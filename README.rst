@@ -33,7 +33,7 @@ Enable PageSpeed Service
 2) Open the project and switch to *APIs and auth* > *APIs* and **Activate the API**.
 3) Switch to *Credentials* and click the button **Create new key** for *public API access*.
 4) Create either a *Server key* or a *Browser key**.
-5) Test the access by using cUrl on the server where you want to use the extension by calling the command ``curl 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?strategy=desktop&url=http://www.bbc.co.uk/&key=AIzaSyA2rQEy7UyQz-9D1-7bnmw1jzSo0FmobYM'``.
+5) Test the access by using cUrl on the server where you want to use the extension by calling the command ``curl 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?strategy=desktop&url=http://www.bbc.co.uk/&key=AIzaSyA2rQEy7UyQz-9D1-7bnmw1jzSo0FmobYM'``. (If you get a ``Bad request``, just wait a few minutes to get the key deployed on all Google servers)
 
 Preview Domain
 ^^^^^^^^^^^^^^
