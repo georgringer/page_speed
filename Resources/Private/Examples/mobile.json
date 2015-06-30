@@ -1,0 +1,2449 @@
+{
+ "kind": "pagespeedonline#result",
+ "id": "http://m.bbc.com/",
+ "responseCode": 200,
+ "title": "BBC - Homepage",
+ "ruleGroups": {
+  "SPEED": {
+   "score": 33
+  },
+  "USABILITY": {
+   "score": 94
+  }
+ },
+ "pageStats": {
+  "numberResources": 89,
+  "numberHosts": 26,
+  "totalRequestBytes": "17466",
+  "numberStaticResources": 61,
+  "htmlResponseBytes": "105435",
+  "cssResponseBytes": "58441",
+  "imageResponseBytes": "358222",
+  "javascriptResponseBytes": "804229",
+  "otherResponseBytes": "8317",
+  "numberJsResources": 28,
+  "numberCssResources": 3
+ },
+ "formattedResults": {
+  "locale": "de",
+  "ruleResults": {
+   "AvoidLandingPageRedirects": {
+    "localizedRuleName": "Zielseiten-Weiterleitungen vermeiden",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Auf Ihrer Seite sind keine Weiterleitungen vorhanden. {{BEGIN_LINK}}Weitere Informationen zum Vermeiden von Zielseiten-Weiterleitungen{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+      }
+     ]
+    }
+   },
+   "AvoidPlugins": {
+    "localizedRuleName": "Plug-ins vermeiden",
+    "ruleImpact": 0.0,
+    "groups": [
+     "USABILITY"
+    ],
+    "summary": {
+     "format": "Ihre Seite verwendet anscheinend keine Plug-ins. Plug-ins können die Nutzung von Inhalten auf vielen Plattformen verhindern. Erhalten Sie weitere Informationen über die Wichtigkeit, {{BEGIN_LINK}}Plug-ins zu vermeiden{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/AvoidPlugins"
+      }
+     ]
+    }
+   },
+   "ConfigureViewport": {
+    "localizedRuleName": "Darstellungsbereich konfigurieren",
+    "ruleImpact": 0.0,
+    "groups": [
+     "USABILITY"
+    ],
+    "summary": {
+     "format": "Ihre Seite spezifiziert ein Darstellungsfeld, das der Größe des Gerätes angepasst ist. Dies ermöglicht eine korrekte Darstellung auf allen Geräten. Weitere Informationen zur {{BEGIN_LINK}}Konfiguration von Darstellungsfeldern{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/ConfigureViewport"
+      }
+     ]
+    }
+   },
+   "EnableGzipCompression": {
+    "localizedRuleName": "Komprimierung aktivieren",
+    "ruleImpact": 7.324700000000001,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch die Komprimierung der Ressourcen mit \"gzip\" oder \"deflate\" kann die Anzahl der über das Netzwerk gesendeten Bytes reduziert werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Ermöglichen Sie die Komprimierung{{END_LINK}} der folgenden Ressourcen, um die Übertragungsgröße um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu reduzieren.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "71,4 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "77 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://m.bbc.com/"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "69,9 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "78 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,6 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "63 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "LeverageBrowserCaching": {
+    "localizedRuleName": "Browser-Caching nutzen",
+    "ruleImpact": 7.463095238095239,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Das Festlegen eines Ablaufdatums oder eines Höchstalters in den HTTP-Headern für statische Ressourcen weist den Browser an, zuvor heruntergeladene Ressourcen über die lokale Festplatte anstatt über das Netzwerk zu laden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Nutzen Sie Browser-Caching{{END_LINK}} für die folgenden cachefähigen Ressourcen:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.bbc.co.uk/wwscripts/flag"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "4 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://cdn.krxd.net/controltag?confid=JA8mItOH"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "20 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.googletagservices.com/tag/js/check_359604.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "20 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/requirejs/lib.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "30 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://cdn.krxd.net/userdata/get?pub=5d7aaa39-eeed-454f-bb7d-ecea38d770fc&technographics=1&callback=Krux.ns._default.kxjsonp_userdata"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "60 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://pagead2.googlesyndication.com/pagead/osd.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "60 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.googletagservices.com/tag/js/gpt.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "60 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.chartbeat.com/js/chartbeat.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2 Stunden"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.google-analytics.com/analytics.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2 Stunden"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MainResourceServerResponseTime": {
+    "localizedRuleName": "Antwortzeit des Servers reduzieren",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Ihr Server hat schnell geantwortet. {{BEGIN_LINK}}Weitere Informationen zur Optimierung der Serverantwortzeit{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/Server"
+      }
+     ]
+    }
+   },
+   "MinifyCss": {
+    "localizedRuleName": "CSS reduzieren",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Ihre CSS-Ressource wurde reduziert. {{BEGIN_LINK}}Weitere Informationen zum Reduzieren von CSS-Ressourcen{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+      }
+     ]
+    }
+   },
+   "MinifyHTML": {
+    "localizedRuleName": "HTML reduzieren",
+    "ruleImpact": 2.3108000000000004,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch die Komprimierung des HTML-Codes, einschließlich der darin enthaltenen Inline-JavaScripts und CSS, können viele Datenbytes gespart und das Herunterladen und Parsen beschleunigt werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Reduzieren Sie HTML{{END_LINK}} für die folgenden Ressourcen, um ihre Größe um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu verringern.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "22,5 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "26 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://m.bbc.com/"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "22,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "26 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MinifyJavaScript": {
+    "localizedRuleName": "JavaScript reduzieren",
+    "ruleImpact": 0.33179999999999993,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch die Komprimierung des JavaScript-Codes können viele Datenbytes gespart und das Herunterladen, das Parsen und die Ausführungszeit beschleunigt werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Reduzieren Sie JavaScript{{END_LINK}} für die folgenden Ressourcen, um ihre Größe um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu verringern.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "1,2 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "15 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten nach der Komprimierung {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/wwhp/1.67.0/modules/vendor/modernizr/modernizr.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "695 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "19 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten nach der Komprimierung {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://cdn.krxd.net/controltag?confid=JA8mItOH"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "517 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "12 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MinimizeRenderBlockingResources": {
+    "localizedRuleName": "JavaScript- und CSS-Ressourcen, die das Rendering blockieren, in Inhalten \"above the fold\" (ohne Scrollen sichtbar) beseitigen",
+    "ruleImpact": 184.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Ihre Seite enthält {{NUM_SCRIPTS}} blockierende Skript-Ressourcen und {{NUM_CSS}} blockierende CSS-Ressourcen. Dies verursacht eine Verzögerung beim Rendern Ihrer Seite.",
+     "args": [
+      {
+       "type": "INT_LITERAL",
+       "key": "NUM_SCRIPTS",
+       "value": "11"
+      },
+      {
+       "type": "INT_LITERAL",
+       "key": "NUM_CSS",
+       "value": "3"
+      }
+     ]
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "Keine der Seiteninhalte \"above the fold\" (ohne Scrollen sichtbar) konnten ohne Wartezeiten für das Laden der folgenden Ressourcen gerendert werden. Versuchen Sie, blockierende Ressourcen zu verschieben oder asynchron zu laden, oder laden Sie kritische Bereiche dieser Ressourcen direkt inline im HTML."
+      }
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Entfernen Sie JavaScript, das das Rendering blockiert{{END_LINK}}:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/requirejs/lib.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/script/orb/api.min.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/script/vendor/edr.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.bbc.co.uk/wwscripts/flag"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/orb/bbcdotcom.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://partner.googleadservices.com/gpt/pubads_impl_59.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/wwhp/1.67.0/modules/vendor/modernizr/modernizr.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://pubads.g.doubleclick.net/gampad/ads?gdfp_req=1&correlator=3172422247251968&output=json_html&callback=googletag.impl.pubads.setAdContentsBySlotForSync&impl=ss&json_a=1&eid=108809048%2C108809022&sfv=1-0-2&iu_parts=4817%2Cbbccom.live.site.mobile.www%2Cbbc_homepage_int&enc_prev_ius=%2F0%2F1%2F2%2C%2F0%2F1%2F2%2C%2F0%2F1%2F2&prev_iu_szs=300x50%2C300x50%7C300x250%2C1x1&ists=1&prev_scp=slot%3Dleaderboard%26sl%3Dtop%7Cslot%3Dmpu%26sl%3Dmiddle%7Cslot%3Dinterstitial&cust_params=frd%3D1%26channel%3Dhomepage%26domain%3Dm.bbc.com%26ctype%3Dindex%26asset_type%3Dindex%26referrer%3Dnonbbc%26esi%3D0%26kuid%3D%26khost%3Dm.bbc.com&cookie_enabled=1&lmt=1429707402&dt=1429682203025&frm=20&biw=320&bih=533&oid=3&adks=306198871%2C2770951235%2C1325049964&gut=v2&ifi=1&u_tz=-420&u_his=1&u_h=533&u_w=320&u_ah=533&u_aw=320&u_cd=24&u_sd=2&flash=0&url=http%3A%2F%2Fm.bbc.com%2F&vrg=59&vrp=59&ga_vid=933972440.1429682203&ga_sid=1429682203&ga_hid=245482823"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/script/orb.js"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Verwenden Sie asynchrone Versionen{{END_LINK}} der folgenden Skripte:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/UseAsync"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.googletagservices.com/tag/js/gpt.js"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Optimieren Sie die CSS-Darstellung{{END_LINK}} für die folgenden URLs:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/style/orb.css"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/style/orb/bbccom.css"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/wwhp/1.67.0/responsive/css/wwhp.min.css"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "OptimizeImages": {
+    "localizedRuleName": "Bilder optimieren",
+    "ruleImpact": 9.783700000000003,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch eine korrekte Formatierung und Komprimierung von Bildern können viele Datenbytes gespart werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Optimieren Sie die folgenden Bilder{{END_LINK}}, um ihre Größe um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu reduzieren.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "95,4 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "29 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/52/p02p5231.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "21,6 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "58 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/ns/p02pnstm.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "17,2 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "72 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2n/px/p02npxjw.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "12,1 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "67 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/336-189/images/live/p0/2p/nm/p02pnm0c.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "10,1 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "47 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/ny/p02pny47.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "3,8 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "40 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/q1/p02pq1zw.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,9 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "20 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82446000/jpg/_82446535_picture3.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "45 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82474000/jpg/_82474963_murphyfalcon-murphy-freddiegrayphoto.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "38 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82473000/jpg/_82473387_neymar_getty.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "31 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82474000/jpg/_82474255_bayern.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "27 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82268000/jpg/_82268492_garethbale2_getty.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "28 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/304-171/mcs/media/images/81342000/jpg/_81342577_globe.money.think.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "15 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/304-171/mcs/media/images/82455000/jpg/_82455765_thinkstockphotos-93394580.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "12 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82454000/jpg/_82454662_82454661.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "48 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82475000/jpg/_82475232_samuels_afp.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "30 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82450000/jpg/_82450503_82449817.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "37 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82451000/jpg/_82451608_82450512.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "49 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82459000/jpg/_82459511_houthi_epa.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "36 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/304-171/82448000/jpg/_82448845_82446819.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "10 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82476000/jpg/_82476400_82476398.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "37 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82476000/jpg/_82476455_026854977.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "35 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/304-171/mcs/media/images/82476000/jpg/_82476455_026854977.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "15 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/wwhp/1.67.0/responsive/img/media-icons-responsive-sprite.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,3 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "14 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/144-81/images/live/p0/2p/nt/p02pnt1r.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.014 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "15 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/624-351/images/live/p0/2p/nt/p02pnt1r.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.014 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "2 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/id/0.27.15/img/bbcid_orb_signin_dark.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "863 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "68 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/id/0.27.15/img/bbcid_orb_signin_light.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "789 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "66 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "PrioritizeVisibleContent": {
+    "localizedRuleName": "Sichtbare Inhalte priorisieren",
+    "ruleImpact": 8.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Für Ihre Seite sind zusätzliche Netzwerk-Roundtrips erforderlich, um die ohne Scrollen sichtbaren Inhalte (\"above the fold\"-Inhalte) darstellen zu können. Reduzieren Sie die zur Darstellung von \"above the fold\"-Inhalten erforderliche HTML-Menge, um eine optimale Leistung zu erzielen."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "Zum Rendern des ohne Scrollen sichtbaren Seiteninhalts waren {{SIZE_IN_BYTES}} der HTML-Antwort erforderlich. Dies erfordert {{NUM_ROUND_TRIPS}} Netzwerk-Roundtrips. Mit einer komprimierten HTML-Antwort könnte die HTML, die zum Rendern des ohne Scrollen sichtbaren Seiteninhalts erforderlich ist, jedoch in nur {{NUM_COMPRESSED_ROUND_TRIPS}} Netzwerk-Roundtrips übermittelt werden. {{BEGIN_LINK}}Aktivieren Sie die Komprimierung{{END_LINK}} für die HTML-Antwort, um den sichtbaren Inhalt für diese Seite zu priorisieren.",
+       "args": [
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "89,8 KB"
+        },
+        {
+         "type": "INT_LITERAL",
+         "key": "NUM_ROUND_TRIPS",
+         "value": "3"
+        },
+        {
+         "type": "INT_LITERAL",
+         "key": "NUM_COMPRESSED_ROUND_TRIPS",
+         "value": "2"
+        },
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Nur etwa {{PERCENTAGE}} der Seiteninhalte, die in der endgültigen Version ohne Scrollen sichtbar sind, konnten bei der Übermittlung von HTML in {{NUM_ROUND_TRIPS}} Roundtrips gerendert werden {{SCREENSHOT}}.",
+         "args": [
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "46 %"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_ROUND_TRIPS",
+           "value": "2"
+          },
+          {
+           "type": "SNAPSHOT_RECT",
+           "key": "SCREENSHOT",
+           "value": "snapshot:15"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "SizeContentToViewport": {
+    "localizedRuleName": "Anpassung von Inhalten auf einen Darstellungsbereich",
+    "ruleImpact": 0.0,
+    "groups": [
+     "USABILITY"
+    ],
+    "summary": {
+     "format": "Die Inhalte Ihrer Seite passen in den Darstellungsbereich. Erhalten Sie weitere Informationen über die {{BEGIN_LINK}}Größenanpassung von Inhalten zum Darstellungsbereich{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/SizeContentToViewport"
+      }
+     ]
+    }
+   },
+   "SizeTapTargetsAppropriately": {
+    "localizedRuleName": "Optimale Größe von Links oder Schaltflächen auf Mobilgeräten einhalten",
+    "ruleImpact": 5.000210419998316,
+    "groups": [
+     "USABILITY"
+    ],
+    "summary": {
+     "format": "Einige der Links oder Schaltflächen auf Ihrer Webseite sind möglicherweise so klein, dass ein Nutzer sie auf einem Touchscreen nicht bequem antippen kann. Wir empfehlen, {{BEGIN_LINK}}diese Links oder Schaltflächen zu vergrößern{{END_LINK}}, um eine bessere Nutzererfahrung zu bieten.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately"
+      }
+     ]
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "Die folgenden Links und Schaltflächen sind nahe an anderen und benötigen möglicherweise zusätzlichen Abstand."
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen {{SCREENSHOT}}.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003cdiv id=\"orb-header\" class=\"orb-nav-pri or…-w orb-nav-dyn\"\u003eAccessibility…Full A-Z\u003c/div\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "2"
+          },
+          {
+           "type": "SNAPSHOT_RECT",
+           "key": "SCREENSHOT",
+           "value": "final",
+           "rects": [
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            },
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            },
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            }
+           ],
+           "secondary_rects": [
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            },
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            },
+            {
+             "left": 16,
+             "top": 49,
+             "width": 288,
+             "height": 162
+            },
+            {
+             "left": 0,
+             "top": 0,
+             "width": 320,
+             "height": 33
+            },
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            },
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            },
+            {
+             "left": 16,
+             "top": 49,
+             "width": 288,
+             "height": 162
+            },
+            {
+             "left": 0,
+             "top": 0,
+             "width": 320,
+             "height": 33
+            },
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            },
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            },
+            {
+             "left": 16,
+             "top": 49,
+             "width": 288,
+             "height": 162
+            }
+           ]
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen ({{SCREENSHOT}}).",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003cdiv class=\"orb-nav-section orb-nav-blocks\"\u003e\u003c/div\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "3"
+          },
+          {
+           "type": "SNAPSHOT_RECT",
+           "key": "SCREENSHOT",
+           "value": "final",
+           "rects": [
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            }
+           ],
+           "secondary_rects": [
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            },
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            },
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            }
+           ]
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen ({{SCREENSHOT}}).",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/\"\u003e\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "3"
+          },
+          {
+           "type": "SNAPSHOT_RECT",
+           "key": "SCREENSHOT",
+           "value": "final",
+           "rects": [
+            {
+             "left": 8,
+             "top": 0,
+             "width": 82,
+             "height": 32
+            }
+           ],
+           "secondary_rects": [
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            },
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            },
+            {
+             "left": 14,
+             "top": 16,
+             "width": 19,
+             "height": 34
+            }
+           ]
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen {{SCREENSHOT}}.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/sport/football/european\" class=\"media__content…opean-football\"\u003eEuropean Football\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "9"
+          },
+          {
+           "type": "SNAPSHOT_RECT",
+           "key": "SCREENSHOT",
+           "value": "final",
+           "rects": [
+            {
+             "left": 16,
+             "top": 273,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 345,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 436,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 527,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 654,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 726,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 798,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 910,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 982,
+             "width": 288,
+             "height": 12
+            },
+            {
+             "left": 16,
+             "top": 1073,
+             "width": 288,
+             "height": 12
+            }
+           ],
+           "secondary_rects": [
+            {
+             "left": 16,
+             "top": 227,
+             "width": 288,
+             "height": 38
+            },
+            {
+             "left": 16,
+             "top": 318,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 390,
+             "width": 288,
+             "height": 38
+            },
+            {
+             "left": 16,
+             "top": 481,
+             "width": 288,
+             "height": 38
+            },
+            {
+             "left": 16,
+             "top": 627,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 699,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 771,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 883,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 955,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 1027,
+             "width": 288,
+             "height": 38
+            }
+           ]
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen {{SCREENSHOT}}.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/sport/football/european\" class=\"media__content…opean-football\"\u003eEuropean Football\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "9"
+          },
+          {
+           "type": "SNAPSHOT_RECT",
+           "key": "SCREENSHOT",
+           "value": "final",
+           "rects": [
+            {
+             "left": 24,
+             "top": 272,
+             "width": 131,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 344,
+             "width": 58,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 435,
+             "width": 78,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 526,
+             "width": 155,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 653,
+             "width": 79,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 725,
+             "width": 64,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 797,
+             "width": 37,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 909,
+             "width": 53,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 981,
+             "width": 61,
+             "height": 15
+            },
+            {
+             "left": 24,
+             "top": 1072,
+             "width": 61,
+             "height": 15
+            }
+           ],
+           "secondary_rects": [
+            {
+             "left": 16,
+             "top": 227,
+             "width": 288,
+             "height": 38
+            },
+            {
+             "left": 16,
+             "top": 318,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 390,
+             "width": 288,
+             "height": 38
+            },
+            {
+             "left": 16,
+             "top": 481,
+             "width": 288,
+             "height": 38
+            },
+            {
+             "left": 16,
+             "top": 627,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 699,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 771,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 883,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 955,
+             "width": 288,
+             "height": 19
+            },
+            {
+             "left": 16,
+             "top": 1027,
+             "width": 288,
+             "height": 38
+            }
+           ]
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/news/business/\" class=\"subsection\"\u003eBUSINESS\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/news/technology/\" class=\"subsection\"\u003eTECHNOLOGY\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc…s/will-we-ever\" class=\"section\"\u003eWill we ever?\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc…s/will-we-ever\" class=\"section\"\u003eWill we ever?\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/earth\" class=\"section\"\u003eEARTH\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/earth\" class=\"section\"\u003eEARTH\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/travel\" class=\"section\"\u003eTRAVEL\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/travel\" class=\"section\"\u003eTRAVEL\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/culture\" class=\"section\"\u003eCULTURE\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/culture\" class=\"section\"\u003eCULTURE\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/capital\" class=\"section\"\u003eCAPITAL\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/capital\" class=\"section\"\u003eCAPITAL\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/autos\" class=\"section\"\u003eAUTOS\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/autos\" class=\"section\"\u003eAUTOS\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbcmundo.com/movil/\"\u003eSpanish\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbcmundo.com/movil/\"\u003eSpanish\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "2"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/news/\"\u003eNews\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "1"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://www.bbc.com/news/\"\u003eNews\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "1"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/sport/\"\u003eSport\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "1"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} liegt nahe an {{NUM_TOO_CLOSE}} anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/sport/\"\u003eSport\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_TOO_CLOSE",
+           "value": "1"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/weather/\"\u003eWeather\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "10"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"/weather/\"\u003eWeather\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "9"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://shop.bbc.com/\"\u003eShop\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "9"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Die Schaltfläche oder der Link {{HTML_TEXT}} und {{NUM_OTHERS}} andere liegen nahe an anderen.",
+         "args": [
+          {
+           "type": "STRING_LITERAL",
+           "key": "HTML_TEXT",
+           "value": "\u003ca href=\"http://shop.bbc.com/\"\u003eShop\u003c/a\u003e"
+          },
+          {
+           "type": "INT_LITERAL",
+           "key": "NUM_OTHERS",
+           "value": "8"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "UseLegibleFontSizes": {
+    "localizedRuleName": "Lesbare Schriftgrößen verwenden",
+    "ruleImpact": 0.0,
+    "groups": [
+     "USABILITY"
+    ],
+    "summary": {
+     "format": "Der Text auf Ihrer Seite ist lesbar. Weitere Informationen zur {{BEGIN_LINK}}Verwendung lesbarer Schriftgrößen{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/UseLegibleFontSizes"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "version": {
+  "major": 1,
+  "minor": 15
+ },
+ "screenshot": {
+  "mime_type": "image/jpeg",
+  "data": "_9j_4AAQSkZJRgABAQAAAQABAAD_2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj_2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj_wAARCAIVAUADASIAAhEBAxEB_8QAHQABAAEFAQEBAAAAAAAAAAAAAAUDBAYHCAECCf_EAFcQAAEDAwIEAgQJCAYGBgkFAAECAwQABREGEgcTITEUQSJRYdEIFRYyVFVxkZQYI0JTgZKT0xczNHShsTY3UrKzwSRWYnKktCUmNXWCg4Th8HOFo8Lx_8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT_xAAkEQEAAwACAgEEAwEAAAAAAAAAAQIREiEDMVEEE0FxMjOxkf_aAAwDAQACEQMRAD8A5Urav5PnE7_qz_4-L_MrVVfof8IS5zrPwhv861SnokxpLRbeZVtUnLqAcH7CRQci_k-8Tv8Aqz_4-L_Mq0u_A3iJaLVMuVx09yYUNlch9zxsdWxCElSjgOEnAB6AZrb068X7SMfRd00_r-dqG7XVyOl-xSHEv7w4gFQAT1ABOMnr1HqroDi1_qr1j_7nmf8ABVQcN6d4L6-1HZYt2s1h8Tb5SN7LvjI6NwyRnCnAR1B7ipH8n3id_wBWf_Hxf5ldY8CFKRwK08pBIUmAsgjyO5daG05dLy9wilawkcULnCvcdTvJgOyELS8pB9FG0-kSr7utBg_5PvE7_qz_AOPi_wAyoPSnCfWurGJr2n7L4tuHJVEfPimG9jqQCU-msZ7jqOld68OLrc73oOx3K-x_DXOTGQ4-3sKMKPntPbIwceWa1b8GaYzb9Ja7mSlbI8e_y3XFepKW0En7hQc8fk-8Tv8Aqz_4-L_Mp-T7xO_6s_8Aj4v8yt-aVY1lxnakaglakm6Z0q46tqBCtuEvOoScb1r-0ffnGB3zrRehdS6W1G04daz7zYC0tDkO5JC3Eqx6KkrHt79qDgrVOnrppW-yrNfovhLlG281nmJc27khafSSSD6Kgeh86pXT-w2f-6q_47tbE-FH_r21N_8AS_8AlWq13dP7DZ_7qr_ju0EdU_8AIzVHxf4_5N3rwO3d4jwDvLx6923GK338Drh_b7u5cdW3eO3K8C-IsJtwbkodCQpThHmQFIx6sk98Y2n-URpL-kD5M8mdy_E-D-MNqeTzd23tnO3PTd-3GOtBwlUja_7DeP7qn_jtV0T8MXh_b7Q5btW2iO3F8c-Ys1tsbUrdKSpLgHkSErz68A98552tf9hvH91T_wAdqgjqVLaTtHyg1VZrNz_D_GM1mHztm_l8xYRu25GcZzjIz663HbPg8PTeJd20srUaWosKK3IRcPBbucpZI2cvmdMFDvXcfmduvQNDUqQiWS6zLbIuEO2Tn4Ef-uktR1raa8_SWBgftNV42mb9KgNzYtkuj0J1tx1EhuI4ptaGzhagoDBCSQCewPegiKVLQ9OXyb8X-Cs1ykfGPM8Fyoq1-K5f9Zy8D09uDnbnHnUTQKUpQKUpQKUpQKUpQKUpQKUpQSOo_wDSG6f3p3_fNR6UlSglIJUTgAdzUhqP_SG6f3p3_fNbY4DJjWHSWuddiE1Nu9hYZRb0Op3JZcdUUl0j2dD9gVQaquOnr1bYqZNxtFxiR1EAOvxltoOe3UjFRdb14W8YtXXrX1ts2p5gvtnvclEGVCksoKNrqgnckBIxtznHbAPTzGr-JVkj6c1_qCzwlbosOa6011yQgKO0E-sDAPtFBF6c_wBIbX_emv8AfFR1SOnP9IbX_emv98VHUCv0D-E0CeCWpQASdjP_ABkV-flb9e-FNrR5stu2fTC0HulUV4g_sL1BXvE_hnI0BAZ0XbbgnXzbDAYdt8d9twSMJCyVdiPndvX0rorU_wAafk_3n5Q_-1_k4_4vt_W-HVuzjpnPf21zSz8J7VzC97Ni0q2r1ohvJP8Ag7VtqL4SmsL9p-5WiZbdPojT4zkV1TTDwWlC0lJKSXSM4PTINB0twK_1Eaf_APd6_wDeXXOPC-dwla4emLra2vSNQlx3qxHeLpTn0AlaegNRujfhD6s0lpiBYrdbrE7DhN8ptUhh1SyMk-kQ6B5nyFSCPhNarQoKRp_SaVDqCIToI_8A5aDor4N3x-eGUY6lEsEyF-DEvPOEbI2bs9fXjPlisW-Dnbm7xofiFbXlFLUu-TGFKHcBTaBn_GtUflVa3-qtN_h3_wCdWLcP-OepdDRLnHtMGzvIuE1c90yWXVFLiwAQna4n0fRHfJ9tBvHhrr5vhFaToviRDmW_wDq_B3JthTrElpSiQcpBOck-vp3wRWxdJcYLBrDVEe0aYj3Gc0tDjjs7wym2GgkZAJUASSeg6VzbJ-FFrGU3sk2XS7qM52uRHlD7i7SP8KLWMZvZHsul2kd9rcV5I-4PUGNfCj_17am_-l_8q1Wu7p_YbP8A3VX_AB3av9e6rna31ZO1DdWozM2Zy-YiMlSWxsbSgYCiT2SPPvmrC6f2Gz_3VX_HdoOjPgda_tlobuulbvJaiGS942I46oJStewJWjJ7HCEkevB9mce5vBX-kf5Q_HV88H4vxfgPBHl8zdu-f35eeu3GcdM1oOlB078MXX9su7dq0rZ5LUsxnvGy3GlBSUL2FKEZHc4Won1ZHtxzna_7DeP7qn_jtVHVI2v-w3j-6p_47VBf8PbhFtGv9NXK4O8mFDucaQ-5tKtjaHUqUcAEnAB6AZrpWz8aNHM6htcp-5ltQvc9cuV4Z47oQ8aqL0CMkFUodAMjHUCuSqUG--HvEiwWfQOnIjkmBDutlM_mpmQpUkyA-DjloacQ2okHYeaemAR263PDbiRpyyxuEUe4XdTDFl-N_jZvkOqS1zt_JyAk787v0c4z1xXPdKDoXhVr_SVsicL3L3eFQXtMLuqJLRiuubhJCihYKEkbeuD55x0xkjnqlKBSlKBSlKBSlKBSlKBSlKDYGkuIsewaNuFmf0hpu5z158FdJlvZcei7j6W7cg83Gcp3H0T33Jwka_pSgkdR_wCkN0_vTv8Avmsl4V6_k6Cu8p3wbNytNwZMa4W984RIaPlnBwRk4OD3Ix1rGtR_6Q3T-9O_75qOoN-6W4m8LNIX-PedO6FuYnlwBS5MsLTEQeiyyCVZVjIGcH2jJrFuPmnbHBvsbUel74xc7XqLmTkNF3c-yoqyveD1wVE4z1yFA9Rk6rpQSOnP9IbX_emv98VHVI6c_wBIbX_emv8AfFR1B-nfyV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQQ3yV099Q2n8G37qfJXT31DafwbfuqZpQKUpQYYZkr6S9_ENeeNlfSXv4hqhQitIreNlfSX_wB818MzpRSvMp8-mof1hqljpVON8xf_AOoqir3xkr6S9_ENeGZK-kvfxDVClEVvGSvpT_8AENPGyvpL38Q1RrzFBceNlfSX_wCIaeNlfSX_AOIatz0pRVx42V9Jf_iGvnxsr6S__ENUa8oiv42V9Jf_AIhrzx0r6U__ABDVKvmqK_jpX0p_-IaeOlfSn_4hqhSg-pM-WGFkSpAOO4cPr-2qhnS8n_pT_f8AWGrKV_Z1_Z_zqsQcn7aiKvjZn0p_-Ia98dL-lP8A8Q1b4p5UFczpf0p_-IaeOl_Sn_4hqgR0ryhC48dL-lP_AMQ08dL-lP8A8Q1bGhoq4M6X9Kf_AIhrzx0v6XI_iH31b4r2gr-OmfS5H8Q--vPHzM_2uR_EPvqjXhFUV_Hy_pUj-Ia88fM-lyP4h99UAK8qC48fM-lyP4h99eePmfS5H8Q--qFeUFfx8z6XI_iH31746b9LkfxD76t6886Cv4-b9MkfxT7698dN-lyP4h99W9fNUbLpSlYUpSlBgpryvqlVHzVGP8zt-kf86uKox_6r_wCI_wCdFfflSvaEYoPKUpTQrw17Q0ELqzUMLS9jfuty3llrACG05WtR7BPtrRSeM9xe1AiQgOx4e_0o7ikOI29c7vMHGa2zxetca56NfMuUiN4Yl9orIAcWEkbevfIJ-w1yzbE267XliBIm-BjSVhnnONby0nPc4xkYrjeZ10pxzt2pEfblRGZDJy06hLiDnyIyP86rCo_T0VmDYoESJIEqPGZSyh8EHmBIxnI9dSArp25va-SK-qVpFvKAMdYPqH-dVfM18Sv7O5_3R_nVWg-aGvcV5QfNe17Q9qaPk15X1XlB5SvrFeEYoryvDX1XmM0R5Xwqvs9DSg-BSvrFNtNHzXnnX1XhoPK-a-8V5RWyKUpUClKUGD0NK8zQPVVCL1YTj2_7xquKt4f9mb_b_maCtSvaGgV5ivf2GvP2H1UHhqPv10as1nmXCQRy47ZcIJ7nyFSBPTNaW4_6lDcT4ljO5SQC-lKSMK7gZrNpyFiOUri7359-zxZEhaHn5SFKXzGwTsUTgdiB0rAE2qEjJagRG1bircEZKvZjsPXWT6itc6DpK1vjegx4zaVpWOvbr_nWI21UiSHVOvOgJIAxj3e2vDs-3upWMxd6d1JJ0fqlhTLqhb8JD0cH0FoJ6nHYfaPVXTDDrb7DbzKw404gLQsdlJIyD-0VyTqHCJ8ALUVuIKvTV3x6uldJcM53j9DWl1XVTbZZUfWUHb7q9XhtsPL5a5Zk_nTB9Rr1IzVQJ6dq7OSzmA-Gd6fo1WHeqU11otOtJdbLuzOzcM_dVYjAB9lNCvMUr2g-ceuhFemhoj5pQ0oBryva8NFeGle14aBXzXtMig8_ZT9le5FM0HleYr2lB8Ur6xXlBsalKUClKUGBl0V880YqP59ec_21BIh1Oai5V8ttohMruUtqOFD0d56nqew718vywyy46rO1tJUcewVy1rHUMm6XiTIkLISVYbAOcJ_2Rntiud7TX06UpFp7dMfL3TZGRdGiP-6r3V8t690y6sJRd4-T6wof8q5GbuaELBLiyAexUPdXwq4J6BL60BPbqMYrH3Lun26fLtG53mPCsr9zH5-O00Xvzah6SR5g1p64cZEmXZrgm0vtx0vPMqAe6Ogox16dwSDWM2jUz8rhZqKKVYQ0hnljechRcCVEfbgEjtke2teJekyGo6fRcaayG-wKc5JB9Yya1N9c-GS6Pi8V47-CLW4AexEgfd82tT64vTN_vKLgtt1oPSUJQwoBSQRk9QOhBwKjrStUeI2hatzicqVjy6VBLl81yH1UNr48_PBrhytae3XhFYZzftbSrowqHcrnF2LI9FLSUkY7Dp91Y-bq3b8ttyUenheVNDzANYogdClaAVkndnz696qXMoIjhCAFJbAyexwAK19uCPJMMsacZuNtU-6tC1-J2IcCduCRnHT7K3hwcktx9D4kOoQhMt1O5agkeR_zrniC8WdMKUg4xLCunkcGqt8urSbRHhYltPJWXF5c_Nq3YOQn14x1q1ma9JbLR268bukFXzZkb-Mn31Ca219ZdJW9p6c-XHn9wZajgLUvHfrnAAz51x-i4uN7QHlA42jAxk_fV_DXLnDLyXHIzTTh5q0EbMgnIJ_7tam0yzFIiWX3LiBHuF98c141tal5bLgB2kHoMJPaumLJdGrraIU5lSVJkMpX0Pn5_wCIrjzTFrkX7UTEBp9CApW5SlkJSEjqSknurHYe2ur7FAYsdkhWqGp1UeK2EI5ytyiM5yfvrdIxPJn4TwdGK95oqM8Rjzpz66OST5orwuJNRvPpz6CRLiRXnNTUeXs14XqCR5orwuio7n059BI80U5oqO59ec-gkS4K-eYKj-fTnUEhzRTmio7ne2vOf7aCS5or3miozn-2nP8AbQSXNFecweqo7n059BtqlKVQpSlBpwv-2hkAAkkYHc57fbWFanv7trkRkJUENupUScYVkH_a7Vr28arl3F1yLbGnHCNyCtajhRz_AI-yuM3ycdIpvbd0qe2iBIfCkLbS0tfQ7gQAfVXNesLOHEQJyXQ0meyh_apBCSo9Dgjt2rb1_tcW08A9Lz5UViNc1T1JfkspCXVpJkEJKwNxGAnp7B6qrW_hpfpNqgXRr4sXa5MDxQLslaShBSlQSrKPROFdMZHQ5I6Zltt6aplWkGdOJShPN5eT0AAJJ-4V9L00hpwqecYbbI-a4rCk_aK2hadI3q-WFu7F-z2K1vnlx37nL5RdAyMJO0-o_bjpUPfNFags9-t2n7i3FLl2cQ1EkBwrYWVqCd24DPTI8sj1dRWIrP5bm0MZNtjtxVMQ56FsIQoFpKT6Rzncc-dYWS-2pYSpaEgnG71eVb-Y4Eax8TMbC7Wnk4Sl0vq2vEpB9D0M9M46gdQa1JObm2q4y7PfmDHucJZadQSO47dR3BGCD2Irf8fcM_y9IO3rekulp6Q8lBAB2r75NSTEUMSWEIJU0l0LGe-cGsv0LoWdri9qgWiTEQ8yx4lbr-4NhIUkFIUkHKvSHTt7aaL0PP1nf37ZY5cNMqMgyVeNK0AoBCTgpSrrlY_xrMxvpqJz2g3ExFSG23FBLzgyE7utRmoGUJcYDaClIBBI9ftrOtD6A1BrGPPl2pq3KdtzaSA8-QpwqCsJRhJGfR_SIHUde-Lm5cLtXDVLen2okGXLU2l5brEnLbaSTkrKgCMfZ5jGc1mIn2kzE9Ndx1H5N7AOpk5-8GvnlNXUoU48cglAbV1O4ADIx1PQdq20OAGt_HCBmzIjLBkGV4lZbCgQNnzN247sj0cYSevrw3gnpa-6i1ap2wtgJhoUqQtw7G8KPRClYJGSD2GcA4rfGU5Ri9sdutWlrU9NfbQq4EIc3rSlYZQewAPme5qlqy6pvEK3IKVhhw5Q86eriuvzQOgHXzrIeKui7loyE7c9QNtSlynRy3G1lUZtQOcEEAk7RgAgYAOM9a-V8OtXXxq1u3S62CxqltpXHt02YGnnEnttbCT-wZBB70mkkTDX9ssKmJaZDqkFSDuQE-RzWydG6wnQ7xCt9xdLkKQooSpSshJ8jk9RWN3y1TdO3Z62XdtTMxogKRnORjIII7gjzqnZNL3bWGomrfZmA4Usl551xexDSQcZUr9v21mszuLeI4t-qePnTn0ZskxNhTOZm264tsoAfdgyA6lKgMHrgVfzkbND2-T4SKkLfKfEJV-dX1X0I29un-0ew_Z6HnWPPpz6vrbpS7XCCmU2hptCxuQl1WFKHsGP88Vda2it2-12JIjtsSFMkPbUgFSglGckdzkmmCH59eF-o5pa3nUNtJK3FkJSkdSSfKsle0deWoZf2MrIG4tJXlY_wwf2GgiueaF_21keibMt-BLuD8JuQS2fCJdIKVqG4EEZ6dQB1q609Z3pCrpPm2uNzQFJjMDbyy4nclQxnp6SQOvrpgxHn-2nP9tVkQLheb3JYjw2mnm1FLqG8JbaI6H_ABHtq4vGlrra4qpLqWnWU9VqZUTtHrIIFFWBf9tOf7aubJp6feoK5UNTGxLvKKVqIVnp17YxhXr8jWSWXRjiYs5U1UZ19Tam45StRSlfpAlXT149fnQYjzq859Wk1K4cx-M6pJcZcU2opPQkHBx91W_P9tBJ8-geqM5_tpz_AG0RJ8-nPqL53tpzvbVV0DSlKqFKUoOQbmiXew38auNx4zat6WmU5OfWVn11bT7nb7BEQlhlIWR6CPM581Va3e5ogxy66ASrogFWSVe6tc3G4OzZC3X3CpxR7-z1V5Yje5en103lrma5P-DPpWVIWSt27OEkj_tSsD7hVPjpLeb4XcLoqHFhl23JcWkHoopZYAJHs3q--tQSdX3mZpWHpyTL3WSG8X2I3KQNizvydwG4_wBYvuT39gr41FrC8322WqDdppkRbUzyIbYaQjlIwlOMpAKuiE98np9tdGMxuaVZbJYeH-lbnriRqPUJuDQVBgR3z4eMkpSQjqcpOCkdD1wQB0rKuJu1u_8ABQNQ3Le2ZLSREWoqUwN0XDZJ6kp7ZPXpXPen-KusdO2v4ts99fjQE52tFCHNme-0rSSn9mKtbnxS1TcPikSru5KctckSojjzTa3G3d27O8pyrrjookdB06Cqz-W5Ne3S5u_Cmt0WO--pEadAbShKjhtlSWlOfYDvVn15rBPhJsD-ma_FRLaVGOc9gR4dvPWrQ6quqb4rUE-SiVqN11p52ZtQAFtpSEBKEgJ9HanywcdahtSanl6jukm53t0SJj-A4vYEg4SEj0QAB0A7eqpNtbistr_BQkW1rXk2NDkyFrXbV4S4kBBIca-b557_AONZX8HnRl8ses7pcbxAkxGhDVFy83sCllxB9HPzhhB6jpWg9IXRqxyUXK1l6LcWFHDzRwoZHrPTaeo7dazBPFjWJnpuKdRP84IUyErQ0pO3KSfzezbn0R6WM-3qaRaI9pNZZX8HyTJgaI4lSQtSXY1vQ42odCkpbkEHHl2FffwdJr89GtYkN7bfHrdmEoqxgjmDI_8AiU3k_ZWsrPqW8WWBdoVtkoiRrq3yZaEtIcLqMKSB1SSOi1DIx3qc4OpsLN-ddvOoLhYpraP_AEfPjrSlnfghQWFJPTt0yAfSB8qRMdLMe23_AIPVh1RaLpcl32PLiw1M7SiRuHMe3ghQz3wN3Ueuozghy5HC_VUVu3_GcwygtyE1KLK3GilACd6Oo-a50Hft51kPyytuk4c-8XfiExqiUiMtqNFiJbSNxIIylskZykDccYBNcvac1LddKzVTrJcXYb-NqltnIUPUoHIIz5HNPWJEbrf2q4Sn-D8i0ydEvWa1uyErSiRdFuKaWFAjaHAF9QD0HTqT66mb9dLRd3LXA4maPkImvspTFuMVaXd49YW2rcnqc7evft1rVFq19dta25td-nrlSIxOUlKUI_7wSkAZ_ZVw5xOv-mYcaHBuz6G85LJShzan1AqB2j7Kzz7OK240abkWbiW1DZvE27b4yHUquEkuutJJV-bKj1I6Ej2K_bUnws0i_fTe3pd6u1ttUKNvlsWt4pcmIIUQggdFDAX0IPfHnWr9Q32Rebw7cpji3JLpBUtS9yjjtk1dQNfXrTk5p6xSEwnSjBdbAPMBPUFJGD27EGn51e8x0rwqlWV7QWpkaZs9xgW5ple16c7uVIVsXn2DHTOP9qvdQT2o_COyvrkMoQqapO9fUZy906efSuf1cW9cSX3nXr-66HmVMLbWw0WlIPccvbtz7cZqxOs7w_peJp6RKC7TEd5zLHLSClWVE4VjJ-erufOt82PtumOKK7u8i1TNPQZVyt7kdHITDSVbVFXzjjsCkp6n1GqvFR1cS26dTOcxIDSw4on9IBvcc_bXOlt4h6qsds-L7HqJ5tkjcIwCXCgH9FJUCUnz9E1QlcRrldU26NqV5c9qCktstPthJSCEjqpIBUfRHVWf86vI4Y3noSU0nVdsU8pOxSyB6txSQn_Eis9ddlxdUSHIel5L0nKsSfGqShxP7RtHTy8q5vgaziyVs8tp9IV2WkbsH9lZYripLfjNwnL44G3vzadyQlS-n-1jd_jVi0MzWWytLP8ANtut3OWGvzSlbAoKCOjvTI6HHrq10E5u05qw57RP_wCjtYJb77Ot0aZHhv8ALalo2Pp2BW9OCO5Bx0Ue3rry3X6dbo0yPDf5bMtHLfTsSd6cEY6jI6KPb11UZ_pF2Q_oW_s2cFd2CtyW0KCVqTgdAfbhYH217wtVdGoV2lX-BMtkBLSg4zMSU7iP0hnuMZ6j1itH6tvd4s7ceZp-7Kt8ptWVcte1bg9Qz6JHrB79KqaT4h6k1KzKi6nvypatyOVHUhthQAznKUgZ8uvWppjdVjkra4V3p1tRCvE7cj1HlA_4GvOHm-RYdVNspLjqooShKRkqJQ5gAVpeZxSMK0v2W3rXIafdUVsBKCCpKgCSrqofNGMdOlW1m4wLsklZgszYr60hKh-bIV-xX7aqM5ccU2tSHAUrSSlQI6gjyNfPP6961vO4mNyJZV4VfPfeClOOuJAIJypXTt51IDXdjPUS1Yzjt1__ADrRWcc_205_trCousoUiQUIZlBnJw8UZScewdf8Kv8A5Qwj80yD9kdz3UGS8_205_trGhf4xICW5pycf2ZfuqR5_toOqKUpWkKUpQfnXebku4SVOZwOyU_7I9lRDjuwgA5q3ekKxhIxmrNx5Z7E_bXKIdplszT_AA2u9-0l8pFz7NarRzFNtPXKVyecoZyEeicnIIwcZIOK13I5zbAcKTtPbNdQaqv-nh8GWwTYulfDwJct5mDCNwcX4J4mSA9zCMuYIUracD0seQqHhw9JcNOHen77qXTqNTX7UKOczHfwWkN4SrsoFIwlSMnaSSfVVZc5JjOuDKlJA796-40TDicDmLyCAfXXQvEiyaa1ZwrOt9H2sWpyFIEabAQQGxkpHQDoCCtBBAGQeozWR6kc0rpDhhoi4K0Xabld7jaW0ha2kNAKLLRW6s7TvVuKcE9equoychzuwyuTOYafeahpddS2qQ_uS02ScZUQCQB5nBrJtX6BvGjbqbfd0R35DjaXI7sYlbTiD3UlRAOQemMe3tg1bvyFvoCFBKR3KcDuPP763VwldY4laWa0pqVxXxrZVJdjSkJJLkXckKTuPswn9w9cGsR23M419D4Zy4-kmtSXZ-G3Ddc2NMuLUHHf-6AnB7HqSOx9mcZ1DOhw2TBiIbacPpKKR1T6utZrxE18xrbXNrsOnXOXb-c3bICdu1CNygjmAeeemPYBW5vkFabfcY9gZ4bM3KyrSlEi-vSmOduI9JeCeYcHvgjz2jtSKbKTbPbkJyQtbKworCkHICe6vUCfOrldyajtMx0cl1Tje5aznKFnyreHCTRtrtnH7VOmbjDi3KHBhOOsIltJd2hTjCkEhQI3BK8Z9p9dTOlWeHGtdK6kSnSbcCDp5KZBktqSqQ-0AtW4rxuyQ2oEEnv0Oe14nNzi1LzhDSCHFHHonH_4KmUQbahjmSm9y0HClLOMn1YHStq6oi6U1nwNuGqbBphixTrVLRHQI4G5XpNj0iEjcNroPUZBHf15bpHRjVs4f2G5M6GY1ddrmymQ-mS-y2iOhSQoAc3Izg-QznOSOgqTTZXm56t0puEXnba00yXUkbSroCOxwfOscnSXlyFqmLKnT3JPet_cSNHwLBxW0CYttRFtt7lx-dbnglxLSw62HG-5SRhYBAJHfHTFZNqG5cPLPxcRpV3RECVJuDzDD8lbSNjC3EoCEttlJAGCkkgp6qJ61Yp8pz-HKiXR3B-41VU6h5IaU42lWM7VdDj2Gst4x6eg6Y4mXy0WtvlwmHELabznaFtpXt69cDdj9lYQ8whbJHUrScpI_wAqYctVlc6GrKUlbZ6jpjGa-DMeX0KEtgnuevSriM66Gwhat4xgZOSK-XmkhJ7denamC6jOH0UPqwgDr2CiPYakwyqRHLm0FAR18lezB9dY0SpOR8_1Z6ivStW1TaXHNuchJPSmCXUiVBaKkuYJynDa-vYZBI9hqPenJIwVJScDCTkbMeo1bMSVIWEK6DHaq6tjgz0J9ZpmCWtmsLlATsbkpkITjLbmVdPt8qzG1a4gzMJkoVGVjqVEFOfZ51rVT62OobSB5kf86oNrwFFXUk56DtWtY4s6veoI9yKorsR0OFRQlWdyTk9D0qCccVEZdb2hT6coTIKjlHXqUj117bpCVqSUOctTIIwVdST51YOuyEPqS5yVnrlSXB1P7Kzs63kJS2wI8y6WZSbaWowBbeU46Ul5XXKgfV2xWTp0XbDKcdeW-tsk7W92Merr3NYCq6vSXUFfoqbOBtPbH_Osysmo3nIwTIAeUnpkKwvHtFaifliY1Aay085b17o5UYKU9HXFDOfMVa2Ow3fMOUxAcUgKS4kqwnODnz8ulZdqOYLjYpEdlLnMcAwCnp39dfVt1Gzt5MhPLS0lKB5k9MdauwnGWaeIOeiiB9teeIP-0fvqAauiHVrA2hIGQeYkk_sBoxdEOPllQKHNoUM9lZ9RpsGJ7n-0_fTn1F8-vOfjvU5GO0KUpXRkpSlB-cjFritJSt3c-snqVHAH7BXyu2xF5JjoAJ6Drmq63kjA3noOwr58Vn0UIKcDz71xdWzdSX-wyPg_6b0szIUu7wrgt9yKhCxsSVSCDuI2no4noD5-w1M6c1XonVWgrPpviMmZDftAKIc6OCo7MYA6BRBwACCkg7Qe9aXS4oqVuSQAM7ielfO4E9XPRBycD_nTZMbl13rLTUTRLWiuH7LxtRd50qXISQp5QIPYgEnISSSBjaABVvxT1VZbzo3QUO2SzJlWqAWZaOWtAaXy2U4JUAD1QrtntWqEvqUklOMYwDX0oqxgdf8AKmyQreJ3q3qI2J9nc-ytmfB_1VatNazm3C_zfCw129bCF8tbg3lxtQGEg-ST91auaCG-45i_Ws9BXinvTSEALSDkjsmkdE9paFJ8BcIk2MygvRHUvtLc64UkhQP3itx3-7cH9bXZvUmo_jJi7ctPiYLaF7XikYwVJTjsAAQpPQDtWiXHwVZdUTj9HsBXrT5c9IDA7J9lInEnttbgzqPTWluKV6vD6E2WxSITjMZkB19SMutFKTgKUSQgkntn9lQfCHVVo09oniLAvMpUaZdrcGISOS4vmr5b6cZSkgdVp6qI71gheQkkJG8k4J7kmreXLbSfSJ34xtQacpXGydKa0stu4Caj07Kmbb5KuKX2I3LcO9vdHyd4G0fMX0JHb2isusOrtE6s0LaLNr1-ZBl2kFDEqMhStyOwAwlWOgSCCP0QQa52eltOqACFD7TV6y-tLQAOcDzNJkxtO6XzRkbiRpqTpq3uRLNb5kdciY-pa1vbXEqU5tJJAAHYAE9enYVcas1FYblx6Y1JFkJdtaJ8J8yeWsYS2loKO0jd02Hy64rUypCS2PSHX_tV6l9fOCunLSOpBqdjPOMlws-puI93u9scEqHI5PLe2rRu2soSehAPdJHbyrCF22O4SUlxtI7HOf8ACqqXEkBRFeF7qT1-0mgtH4DbakgPqCyPNPn5CrCWpTag0R6We1Sjiwo7iMq9lUZUZL43k7XAMA-yrAtAEqSkOnYcjqOv31ds-FZaBkuBS1JKkjGQPV9tRbxcCdiwlQ9dUPTKht79h17VcTU64m3PMlbiSn1KAwRUO4tll50MbiD0Cj514qTI5YbLXQnOcd_21RdbcIKtufXirEEyu95IIxn21WUwnwiHN6U7iRtz3qwbdO0Hy8_ZVTelRCCQr1CmCoRy1A5wR5ivXMSMkeisekVAd6-krwoYyvHQ57ihW1FKhgqWo5x5CoL222tpxlbyngHQcKR5_wD2zX09CcZcUthQ2jGNy-o9lRbcx1D7i0q2lQGM9QftqtJmOlALpBSRnKeopMLCT8U-40GpSVJSR33YzVAOIwra0AnPUIJr5knmtIIxlI9Hr5VaNvFAKQPPrUiCZVnJ5iSefGiRkBI2hSUkE-vNSAvJnRyrCshPpbem3HqqHWpBCtzYKVdMk1a7zAf5jRBQroUH_I1rIlPScj3GS5OTulyEsqz6IcPT1Vcy1XTmqMGc6pOM7VOdRWPhwPArQsZzn1H_AP2rmNLLeTn0856nvUPb9LKUpXVzKUpQfm6l7d5ftoCkZwO9WCH9x7YSR519F7JwOlcsdNSDyi0sodSUFPdKhg_dXyp0KAIIx7ewqpqUA3uRk9Bt_wB0VtmyadtD-oNLTHLfHVBbiwo8tgo9B55xuLhSh5kmVn28s-2seK3OlbfMPR9Z4o-n-o8nhidiszH_ACcaiLv-wR6tx8vsr1DqicFWEjz88VmtvLEDTiJ7ESEqUjTpfCnorbw5hupa3lK0kFWw7ckZx0qraFsT2bVen7dBRMUxdm1pERsMOmPDDjbhZ27MhS_IYOwdM5zvHm1godCiTkn7TXvMCuoOCO1ZxpNTGonbLKuVug81m_wISlMRG2W5DTxcKkLbQkIVjljrjOFEHPTGP8PAy7qZKZHhAlEOY4FSmQ802pMV1SVqRtVuCSArG09uxq4aiWikADuSepI70ekDCUpPQVJaumc7wu25WObjd_7MgeF2dvn_AJlrdny-djB7Z65BqZ5mHAajx7lpiMk2mKsxF2rdJKlxG1Kw6Ix9NRUSFczpuHUeUw1g6l4RkdPL21b-gM9snqTWfXyzNMcPm0ttW_x8Nhie8tEhkyVB1StyVthXMASlcf5wwMK9dfOo5EXwV0kWqNalIty0LTDXBDEu34dSnDwU3h8ZOxQUpXpKBxjoWLrXLjiSUhICiD1OKvNv5kIWBnzyegrItV3x1WntPoRDtTZnwFPvrZtcZlalplvoBCkNgp9FtA9EjIHXuc4cXSE9SOv7auJqSQpppspICsdcJTXyuUgn9IAdgBUaXzjCSP2dK8DqkjqolXYUwSq5KVgHJx6z0zXwHwfX7KsS6QjqsFXbGKpKlnGD09VMXUvHfKlEY9EeZPnVZS9xSTggfo-VRMN4YUMndnNXBez50xNXCmmnFKyAMjuPI1HSWVNdScpPnVyHgB6z9lUZKwplWe9DSO6OVt9R8_VXpPUkdKskL2k-2qvNz9tVH24kL-bgK_zq1KghWHQE-zHWq24E9-teLIUNrg-w-qgNSGyoAqwfLPSrhS3VrIIG0DOO-KsWGwHsq67evUdK-1Ssuhask4--mGvXEkL6dvKvArac5x-yqPPUsnJ6k9K-y7uGFDPtq4sSlWXwqOSCPUB6qtn14fCvWOtWjToaX0VgHvmq6lBxAwpOft6VnF19FfkTkHyqilnevtvGapuOlohKgSaNPkEkjKSO1VNSLDLSdyghGUjHTr1quhDSllakAHyHYf8A3qyTMaCUp2lIzk-yvoOhZwhRx3-2pi6_TWlKV0cylKUH5hFwYAJ6n1V6l0JHSrAOdia9Do6YrONJa4XBc2U5IdCUrXjITnHQAf8AKpVjWt9jlsMXApCHYryRy0dFx0BDJ7fopSOnngZzWKFzPnQLAOfOpWsViIhryeS3kvN7zsz3P7ZRbtVXSAhtDDzC224phBt-K08gsl4vbSlaSD-cO7JGfbiqp1feFXWPcDIZ58dlcdpAitclDa0qSpAZ28vaQpWRt65J71ifMpzauMMsf1hd3ZdukeIZZVb3hIitx4rTLbbgIO_loSEE5A6kHOAD0r6Gtrs3Jbdjt2llbe_0mrTEb3BSFIUlW1obklK1ApOR17ZArEC5k-uvC4cUwT13vsu6hrxbcFsNbtvhYLEbOcd-UhO7t55x1x3NXMnWdzkQhFfTbnkCOmMHF2yMp0NpQEJHNLe_ISAArORgdaxUrPrrzdTF1NKv85dymT1vEypaXEPL2pwsOApUNuMAYJxgdOmMYFXM7Vl1n28wpchCmFbeYUMNocd2_N5jgSFLx_2iaxvdXuauGpSXcXpjENl9zc1EaLDKcAbEFa3COnf0nFnr6_VirVKlEeyrUk19IWU_ZUw1dtq9aelfY2ZyRlVWnNPnXvM9tMNXKkAjIJH7apcs575FUubnzr0LFDVw1lKs1WLmfPpVjzac7r1piL0Oe0k1Tdd7An9lWhe9VU1Lyc0w1cKczigcNW26vd1U1d780358-lWoXTfTBdLc2hRB8qtyc-w18LWSOlfO6gqI9dfZVgVQCsUKqCoV586qpT-byCM9yKtkkA9a-yrKcA9PVQVOZnoa-SrBwK-N3r6185oKoV6q-kqI8yKohVek0H6n0pSqhSlKDQH5KuiPrXUn4hj-TT8lXRH1rqX8Qx_Jrf8ASg0B-Sroj611L-IY_k17-Sroj611J-IY_k1v6lBoH8lbRH1rqT8Qx_Jp-Sroj611L-IY_k1v6lBoD8lXRH1rqX8Qx_Jp-Sroj611L-IY_k1v-lBoD8lTRH1rqX8Qx_Jp-Sroj611L-IY_k1v-lBoD8lXRH1rqX8Qx_Jp-Sroj611L-IY_k1v-lBoD8lXRH1rqX8Qx_Jp-Sroj611L-IY_k1v-lBoD8lXRH1rqX8Qx_Jp-Sroj611L-IY_k1v-lBoD8lXRH1rqX8Qx_Jr38lbRH1rqT8Qx_Jrf1KDQP5KuiPrXUn4hj-TXn5KuiPrXUn4hj-TW_6UGgPyVdEfWupPxDH8mn5KuiPrXUv4hj-TW_6UGgPyVNEfWupfxDH8mn5KuiPrXUv4hj-TW_6UGgPyVdEfWupPxDH8mn5KuiPrXUn4hj-TW_6UGgPyVNEfWupPxDH8mn5Kmh_rXUn4hj-TW_6UGgPyVNEfWupPxDH8mn5Kmh_rXUn4hj-TW_6UGgPyVNEfWupfxDH8mn5KuiPrXUv4hj-TW_6UGgPyVNEfWupfxDH8mn5KmiPrXUv4hj-TW_6UGgPyVdEfWupfxDH8mn5KuiPrXUv4hj-TW_6UClKUClKUEVYNQ2vUHxl8USvEfF01y3yvzakct9vG9HpAZxkdRkHyNLBqG16g-MviiV4j4umuW-V-bUjlvt43o9IDOMjqMg-RrRXDf-kX414hfIf5I_FvytuHM-OPE87m7k5xy-m3bs9uc-yoGzX6_wBj4e6pbM6PbLtdOIT1tuFwiA8qHzAjmut7-oSCkgE9QD5HrQdUUrneU1qG23bXOhrVq29XdtvT3xtEmvyiqXEkpX0Z5ycH0wAceo_bnE2eLF8uGr7JrRE-Y3o61iBbbowlxYaW6-ysuuKQOiihRxk9chGKDrStWI-EDwxWoJGpxk9OsGSB95bqQ4DP3O4cOot4vcqVImXeQ_PCX3VOcltazsQjJ6ICQkgDoM1oPR2o-IumeAFqm26Bp6To9XPacdMd2RLjtqkOBa3GyoIUAoqxgEYxnzoOtrXcIl1t0efbZDUmHIQHGnmlbkrSexBq5rmjVqrlpbh7wy0hoG4zbhEuvOUZcGaiA9JAHNCUPLBDW5TiiAcn0QnvV0nU-pI_BPlahvk2Fdvj0Wpl22yI9wmvoOCljnNrCEO90lZwQEZKeooN8ap1Da9K2KVeb9K8JbY23mvctTm3coIT6KQSfSUB0HnTVOobXpWxSrzfpXhLbG2817lqc27lBCfRSCT6SgOg865QvF4vr_Cbi9Y77JuzrdqdtZjtXWYiXJZ5r6SpK3UjB-ak4_R7d81u_wCFH_qJ1N_9L_5pqgy-46801btGsarmXRDdgfShbcrlOK3BZwn0Akqz7MZHXOMGpy03CLd7VDuVvd50KYyiQw5tKd7a0hSTggEZBHQjNckapbfegXvhmttYh6VN4vByOgjCOpcTr_33z08sCskv1yuT2m-Hdjs121ImSNKxppt1kebhkgNpTznZS1YCBjG3aexORmg6dqKt2obXcb7d7NClcy5Wnk-NZ5ahyuakrb9IjCspBPok488Vz3atV6i1ToPhNbJmo5tr-UMia1cLrHcDb5Edag2gL8lLwBnuSB36g49eH7jpm18dlW7UlwmT4S7K03dUv7ZBAXswpxGPSCfQURjODnuaDqW46htduvtos02Vy7ldud4JnlqPN5SQtz0gMJwkg-kRnyzTVOobXpWxSrzfpXhLbG2817lqc27lBCfRSCT6SgOg861ZIh3bSvFDhhaHNTXu5t3F27PzTLkkpeUIqCElCcJ2JVkpTj0cnFag1o5ddScCbxrK8azuKpk6dyHrEp5PhW0pkgJaS3jKVpCUuZHXaOuck0HY9Wt2uEW0Wqbcrg7yYUNlch9zaVbG0JKlHABJwAegGaxni9JuUThvfXrHc4lquSWQGZcp9DLaCVpBG9ZCUkglIJI9IitHaeulzRp3iLZbzddT-J-SsqX8WX1aJZH5tSec1JSRlHXG3aO4IJxQdL2m4Rbvaodyt7vOhTGUSGHNpTvbWkKScEAjII6EZq6rlbUV51ZJt3DfTGmFXNLPySjXFabddWra44sISnJdcBCkoCclA77ifLpJ6u1braboHhrbWXnXbxfHJDcx203WOwuQWeiUolDc0krHpHGckbe_Sg6WpXLt21Fq9HCjTbd21C7arkjWLVsXcGLm1JWiOULOH3GVbVlJPpJVjOwFQ61sDhy7ctPcX7zo5epLlqK1fFLdzS9cXg-9GdLmwtlY8lA7serHtJDaRvNuF_TZPFtfGyopmiLn0-SFhG8-obiB7euOxqlpbUNr1VYot5sMrxdtk7uU9y1N7tqihXoqAI9JJHUeVafummxN-Fe28b5e4uLAzcgiPL2JUW5SUeHIx1YVt3KR5qUo561rXTsa_af-DXatcWvVd3iu2twmPbWVhMRSFTihQcRjKyVKUck9sDHnQdf1FfKG1_Kr5N-K_wDTXgvjDw_LV_Ub-Xv3Y2_O6Yzn2YrnnjBqDW87ibqKBpuRcI0SwRI7zao95j29lsrRvLz6XRh5GTtIyANvU9eszqXU1-XqO6rXcZEZauGDtzLESWSy3L3n862UKKdw7BaSegGDig6CpWvOB1qnxtDWy7Xa_wB2vEy7wIspYnP8xLGW8gNjHTooZJyVEZJya0RqnU-sXIkzh_ZLzdhqG03W4y3JglOc9cJlsutBTmdxC95ABPdKR2oOuqVzXA4hzdSWbXWs03-faLTCtMGEwplsvoakuBKnlIZKkpLgWoNhRIxkHOBUXpBesLnqLVGkEXjVcRyTp03KEbpdEuykSEvICFBbZy0lWSCjOcHrkEUHVFR86826DdbbbZctpqfclOJiME-k8W0b14HqCepPbqPWK0rpbX07idf9CW62S5MPwcc3XUPh3FNHmNktJYVjHoqcBUUHukjpVXjVpsXvjZw1bVfL3bRNZuDHMgS-SqPymt-9o4O1S9-1R67kpSOmKDetK5s1FdL7eRxJ1KdbXKxydKzXo9vtkd5KGFJaSCgutkfnOacgZ8_WOlb-0lcX7vpSy3KY0GZMyEzIdaAxsWttKin9hJFBK0pSgUpSgUpSgirBp616f-MviiL4f4xmuXCV-cUvmPuY3r9InGcDoMAeQqwGhtNfFN6ti7Uy7AvMtyfOZdUpxLz7hBUv0idpylJG3ABHTFc6XTX-vJnC_ihInxJ1tMO7KS1cWbonfBdEmMjwKAjCiEoUr84PRVk-ZNblsnEyZK13b9PXvSk-zNXZt121S330LMlLad6tzaerZ29cEkjpmgybReh9N6Kivx9L2pmA3IUFOlKlLU5jtlSiVEDJwM4GTVhF4YaOiaRn6Yj2VtFjnPeIkRuc6d68pIO7duHzE9iO1YXYOPdqvGtItoRbkN2ybMVBiTxcGVuuOgkArjA8xtCiMBR75Hrq9-EDqfUmnE6LTpiG6-Jt9YZf5cpDJfIOURSVDoHfSyvskIweiqDaNrgRrVbIlvt7QZhxGkMMtgkhCEgJSMnr0AHeo6waXs1g0w3p61QUNWZtDjYirUp1JStSlLBKySQSpXc-dYJfOKd3iXIWm0aJmXa8w4DM28RmZraU28uJ3coLwQ6sdcBIGR1Hnine-MjbcXRL-mdPyr78qW5CozSH0suNraCfQIII-cohRyAkJJ60GSucLtGuaRa0w9ZUu2Np0vtRnZDq-Us5yULKipPc9AQOp9Zq6f4e6Uf0ejSzlkimwtncmKNwCVZzuCgd27qfSznqetWvDbXCtXi7RLhaH7JfLS-libAedDvLKhuQoLAAUkjODjy9WCc0oMDa4RaGZtE21sWFDMCay1HkstSHkB5LbnMRuwvJUFdd3zsdM46Vk-qdPWvVVilWa_RfF22Tt5rPMU3u2qC0-kkgj0kg9D5VK0oMem6L0_NuN5nybchcu8Qvi-c6HFgvMYKdnQ9OhxkYPbr0FRl84W6LvsO0RbtYmJLNpYRGhhTjgLbSAAlBUFZUAB2UT5-s1mlKDD5nDTSEzTJ09JsjLlm8QuUiKXHAlpxRJJbIVlsZUeiSAMnp1q0j8JNDxrNd7VGsLbNvuyY6ZrLch5IdDBy32XlJB6kpwVHOc1ndKCKuOnrXcb7aLzNi8y5WnneCe5ihyuakIc9EHCspAHpA48sVid34M8PrvcJ864aajOSpx3PuJddb3K3BRUAlQCSSOpTgnJz3NbBpQWd4tkK82yTbrrFalwZCNjrLqcpWPbWL2DhbozT9tusC0WJmNGurCo0wB1xS3WlAhSN5UVJBBPYis0pQYff-Gej9QWa02q8WRmVCtTSWISVOOBTLaUhISFhQURhI7k5x1q7vuhNMX7TcawXWzRnrRG2hiOMoDW0YGwpIKenTofOslpQax1xwshXPTWk9P6ehW6JZrVe49wkxHt2x2OjeHEjooqUrf-l365NZTovQumtEtSW9L2lmAJKgp5SVKWpeOwKlEnAycDOBmslpQY7e9FaevmorZfrpbUP3e2EGLJDi0KbwrcB6JAUASThQI6n11b_0faY-QnyN-LP_AFb-h-Id_W835-7f8_r872dulZVSgxLVvDjSOrrpGuOo7HGnTY4CUOrUpJKQchKtpAUMk9FZHU1eXPRen7ncZU-bbwuVKta7K6pLq0BUNRKlNBKVADqT6QAUPXWQ0oLW02-LaLVDttva5MKGyiOw3uKtjaEhKRkkk4AHUnNRUXR1hi6vm6oYtyE32ayI8iVvWd7YCRjaTtHRCeoGelT9KDFLPw80rZ9LztOW-zMt2WctTkiKta3EuKUACcqJI-anGD0wMYqPtXDLTuk2XZmh7NDgXxmM-iI6688UKWtIwHvSJWjclBwc4wduDWd0oNb8GuHsnRaL9cb07Bev18mKlylQUKSw2MkhtG7rgFSj1x3x5ZrJtY6K09rJEJOpLaib4Nwux1Fxbam1HGSCgg9cDp26CsipQYbqDhfovUOoEXu86fiSrmkpJeUVALI7b0ghK-gA9IHoMVmQAAAAwB5UpQKUpQKUpQKUpQaHv_CjVszT3ETT8KdYjatR3FV1iLdU6l5t5chlxSXCEkbAhsgYBOceR6bD1VpSdduJWhdQxnYyYVi8d4lDilBxfPZCEbAAQcEdckdO2azWlBonRnBi66c1NBQlWlFaegTlTGZXxU25c3E7ipDS3FoISEkj00ncMdCOmM74v6TuurLNZvk9JhMXW0XaPdo_jQrkrW1uwlW0E49Ly9Xl3rO6UGorzojXUXU0_UOj7tYotwvkKOxd2pjbim0PNI2B1ggZ6AnAUMevOemHap0dcNJ6j4Laa0lcI7dzgt3UsypbRU045ykOOb0g5CVkrHQ5AV54ro6lBgPC7R93sM7UV81VNhy9Q359pyT4FKksNIaQUNoRu6nAJ6n2fac-pSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgx7h_IelaRgPSnnHnlczctxRUo4cUOpPsq2gX9yTPU07e7IwoTHI4hqb_PkJdUgDPNHpKABHo-fY1JaRtj1m09EgSlNrea37i2SUnK1K6ZA8jXkC3XOE4pDU-GYapLj5QqGrmYW4pZTv5uM-kQDt_ZXXzTE-S019bLl4ImPFWLe8h8O3d9Ol7rcghrnxfGbE4O08pbiU5656hAz19fao-fqB5q6XOP8b2WF4VxKG2JTZLjgLSF5yHB3KiBhJ7edSL9lecTIiomITbJK1rdYLOVneSVpC93QKJP6JPU4PbFdyzNOpuaXnCoTH0vpKRhTKg2hAKT6wW9wPtrk6rZNxuM5cZmE2xFkGK3KkCShS-XvyEoABT1yleTnpjsc1YS9SOg20KmW2189EjnLmArSHGnEIKEnejzKv2DtUtItsxT7UqLObZm8kMvLUxvQ6B1B27hgglRHX9I5zXsGzIhyYTrbylCOw80rcOrinVoWpZPkcoPTH6XlighndRyOXay7NtltTJbkLU_LQShfLcQlOzK0YCgoqGSelXNxvkmPZ4j0B6FcpLpWrmMJIaW2gKUraAs9fRCfnH0iPsqRucCW_cYsyBKYYdZadZIejl0KCyg-S04I5Y9feqTlibnyW376mHcFttFtCDGw2klRJUEqUrqQEDv-ifXgB8G9qF_TH2tqty4zDiXxnIW6pwJz5bTsA-0j19Dt3fTpe63IIa58XxmxODtPKW4lOeueoQM9fX2r23afaipkNOu8-O7GREDZTt2toW6UjOfIOAeXzc-fQ1Y1J0vMtDktTi5KZCVSFN9cuqWrJTnrjf7M48qCkxd3U2qRMTcLbdPTQyz4NBQkOKUEhKlcxfmtPqwPXmvtV1lW1yQi8mO4ERHJiXI6CgFLeN6Skk9RuTg5657DFSlzhouEJyM4pSArBStPdCgQUqHtBAP7KsGrO484-5d5KJi3WFRgENcpKW1fOGMk5OBk58hgCgpImXZl-M1O8ElU0KQyW21HkOhBWEqyr0xhKuo29vb0snbleo0S_SHZFucTa0uYQmItJcIYS6DnmnAysAjB6DuM9JKHaZKJUZ2fP8AFJiAhhIa2HJG3cs5O5WCR0AHU9K-pVm58K-x-ft-NN3pbM8rLKGu2evzM-XfHtoLG0X7nT3mXLla7hHbjqfW_CG0NYIGFDevOQSe_wCifZVODf5rlrU7KYZaliVFQWwDgNPLbAPfuAtQ9W5J8ulXEmxSp6nF3Kcw4tbJjfmIxbTylLSpYOVqJJCcZz0yehr5maXjhSlWcRrdu5SlIbjDYpbbqXEKKUlPqUPsV36UEpcZbkaZa2mwkplSSysqHUAMuL6e3KB-zNX1Qcm23aSYrjtxgc-M_wA5opgrCf6txBChzcnovIwRjHnmpSCiWhkie-w87u6KZZLQA9WCpXXv1z-yguKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaVS5q_o7v3p99Oav6O796ffQVaUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQcx33Umo4ejtR6Hj3m4_KdGqWbVCmKlL8QI76uayouZ3fNQoE57dO1S-iNXXXWMjhJaWLnOS63EeuN5Wh9aXHkxyWUB0g5UFOJO4K7-eayzUPCyRcuOtk1sxIiotkdoKmR1KUHHH0IcS2tICdpxuR3II2n115wg4WSdD6x1beJ0iK-1cHlItqGVKKmIxdW4UKykAElSegyMg-ugwXhrxevVh4S2G6XywXi72hpxxq43-RMSVIUqSsJwlWVuABSE5yAD6PlWytZcTJtq1PMsWmNKzNSTLdHTKuJZkIZTGQoZSBuB3rIGQkdSO2euMf_opvn5Nn9Hvirb8dfruYvw_9s5_ztm75vT5vf2daldVaI1hF1teNQ8PrtaIq75HaYuDVybWrYppJQh1ooz6QSex6evOegZ5o7UUHVumLdfbUVmHNa5iAsYUk5IUk-0EEH2itb6N40SNU36MzC0jOVZJMpUVE9iU2-40QSAt-Okb2UZHzldADms-4daWY0Voq1aejPKfRBaKS6oY3rUoqWrHkCpSjjyrU9s4O6m_pBtd6utw07y4E_wAaq5wYio0-YkEnlupQEtYOcKIGT6zQWmneJeorA1xBfFgu2pYds1LcFPyVzQhEGKkp2oRvyVBO1R2JGEjr0zWeah4pFlen4mktPy9RXe8wE3RmIh9EcNxSAQtxashOc4A9YPXtmlaOH91h6L4l2h2RBMnU1wucuGpK17G0SWwlAcO3III64CvZmox_hzqq0jSF40jcrO1qO02JqxzG5yXFxZDaQk5CkgKGFgkdBnp26ghItcXosjT2nLlGtL4fueoGtOy4j7vLcgvqKgsq9E7tuAcdMhQ6jtX1xN1u_Dlas0tDYdYksaPl3xq4tSClba0lbYSlIGQQQFBQV-zzqEl8Ibunh_FhwrzFVqxq_jUzkt5siO7MycjAyQjBHl5dhnpSVw31zd9QalvOp7nYHZV10rJsTLcMOttsOuKykekkko7kqzuyogJwBQXdu4k3G2aa0HZrTY5uqdT3Gwxrg-34tLRS1y0hTrjq85JVnv3PnkjN98Hq_XDUVo1hNubk_d8ppiGWJrhW5Fa2tlLPUnaE7iNo6A5xVk9w61ZaF6Ou-kbjZmtQWmxNWKc3PS4uM-0kJOUlICuiwSOgz07dQcj4M6OvGjLRfmNQzYk6bcrzIuXPjBQCw4lAypJA2qJSokDIGR1NBC6k4wv2663sWjSVwvFisLvIutzZkIQGFgZWENnq5tz16jHn061eXTi7At0rUQehAxLfZGb5CfD_APb2XBgAAp9D0ylOcq-dnp2qCv8Awy1gmXqu26WvlojaY1TJckzky2Vqkx1OgB7lY9FW4D9LGPLHcuJfBZzUk3RrVnlsR7Va47dtuLb61BciE2ttSUJ2pIJ9AnBwMkUEjpjjKzqK16Odh2Yi4X-4vQXYZldYgaBU4sq2enhOxW3CfndxioCBx-uD-lYeqJOgp7GmVPBmXcBOQpLJLmzKE7QpwduuEjcSnyyZvS3CeTZONd21YZUVVid50iFESpXMZkvhsOrKdu0A7VdjnqPVVn_RTfPybP6PfFW346_Xcxfh_wC2c_52zd83p83v7OtBlfHu6_EnCe-3DmXJrk8j07bN8JIGX20-g7tVt79fRORkdM5qHv3FS8xta6l03p7Q8u-SbKlhxbrM5DSFIcaDhKtyfRUMgBI3FWCemMVkXGbSk7W_DW8aetTsZmbM5PLXJUpLY2PIWclIJ7JPl3xTSulJ1o4la61DJdjKhX3wPhkNqUXEchkoXvBAAyT0wT074oMekcY47-jtK3Ww2KXdLrqRbjUG1pdS2oqbJDu5wggJSR3x6j0Gca1u2urw_A4y3C8o1FahANnQi2x7pyHoS1KCHAy6ErSgKUNxKU-mk-WcjLbVwl1NZtBaGatNztLOrtLPynGnHeYuI8h9aytBO0L6pUkZx5H2GrK5cItZ3ew8SW7xdLG_d9Um3LacaLrbTZjr3LSobCQkDCUkbicZOM0Gcam4mSrfrSVp-w6Wn35VtYRJuj0d5DfhULGUhKVf1iynrtBBPlnriCd45xm-G-m9SKs7abhfnn2o1vduLbLaeU4pKlLkOBKUj0R3HdQHtrDuJep3dDcZL_JgXYWNu8Q4yZjk-2uvpfKEFKXIhbyFLSk7cObUhWe_lV0pwuut94LcPHWmLY3fLMqVIbh3uMXYrzT7q1FLqME9U7FDp09h6gMwkccIvyDs-pIFjfmuTLymyvwWZKVLadIUTsUkFLvRI24ICtw6ipXS_FF-Xf7xZtX6ckaZnW63G7EOykSEripOFL3IGAQfIZ8_VUQnhbeBpjScIv2JE236nj36amHETDjhtG4FtpLbY3KA2gFfU46q6CsgvugX71xNuN6lvMCyTtLuWB1tKlc_et4rKgNu3btPfOc-XnQRGm-ML9xulkF30lcLPYr87yLVc3pCFh9Z6oC2x1b3AdOpz5dOtTdt4i-N0rry8_Fez5LTZ8Pk-Iz4rwqAvdu2-huzjGFY9ZrFNP8ADLWCpWlLbqu-WiTpjS0huTBTDZWmTIW0Clnm7vRSEg_ok57HPera7cM9eMp1xadN3qwNae1NJlTVmW06ZLbj6cLbGBtCTgJKupA6gZ6UEnfeM7sJGmGLXpo3C6Xq0NXjwy7i1GQ02sA7EuOAcxYOfRABOM49Wy9KXhd_09Bubtvm21ySjcqJNaLbzKgSClST17jofMYPnWpdW8LNTXPTOk7bFd0vPatdoZt8iFdoqltB1CEpU8y8hIdBOMYyAQASM1snhppt_SGhbPYZc1U5-EyULfOfSJUVYGeu0Z2j2AUGCN8aH29X2y13XSM22W65zxb4smVLbRIUtStqVKiEBxKCcekemCKjNR8XNSzrNrxvTOj3ymwuToTl1FwbShktAgPBKk5UoAKWUdfmpGSVVA27gTqaDdrfJ8VpmQbZeG7q1NW06J04pe3lL7pB2jaVdEggkJz6xsfT_D6fE0pxGs86VFCtT3K4yo7jJUrlNSWwlO8ED0h1JAyPaaDHLH8u9ccMNLKmTVaUhBtty43JNwDkyZFTHQpD7a0pw2XFFRUFEKTtz1yRUn8H-7XK5takT8aXK9aXjy0N2e6XIfn5Cdp5oKiAVJSoABRHXJ7YwJrS-mdRxeEMjS9_-JJVwbty7bFDK3kx3GgyG2w6rosE_pFGDjtg1lWkLYqy6Us1scYix3IcNphbUQrLKFJQAoIK8qKcg4KiVEd-tBL0pSgUpSgUpSgUpSgUrBeB86XcuF1ll3GU_LlOc_e8-4XFqw-4BlR6nAAH7KyBmdcZS5EiG1GVEZdWyllWQ46UKKVEKzhPUKABBzjuM9NWrxtNfgTVKsbdLckzLo04EhMWSGUFI6kFltfX25Wf2Yqx03d37nyeehpO-3RJZ2Aj03eZuHUnp6Ax-3qayJylQEt69JvjMNmZbktPtPPoK4S1FAQpsBJ_OjJ_Od-nbt16fbt3fTpe63IIa58XxmxODtPKW4lOeueoQM9fX2oJylYnP1A81dLnH-N7LC8K4lDbEpslxwFpC85Dg7lRAwk9vOvJOoXxMaafuFrs-6ExJLc9BUorWVhSR-cR83YPI96DLaVShuc2Iw5zmn96Eq5rQwheR85PU9D3HU_aaq0ClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUGLcL9Oy9KaFtlluLjDkqNzd62FEoO51axgkA9lDyq-cs0oLfai3EsQX3S642lv84kqOVBDm4bQTk9iepwRU3SraZtMzIipNtlCXIdt81EZMkhT6VMcw7gkJ3JO4bTtAHUEdB0qgLPLiSw7aJcWOyIrMXlPxlO4S2V7SCHE-S8efapylQWIhOKuMOY88lTrEZxhYQjaFlZbJUOpwPzfbr379Otk_ZXnEyIqJiE2ySta3WCzlZ3klaQvd0CiT-iT1OD2xN0oItyzNOpuaXnCoTH0vpKRhTKg2hAKT6wW9wPtqi5bbmm4GZFuERLrkZph3mxFLCigrO4YcTjPMPTr271NUoPhkOBlAeUlboSN6kJ2gnzIGTgezJ-2vulKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKClzV_R3fvT76c1f0d370--qtKBSlKBSlKBSuY77qTUcPR2o9Dx7zcflOjVLNqhTFSl-IEd9XNZUXM7vmoUCc9unapfRGrrrrGRwktLFznJdbiPXG8rQ-tLjyY5LKA6QcqCnEncFd_PNB0LSua-GvF69WHhLYbpfLBeLvaGnHGrjf5ExJUhSpKwnCVZW4AFITnIAPo-VbC4mcVJ2jLlKZj6SlT4ENlL0me_LRDaORnayXB-eUB3SjrnpQbSpWjInEHU91452mNZrM_K03OsEaY2yqc20EsPOtlc1SSOqkZLfLzk7SR0VV9K1Vd-Emi9KWK-JXqjU892Q2l564hpDmFlfpyHuxCVoSAe-MDsKDctKxzQOpJGqbAJ82yzrLJS6plyLLHmnHpIVgBaDkYWOh6-quc7pr_XkzhfxQkT4k62mHdlJauLN0TvguiTGR4FARhRCUKV-cHoqyfMmg6vpWtbJxMmStd2_T170pPszV2bddtUt99CzJS2nerc2nq2dvXBJI6ZqCsHHu1XjWkW0ItyG7ZNmKgxJ4uDK3XHQSAVxgeY2hRGAo98j10G56VgfFqLfY9th6j0tIlqn2RwyXbch5Qanx8fnWlIBwVbclJwSCOnU1jeldUu621DN1umdPg6DscVaYzQUtoTXdm555xAPpJQPRAORkEjqDQbgpWoeG3G2FrPVEezOWtEBU5pb8BaLizJU6lAyUuobOWV7cnar1H1VCWr4QE2VaLLeJWgrk1Z7pIVCZkszG3SuTlQQ02gpSVZ243HaM7h1x1DfNK1Za-LzabLrGVqmwybHP0vyjMhF9EgqDoy1tWnAJV29QyOtWGleN8e92rU7j9oZj3Ky2ty7JisXNmW3IZQknHNayEKyACCMjcO9BuKlabsvGe4S5Wlnbtomfa7HqF1mLEuK5aHAX3B6KeWBnaTnCjjI648qzziNq9nRWnk3FyG9PkvyG4cSGyQFyH3DhCAT27E59nn2oMopWuLfxLlRdL6ju-ttLXHTarIEqcacWH0SAoejyXQAlZKsJOOgJGT1r40bxMm3XU8Oxan0rM03MuMdUq3F6Qh5MlCRlQO0DYsDrtPUDvjpkNlUrQ0Dj9cH9Kw9USdBT2NMqeDMu4CchSWSXNmUJ2hTg7dcJG4lPlk4jrW662vfEXiQOdqC2WvTkF1bfxdekMNRgIjrjLjjYG53mlCVYSQUbsEnFB1PStI6F1ZyNRaeN4nXdwN8PY92lOuziuOrC073FMlOS93Jd35I6Y86ltMcUdRX9bbjHDu6tQZ0J6XapSpSS3JKUFTaHSE4Y34ABUSOoxkdaDbFK1L8GrU-pNUcPmZWpobqk7lqj3VyUhxU8l53f8AmwMthshKAD0IxjAFXOneKku73_UUdzTD0axWCZMizruZiVNoDAJCgjaFEq2nKR0TlPU5oNo0rUPDbjbC1nqiPZnLWiAqc0t-AtFxZkqdSgZKXUNnLK9uTtV6j6q-G-ND7er7Za7rpGbbLdc54t8WTKltokKWpW1KlRCA4lBOPSPTBFBuGlc1HUl8wcXm5Z_pZ-Lf7U5_Zfo_f-q_7HzfZWyGOLMVPDe-6luNuMSfZpDsGVbOfvUJKV7UNhe0Z3Eo67emT0OKDZtKtbU_Ik2yI_OjCJLdZQt6OF7-UsgEo3YGcHpnAzirqgUpSgUpSgUpSgUpSg1NqHhZIuXHWya2YkRUWyO0FTI6lKDjj6EOJbWkBO043I7kEbT6684QcLJOh9Y6tvE6RFfauDykW1DKlFTEYurcKFZSACSpPQZGQfXWxZepLHDurdsl3m2sXJzAREdlIS8rPbCCcnP2VjUXiRa0611XYby7CtLVjVDQiZLmoQmSqQ0XMAKA2lOMYyc9-lBh_wDRTfPybP6PfFW346_Xcxfh_wC2c_52zd83p83v7OtW3Ezg9etVa5ut0iyrC9b7pFbiqVdI7jz9uCUbSYwHo5PVWTjBORjvW6J9yg2-AqdPmxosJIClSHnUobAPYlROKtl6hsqLIbyu8W5NnGCZxkoDAyoJH5zO3uQO_c4oNZad4fasseqdGXmLKsZ-L7Axp66MuKdVuZbcCitkhIyo4HzgAOvfvWQ8YNI3rVttt7NkdsjiI7qlvwLzED0eSCMAlYBcbUnrgoIJ3HJrMLpe7VaXGm7pc4MJx5DjjaZMhDZWhtO5xQCiMhKfSUfIdTWuInG6wzOHSNTw2VSJjsgRGrOy8hcrnLdWhlCwPmFYbKxnyzjdjqE7wZ0XL0JpBdruEph992W7KLcbfyI4Xj801vO7YMZ69ck1gN_4Uatmae4iafhTrEbVqO4qusRbqnUvNvLkMuKS4QkjYENkDAJzjyPTOtCa_l33UczTuo9OSNO3-PFTOTFckokIdjlW3elxAA6K6EY_54z6gwrVWlJ124laF1DGdjJhWLx3iUOKUHF89kIRsABBwR1yR07ZrX2jODF105qaChKtKK09AnKmMyvipty5uJ3FSGluLQQkJJHppO4Y6EdMb2pQK13w40DIsfBhjRN_eYcdVGlRZDkRSlI2vOOH0SpIPzXB3HetiUoNMcKeFd60rf7fIu50mIdrYWxHdttqQiXLJG0OPOqRuSoJJzsV6WepPXPxZ-FN8hcNeHennZVtM3TuoGrrLWlxfLW0l55ZS2dmSrDiehAGQetbqpQalv8AwrlX-48UPHTIzULVTUBMRTZUpxlcZvGXEkAY3hJGCcjPao7TnC2_x7Dqtm5p0fEnXKzPWqI3ZbaiM3laCOa66Gw51O3KRlIxkDOK3XSg1fd-H91maL4aWhqRBEnTNwtkuYpS17HERmylwNnbkkk9MhPtxU9xW0jK1fp2Kxa5jUO7W6czcoLzySptL7RJTvA64IJHT_HtWZUoNYydEap1boLUll4g3uA7Juu0R27bHwxC2EKTtKgFrytIJ3HywCKoaV0Tq-VrW0ah4g3a0yl2OO6xb2rY2tO9TqQlbrpWB6RSMYHT7Mddq0oNK_0U3z8mz-j3xVt-Ov13MX4f-2c_52zd83p83v7OtTc3h_dX7txZlIkQQ3q23sRIIK15bWiKtkl30eg3KB9Hd0z9lbPpQahs3Cye3eIK7tJhqtydDt6Wkhhai4Xtw3rSCkDZtzgkg58qv-Gel9fafftlvv8AqC0O6btMUxY7EGOebKSAEtl5Sx6O0Dsg9cdc1s-lBrzgnpK_6G0uvT17k2uTb4bivi52JzA4pC3FrVzdwxnKhjb5ffXmj9AyIFj19a709HWxqS7z5iDGUolDEhISArckYWADkDI9prYlKDTHCnhXetK3-3yLudJiHa2FsR3bbakIlyyRtDjzqkbkqCSc7FelnqT1zilu4E6mg3a3yfFaZkG2Xhu6tTVtOidOKXt5S-6Qdo2lXRIIJCc-sdJUoNK_0VXz6Vbf9YHyr_rF_wBl_wBj5n9b7Pm_9qsTNliax-EnNYsT8h7TsR9q4XxosqQyJ8be2lGVABRJIJx0V6R64zXS1KBSlKBSlKBSlKBSlKBSlKDiXjMtuTfdcsMW-LbbuzcVPoYTbHpMyU0ghRk-KWSGWtoKtqMDAAxg5rMtQ3bQcfjRxIma5touUORFgJgviKqQgFURJ2pIBCFrG3arp809RXVFKDlyTbZVp4bcIJGvYEuVpq3OvuXeOtlTvKCwrwqnWxk7UAgEEezHXFWVwtartwo4vStH2yS1pOfKhv2iMlhTYVyltqkONtkZCDtyOnZOPLA6wpQc8XDW2nuJHGfhmi0tPTLalq6tyDKiKS05zImFNYWMLwB6QGR6Q75qa-Cauzt8OvARYrUfUUJxbV3_AOjcp0q5zpaDiyBvwg9Opx26Vu2lBqjgFZo8iyv61mXRu-X2-rc51xb5nLS0h1SUtNJcQhSUDb2KR1HmAK2vSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlBGaauvx3ZI1w5PI52783u3Ywop74Hq9VeuXy2twZkxctAjRHFMvrwfQWk4KSMZzkiovhr_AKFW7_5n_EVWMXW1XBca6Rm4chTErx0lQDZ6rSuQED7Vb2SPWE9K6-asV8lqx6iZcvBab-Ktre5iGeS71BilaXXHVLS-IxQ0w44rmFvmbQEpJPodcjpXyL9bzBdlh1zlNOJacTyHOYlaiEpSW9u_JKhgY86hZYci3lcp2PKUwm8B0lphbh2GBs3AJBJG70cgd6pXDmynJ9zbhS0Ri7b0JBjrDrgak71r5eN2AFerPonpjFcnVPtX63uMS3S642IjZdfS8w42tCACd2xSQojAPUDyq7uE1i3xVSJSlJaCkp9BClklSglICUgkkkgdB51it-5t4bub8KFLDbVplRgp2OttbrjgQUpShQCjjYfLuoYz1q61DcW7jaVtRG7ohxD8d0qFveSpKUvtkqSFN4UQMnGD27EA0E7b7gzP5nIRKTsxnnxXGc5z23pGe3lVs1fYT0ksNCYtQdLJWmE8W94UUkb9m3AIIJzjpXzYHebz_wDpt0lY2_26JyNvf5v5pGfb3xgds9YWzKcYluMuzL2woz31COm35YIU-sj85yT6KgQSd_n3HkGTN3GK5cnoCHgZbSA4tvB6JPbr29X3j11asX63vrUll11ZCVLThhzDgT35Z24c-xOagoEG5tXCLeXdhS_JWpyOI6g8ht3alIUrd-iENEjaMbT6q-rK0-1cbewy1OSyzu5saUzuai4QoDkulIz1ISME-iT2oJuDfYU6UY8cTC6lW1W-E82EHbuwpSkAJOCD1PmPWKlKi7O043cL4pxCkpcmJUgqGAoeHZGR6xkEfaDUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQUvDMfqWv3BTwzH6lr9wVVpQKUpQKUpQaVuPFfXduvtos03hZy7ldud4Jn5QsHm8pIW56QRhOEkH0iM-Wa2JA1UiJp2DP1yiBpSdIK0qhy7i0sIIUQAHchKsp2q6dt2PKsQ4if69uEf_AO7_APlU1hPwjpENrXtmauUKDGZctq0t3adbnbkCsuH8w0wDy-Z2O5Sc9QMig31Pvtot9tbuM-6wItvcxskvSEIaVkZGFk4OftrGdbcS7BpWFp-W9MiSY95ntQ2XW5TYbShRwt8qzgtoGNxHQEpBxnNc5rYgp4JcO3L49Khy7TMuEdxyRbBOhxnOcrLUto-kkkbduEqIweg6Gq7zFtVwj0pebppyHFtcLWjbsh1qK6tl6Ec815Dbm5SGl7UgtjCSUj0fKg6Nt-uoD1z1CJsi0RLJa0RHGrp8bMLQ-iQjcFLSDlkZKQkqPp5BT0qcgX-zXG4SINvu1vlTo-edHYkoW431x6SQcjr665b4iLgu2Xjm5aENN21UfTSoqGm-WhLRS3sCU4G0bcYGBitjXfSdj0jxx4Vt6btka3JktXNl_wAOgI5yW4wKd-PnHKicnrQbXm6s07BemNTb_aI7sMBUlD0xtCmASEgrBV6IJUB18yPXUytaUIUtaglCRkqJwAPXXEGpE6ei8HL5aLrZpB4kQ56nbhLVEXvTukj84p7GOWpKkpAz1UQceddRceoVyuHCDU8WyIdcnLjDCGgSpaAtJcSAOpygLGPPOKCWuet7M3pa_wB5slwt15NohvS3WYkxC8lCFK2qUndtztIyR-w19aT1nadQW6zL8bBj3W4wGZ3xZ4tC3m0uNheNvRRAB74GcZrTUGZw9umjdeSuH2n5cN5nSsliTOTHWxH_AKpR5JBUAp0EZKth7H0jVjM0vZbLofghebZbo8a7SrxZ0vzEIw86l1oqWlS-5BIHQ9gMDpQdCS9SWOHdW7ZLvNtYuTmAiI7KQl5We2EE5OfsqnP1Xp23yX41wv1piyI6kIeafmNoW2pY3ICgTkFQ6gHuO1cfcZltyb7rlhi3xbbd2bip9DCbY9JmSmkEKMnxSyQy1tBVtRgYAGMHNbB1JY7HqLVfHm6zYUWe5DssR-C-tIXyiqApYWg-Ry2g5Hq9tB0TGvdqlXR62xrnBeuLKd7sVuQhTrafWpAOQOo7jzqzg6u03cJEViBqGzyn5QKo7bM1pangCQSgBWVYII6eo1ojSFhtdk1fwFl2uEzGlXS1THZzzacLkqMJDmVnuo7lqPX_AJVrDSitNzeEVms1lsz_APSXIuCHoUpERfMVtkf1qXsY5aUJKSM9FJJx0zQdnXfUdksz7LF4vFtgPPf1TcqUhpS_L0Qogn9lVbterVZ2Wnrvc4UBp1QQ2uU-hpK1HyBURk-yuXfhAlmXxE1Lbl22JFuEi3sohPO2x6fJuay30RHJJQwEn0SpIBzk5J6VeOS7CzceGN615FNy0mvSTUNla4ypTLc8bd-5AByopG3seo9mQHRx1NYQgrN7tYQJnxfu8W3jxX6jv_Wf9j53sqtZ79aL3zvia6wLhyTtd8JIQ7yz6lbScH7a5KtlsgXDQ0S1rgvMWuTxURGMN8FK0MqaCeWrzBCTg-2tj3DTjNj41aktmiYLFsdmaEedaYiIDSDJ55QhYAwAeietBu623203STJjWy6QJkiMdr7UeQhxbR7YUEklP7awbi1xVjaBn2i2swo1yu1xC1pYeuTUJDTaf03HHOiQo5Cc4BKVAHIxWlfg52pga-0-7Dus12fBgvN3GE1p1ENEXKMFuRIC0qcVv2lJKVk7eu3rjZ_FayWq6ccuFjdztkGY3JRdG30yI6HA6hEcKQlQUDuCVKUoA9iSR3oNkWXVNquRjxTcbai7r3Nu29ua2640-hILrXonJUjPXp07nFXUG_2afcX7fBu1vkz2M86MzJQt1vHQ7kg5H7RWk-Gum2ZsTi9drZDYOqfj-7xIMwoHNaVs9AJWeqfScOcf8qwzRLdhmzeGVs0ZZZMLWtqmtOX50w1sraZSkiQHlkDdvPzck4Bx0zig6Y-VmnfGCJ8f2jxRkKiBnxje8vJxua27s7xkZT3GRV3bb1a7o_JZtlyhTHoqtj6I76HFNK9Swknaeh6GuT9V6etLvC7jJqB2Awu9RtXvtMTCgc1pIks9Eq7j-sXnHfPsFbW0xp-1aX-Ekq3afgsQIS9Hh1bTCQlK1iWEbzjurAHXuaDbF6vtosTTbt7ukC3NuHahcuQhkKPqBURmr2O-1JYbfjOtvMOJCkONqCkqB7EEdCK54-EdIhta9szVyhQYzLltWlu7Trc7cgVlw_mGmAeXzOx3KTnqBkVnPwZCtHBeyRZG5MuG5KjSGl9FsrTIc9BQPUEAjofZQXmkuK1r1ZxHl6ZsbCpMJi3qnC6BZDbykupbKW07fSSCo-mDjKSAD3rGdQcWtdafXb0XXhYWnZ8gRYrSNQMOrdcIzgJQgnsOpxgeZFSUSMxD-E61GhsNMR2tFBLbTSAhKAJ3QADoBVWADqL4RV0dfO6NpS1tMMNnsl-VlanB7eWnbQU9T8X5Fqu17TatJzrvYrC4Gbrc2ZCEBhWAVBDZGXNoPXBGPPp1rZqLpBVZ03UymUW1TAk-JcWEIDRTu3knoBjrk1zleNQMaOtvFfR11izlXzUNwmybS01FW4JiZbYSnYoAj0T3yfZ1PStnwLLrmDatJ2OE3phzTjFsiQrsifzzKVtTseDez0CNgGN3nnPSgzuTerXFs4u0q5QmbUUJcExx9CWSlWNqt5O3ByMHPXIr5evtoZuzVreusBu5vDc3EXIQHlj1hGdxH2CubtKRrpdNV2rhFcW3V2zS9zduEp9fZ-E3tXFQfXlTgyPVtx2rFdY2R5_ijqaJdrvOh36VfEv22LG08iZIfa3JLLjUlS0FCUgAFIWAAnz6gB1xd9R2SzPssXi8W2A89_VNypSGlL8vRCiCf2V83LUlitcnw9zvVshyOUH-VIlNtq5ZVsC8Eg7Sr0Qe2eneuZPhAlmXxE1Lbl22JFuEi3sohPO2x6fJuay30RHJJQwEn0SpIBzk5J6VOaBtVo1XxO0P8bxot0YY4eRXkpfSHUh5L_LJIPTcCpY9h9ooOlaVitg-XHyquXyh-Tfyb_OeB8Dz_F_PHL5u_wBD5md239LGOlZVQKUpQKUpQKtfjKD8a_FnjY3xlyfE-E5qedyt23mbM527um7GM9K0bfdX68uitdah05ebdbbNpKW9FFsfhpdM0sJCnStw-knP6O3v26dz6vVI_pbOrURlY_o1-NRHJ6_2jm7M_wCFBvG4XKDbvDfGE2NE8S8mMxz3Ut811Wdracn0lHBwkdTirquXb49ra5QeFN91TfoFwt141JbZjUJmGlpUNSiVISlYOVp2KVnd1BA6nrW5-NF11PZtF-K0aw67N8S2h9xiMJLrEc53uIaJwtQ9Hp6ie2MgMxulyg2iA7Ous2NBhNY5kiS6lptGSAMqUQBkkD7SKuq5Y1Zqu56l-D3r9u7X-Je1Q3oSW3RCVDlNhUholL7JSEp7eiUlQPXr0rZEW86309xY0vadTXmBcrdqVuWpMViGGRBWy0HNqV5KljqBlXfr0FBTtHBrRd0Zjy7TfrzO0yqQZLNsj3UO2xSgskgJAOQFA59LuDW465e0fqvV8nSXCG16aulutD9_N2RJUm3MJZAadJSoNISlIKRuICdoUrG7OTU3cdd62sen9YxZ91ZnXXR1yguyZrEVtHjoT3VSFIwQkgHJKcEY79MkOhqVzWrjddYnEPUEyRIQ5ogtTotr_NoCVSorKFkhYG47jkDJwd4x2qQsd74kXnVumNPI1S1CelaVavM5523MuKDipCvmpCUgK2lDfqAycFXWg6EpXNN-4q68c1_ejpy23mbabRdDbzAh2PxLD6WyA4VyQd6HO5CQkjBTms01Jdddao4i6ksGiL7BsTWno0ZavEREveMeeSVgFSgdiABjKQSPbnoG2PjKD8a_FnjY3xlyfE-E5qedyt23mbM527um7GM9KidBaUg6I0nB09anZL0KHzOWuSpKnDvcUs5KQB3UfLtitB8WdbXfQXFxm6eAbm3xzRaI6-QFLYZdMpSlunpuLadij2BPTOK6E0emSnTFtVOu_wAdSHGEuLn8tDYf3DduSlAACevTp2xkk9aCYrCNc8NrXq68Rbsu5Xqz3aOwYyZtomeHdU0Vbtijg5Tkk_trN6UGPaF0jbNFWIWqz89TRdW-69Ic5jrzij6S1q8ycDy8qyGlKBSlKBSlKBSlKBSlKBSlKBSlKDDtA8PbVouTcpcSXc7lcriUGTOucnnvrCRhKd2B0Gf8vUKzGlKBSlKBSlKBSlKBSlKDW2peDWmr_fplykSLxFRPWly4QYcwtRpqk9i6gDr-wj19-tZCrQ9oVq86gKXecbP8R-E9Hw_huZvxt25znp3xjy86ySNIZlMJeivNvMqztW2oKScHHQj21UpMYRO9w1NA4D6agz7TJaueolotM5udBjOz-YzHKFbuWhCknCCcZ_SOB6Q65zfXej7XrayJtl48Qhtt5Elh6M6W3WHU52rQryIyfI96yKlBrT-hrT6tIX6wyJ97km-OMuT7jJlB2W6WlJU2CtSSMDbj5vYmsrvOlIN31ZpzUMl2SmbYvE-GQ2pIbXz2whe8EEnAHTBHXvmsgpQaLv3BhCZ_DWxWo3NemrJ8ZmTOEtDUmOp4BxpQUnaSeb22pOMDPTvndi4YWGz6TvlhbXPlIvSXBPmy3-bJfK0lO4rIxkA9OnQ9fXWc0oNWzuB2lJvD616QdXcRb7dJVLbfS6gPrWoq3blbMEHdjoB0Sn1VmLekbe3rtOq21yEz02sWhLIUkMhkO8zO3bndnp3xjy86yGlBri88HdM3bVD95ku3RCJT6JUu2tSimHKdRjatxrHpHoD3H-JqtrjhNYdYXpd0mSrvBkPsCNLTb5fJRMaB6IeGDuHl5dPsFbBpQYkNAWMalF45bvSyfJ_wRKTH8Lv34243Z8vnYx5edSWjNOR9Jaah2SDKlyYkRJQyuWtK3EoySE5AHQZwOnYCpulApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlBjPDX_Qq3f_M_4iqpWbnT7pOX4uUiRGmLGS8pTSmw4Rs5Wdo9Hpu756-ylK7fU_3X_c_64fS_00_Uf4u4DD9yEub42SzIEl5loJWeW2ltwoA2fNVnbkk9epwR0qyllyVeVxXZEpLCrwGiGn1tnYIG_aCkggbvSwD3pSuLuqajaXaYluFvky2_-lrdUXJDjpXtjur2ErUSUkoHTOPPv1pcrhJTLnFh1bXMiwEoGchouvuoUoA9M4I8uu0UpQXF8iu2zTt4dizpe1EF5SQ46pakuBBIWlZO4H2du2MVJwbXHhPFxlyYpRTtw9MeeGPsWojPTv3pSggL9LfRrG3RW330JcDRSEOEJHpOFe5PZe5KQnr83uKlNRoL8izRy6-209MKXOS8toqAYeUBuSQcZSD38qUoI_UbS7TEtwt8mW3_ANLW6ouSHHSvbHdXsJWokpJQOmceffrXzcJr4vXiG3nUNtt29XJCzsPNdebUCO3ZQP2pT6qUoPt2TIc1Q0ee6lpNwETlBZCCkQ3HMkdiSpY_cT6qsYDSo1g05cG5c9UuUqIHVOzHXEr37d-UKUU9QT2Axn2UpQXMxT5tV0vQlyUyIjr5abS6Q0EtLUnaUdju2nJIz6XQjAq5t0uQnVtzYW8tyO48UIbUchrYwwr0fVkuKyPsPrypQQdpvE1mXbVrkOvNqsLDqm3FkhThS6orP_aOwDPtqtp4PXNFnZuE2a6C1cFLUiS40VqRJQlJJQoZwCQB2GaUoJC9LdtN0tKYj8jkNMvLW248tzm5dYT6RUSTjmKwSen2dKo3xC3rdqx8yZiHYKnFRy1KcbCD4RpXZKgCN3XByMk-s0pQZRBhtQmS2yp9SSrdl59bxz9qyTjp27VcUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQf_9k=",
+  "width": 320,
+  "height": 533,
+  "page_rect": {
+   "left": 0,
+   "top": 0,
+   "width": 320,
+   "height": 533
+  }
+ }
+}

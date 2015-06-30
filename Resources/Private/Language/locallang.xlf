@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-01-30T20:22:33Z" product-name="page_speed">
+		<header/>
+		<body>
+			<trans-unit id="module" xml:space="preserve">
+				<source>Page Speed</source>
+			</trans-unit>
+			<trans-unit id="module.header" xml:space="preserve">
+				<source>Page Speed</source>
+			</trans-unit>
+			<trans-unit id="module.description" xml:space="preserve">
+				<source>Measure the performance of the selected page.</source>
+			</trans-unit>
+			<trans-unit id="extmng.key" xml:space="preserve">
+				<source>Key</source>
+			</trans-unit>
+			<trans-unit id="extmng.demo" xml:space="preserve">
+				<source>Use demo mode</source>
+			</trans-unit>
+			<trans-unit id="extmng.cacheTime" xml:space="preserve">
+				<source>Cache time in seconds</source>
+			</trans-unit>
+			<trans-unit id="language" xml:space="preserve">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="error.header" xml:space="preserve">
+				<source>An error occurred!</source>
+			</trans-unit>
+			<trans-unit id="error.invalid.key" xml:space="preserve">
+				<source>The provided key is either empty or wrong.</source>
+			</trans-unit>
+			<trans-unit id="error.http_request.connection" xml:space="preserve">
+				<source>It seems there is no internet connection from the server to the outside world.</source>
+			</trans-unit>
+			<trans-unit id="error.page.idIsZero" xml:space="preserve">
+				<source>Please select a page in the tree first!</source>
+			</trans-unit>
+			<trans-unit id="error.page.doktype" xml:space="preserve">
+				<source>This doktype can not be checked because it is a not available doktype (sysfolder, shortcut, ...).</source>
+			</trans-unit>
+			<trans-unit id="error.page.hidden" xml:space="preserve">
+				<source>The page is hidden and can not be checked by a remote server.</source>
+			</trans-unit>
+			<trans-unit id="error.page.restricted" xml:space="preserve">
+				<source>The page is restricted to FE users and can not be checked by a remote server.</source>
+			</trans-unit>
+			<trans-unit id="troubleshooting.header" xml:space="preserve">
+				<source>Troubleshooting</source>
+			</trans-unit>
+			<trans-unit id="strategy.mobile" xml:space="preserve">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="strategy.desktop" xml:space="preserve">
+				<source>Desktop</source>
+			</trans-unit>
+			<trans-unit id="statistic" xml:space="preserve">
+				<source>Statistics</source>
+			</trans-unit>
+			<trans-unit id="statistic.numberHosts" xml:space="preserve">
+				<source>Used hosts</source>
+			</trans-unit>
+			<trans-unit id="statistic.totalRequestKb" xml:space="preserve">
+				<source>Total requests</source>
+			</trans-unit>
+			<trans-unit id="statistic.numberStaticResources" xml:space="preserve">
+				<source>Static resources</source>
+			</trans-unit>
+			<trans-unit id="statistic.numberCssResources" xml:space="preserve">
+				<source>CSS resources</source>
+			</trans-unit>
+			<trans-unit id="statistic.numberJsResources" xml:space="preserve">
+				<source>JavaScript resources</source>
+			</trans-unit>
+			<trans-unit id="chart.resources.balloonText" xml:space="preserve">
+				<source>[[category]] for [[title]]: [[value]] kb</source>
+			</trans-unit>
+			<trans-unit id="resources.html" xml:space="preserve">
+				<source>HTML</source>
+			</trans-unit>
+			<trans-unit id="resources.js" xml:space="preserve">
+				<source>JavaScript</source>
+			</trans-unit>
+			<trans-unit id="resources.css" xml:space="preserve">
+				<source>CSS</source>
+			</trans-unit>
+			<trans-unit id="resources.img" xml:space="preserve">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="resources.other" xml:space="preserve">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="demo.header" xml:space="preserve">
+				<source>Demo mode</source>
+			</trans-unit>
+			<trans-unit id="demo.description" xml:space="preserve">
+				<source>The demo mode shows a static response.</source>
+			</trans-unit>
+			<trans-unit id="header.usability" xml:space="preserve">
+				<source>Usability</source>
+			</trans-unit>
+			<trans-unit id="header.performance" xml:space="preserve">
+				<source>Performance</source>
+			</trans-unit>
+			<trans-unit id="action.required" xml:space="preserve">
+				<source>Action required</source>
+			</trans-unit>
+			<trans-unit id="action.suggested" xml:space="preserve">
+				<source>Action suggested</source>
+			</trans-unit>
+			<trans-unit id="rules.passed" xml:space="preserve">
+				<source>%s rules passed</source>
+			</trans-unit>
+			<trans-unit id="cache.clear" xml:space="preserve">
+				<source>Clear cached result</source>
+			</trans-unit>
+			<trans-unit id="cache.clear.text" xml:space="preserve">
+				<source>Cache has been cleared!</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

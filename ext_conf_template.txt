@@ -1,0 +1,8 @@
+# cat=basic/enable/2; type=string; label=LLL:EXT:page_speed/Resources/Private/Language/locallang.xlf:extmng.key
+key =
+
+# cat=basic/enable/3; type=int; label=LLL:EXT:page_speed/Resources/Private/Language/locallang.xlf:extmng.cacheTime
+cacheTime = 86400
+
+# cat=basic/enable/3; type=boolean; label=LLL:EXT:page_speed/Resources/Private/Language/locallang.xlf:extmng.demo
+demo = 1

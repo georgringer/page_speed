@@ -1,0 +1,134 @@
+.screenshot {
+	height: 485px;
+	position: relative;
+	width: 250px;
+}
+
+.screenshot.desktop {
+	background: url(../Images/background_desktop.png) no-repeat;
+}
+
+.screenshot.mobile {
+	background: url(../Images/background_mobile.png) no-repeat;
+}
+
+.screenshot.desktop .screenshot-img-container {
+	width: 180px;
+	height: 112px;
+	clip: rect(0, 180px, 112px, 0);
+	top: 45px;
+	left: 32px;
+}
+
+.screenshot.mobile .screenshot-img-container {
+	width: 225px;
+	height: 375px;
+	clip: rect(0, 225px, 375px, 0);
+	top: 54px;
+	left: 12px;
+	right: 13px;
+}
+
+.screenshot-img-container {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.screenshot-img-container .snapshot-rect {
+	position: absolute;
+	background-color: rgba(255, 0, 0, 0.15);
+	outline: 2px solid #f00;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+}
+
+.screenshot-img-container .snapshot-rect.secondary {
+	background-color: rgba(0, 0, 255, 0.15);
+	outline: 2px dotted #00f;
+	z-index: 2;
+}
+
+.screenshot-img-container img {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.color-danger {
+	background-color: #dd4b39;
+	color: #fff;
+}
+
+.color-warning {
+	background-color: #fda100;
+	color: #fff;
+}
+
+.color-ok {
+	background-color: #009a2d;
+	color: #fff;
+}
+
+.rules .indicator {
+	padding: 2px 5px;
+	margin-right: 7px;
+}
+
+.rules h3 {
+	margin-bottom: 17px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-top: 30px;
+}
+
+.single-rule .title {
+	cursor: pointer;
+}
+
+.single-rule .title .fa {
+	margin-right: 5px;
+	color: #666;
+}
+
+.url-blocks ul {
+	list-style: none;
+	max-height: 200px;
+	overflow-y: scroll;
+	background: #fff;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.url-blocks ul li:first-child {
+	border-top: none;
+}
+
+.url-blocks ul li {
+	border-top: 1px #ccc dashed;
+	padding: 3px;
+	word-wrap: break-word;
+}
+
+a.screenshot-toggle, a.link {
+	color: cornflowerblue;
+}
+
+.score {
+	list-style: none;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.score li {
+	margin-bottom: 10px;
+}
+
+.score .indicator {
+	padding: 2px 4px;
+}

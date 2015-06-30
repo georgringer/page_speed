@@ -1,0 +1,1767 @@
+{
+ "kind": "pagespeedonline#result",
+ "id": "http://www.bbc.com/",
+ "responseCode": 200,
+ "title": "BBC - Homepage",
+ "ruleGroups": {
+  "SPEED": {
+   "score": 56
+  }
+ },
+ "pageStats": {
+  "numberResources": 131,
+  "numberHosts": 36,
+  "totalRequestBytes": "23657",
+  "numberStaticResources": 83,
+  "htmlResponseBytes": "134269",
+  "cssResponseBytes": "105084",
+  "imageResponseBytes": "680215",
+  "javascriptResponseBytes": "1312307",
+  "otherResponseBytes": "8998",
+  "numberJsResources": 56,
+  "numberCssResources": 3
+ },
+ "formattedResults": {
+  "locale": "De",
+  "ruleResults": {
+   "AvoidLandingPageRedirects": {
+    "localizedRuleName": "Zielseiten-Weiterleitungen vermeiden",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Auf Ihrer Seite sind keine Weiterleitungen vorhanden. {{BEGIN_LINK}}Weitere Informationen zum Vermeiden von Zielseiten-Weiterleitungen{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+      }
+     ]
+    }
+   },
+   "EnableGzipCompression": {
+    "localizedRuleName": "Komprimierung aktivieren",
+    "ruleImpact": 17.356499999999997,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch die Komprimierung der Ressourcen mit \"gzip\" oder \"deflate\" kann die Anzahl der über das Netzwerk gesendeten Bytes reduziert werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Ermöglichen Sie die Komprimierung{{END_LINK}} der folgenden Ressourcen, um die Übertragungsgröße um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu reduzieren.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "169,1 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "72 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.bbc.com/"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "89,9 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "77 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/glow/1.7.7/core/core.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "65,4 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "68 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/gloader.0.1.6.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "10,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "69 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/glow/map.1.7.7.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,7 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "65 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,6 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "63 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "LeverageBrowserCaching": {
+    "localizedRuleName": "Browser-Caching nutzen",
+    "ruleImpact": 7.46383349867725,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Das Festlegen eines Ablaufdatums oder eines Höchstalters in den HTTP-Headern für statische Ressourcen weist den Browser an, zuvor heruntergeladene Ressourcen über die lokale Festplatte anstatt über das Netzwerk zu laden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Nutzen Sie Browser-Caching{{END_LINK}} für die folgenden cachefähigen Ressourcen:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}} (Ablaufdatum nicht festgelegt)",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://images.amcnetworks.com/bbcamerica.com/files/2015/04/ripper-street-train-wreck-336.jpg"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} (Ablaufdatum nicht festgelegt)",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://secure-assets.rubiconproject.com/static/psa/edx/RUBICON-300x250-2.jpg"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://open.live.bbc.co.uk/wurfldemi/network.jsonp?callback=bumpDemiNetwork"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "30 Sekunden"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.bbc.co.uk/wwscripts/flag"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "4 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://emp.bbci.co.uk/emp/bump-3/bump-3.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "5 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://cdn.krxd.net/controltag?confid=JA8mItOH"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "20 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.googletagservices.com/tag/js/check_359604.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "20 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/requirejs/lib.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "30 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://cdn.krxd.net/userdata/get?pub=5d7aaa39-eeed-454f-bb7d-ecea38d770fc&technographics=1&callback=Krux.ns._default.kxjsonp_userdata"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "60 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.googletagservices.com/tag/js/gpt.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "60 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://gum.criteo.com/sync?c=2&r=2&j=rp_onUserIdLoaded_211570_15"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "60 Minuten"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.chartbeat.com/js/chartbeat.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2 Stunden"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.google-analytics.com/analytics.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2 Stunden"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ads.rubiconproject.com/ad/12198.js"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "3,8 Stunden"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MainResourceServerResponseTime": {
+    "localizedRuleName": "Antwortzeit des Servers reduzieren",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Ihr Server hat schnell geantwortet. {{BEGIN_LINK}}Weitere Informationen zur Optimierung der Serverantwortzeit{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/Server"
+      }
+     ]
+    }
+   },
+   "MinifyCss": {
+    "localizedRuleName": "CSS reduzieren",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Ihre CSS-Ressource wurde reduziert. {{BEGIN_LINK}}Weitere Informationen zum Reduzieren von CSS-Ressourcen{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+      }
+     ]
+    }
+   },
+   "MinifyHTML": {
+    "localizedRuleName": "HTML reduzieren",
+    "ruleImpact": 1.6248,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch die Komprimierung des HTML-Codes, einschließlich der darin enthaltenen Inline-JavaScripts und CSS, können viele Datenbytes gespart und das Herunterladen und Parsen beschleunigt werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Reduzieren Sie HTML{{END_LINK}} für die folgenden Ressourcen, um ihre Größe um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu verringern.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "15,8 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "14 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.bbc.com/"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "15,8 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "14 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MinifyJavaScript": {
+    "localizedRuleName": "JavaScript reduzieren",
+    "ruleImpact": 1.3716000000000002,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch die Komprimierung des JavaScript-Codes können viele Datenbytes gespart und das Herunterladen, das Parsen und die Ausführungszeit beschleunigt werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Reduzieren Sie JavaScript{{END_LINK}} für die folgenden Ressourcen, um ihre Größe um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu verringern.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "11 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "8 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten nach der Komprimierung {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/zones/3pt_zone_file.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "3,8 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "35 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten nach der Komprimierung {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/av/emp/adverts.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "2,7 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "44 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten nach der Komprimierung {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/av/emp/analytics.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "2,3 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "60 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/glow/1.7.7/core/core.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "604 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "1 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/gloader.0.1.6.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "592 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "4 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/glow/map.1.7.7.js"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "589 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "23 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Reduzierung von {{URL}} könnten nach der Komprimierung {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://cdn.krxd.net/controltag?confid=JA8mItOH"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "517 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "12 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MinimizeRenderBlockingResources": {
+    "localizedRuleName": "JavaScript- und CSS-Ressourcen, die das Rendering blockieren, in Inhalten \"above the fold\" (ohne Scrollen sichtbar) beseitigen",
+    "ruleImpact": 36.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Ihre Seite enthält {{NUM_SCRIPTS}} blockierende Skript-Ressourcen und {{NUM_CSS}} blockierende CSS-Ressourcen. Dies verursacht eine Verzögerung beim Rendern Ihrer Seite.",
+     "args": [
+      {
+       "type": "INT_LITERAL",
+       "key": "NUM_SCRIPTS",
+       "value": "13"
+      },
+      {
+       "type": "INT_LITERAL",
+       "key": "NUM_CSS",
+       "value": "3"
+      }
+     ]
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "Keine der Seiteninhalte \"above the fold\" (ohne Scrollen sichtbar) konnten ohne Wartezeiten für das Laden der folgenden Ressourcen gerendert werden. Versuchen Sie, blockierende Ressourcen zu verschieben oder asynchron zu laden, oder laden Sie kritische Bereiche dieser Ressourcen direkt inline im HTML."
+      }
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Entfernen Sie JavaScript, das das Rendering blockiert{{END_LINK}}:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/gloader.0.1.6.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/glow/map.1.7.7.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/requirejs/lib.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/desktop/3.5/script/barlesque.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/desktop/3.5/script/vendor/edr.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://www.bbc.co.uk/wwscripts/flag"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/orb/analytics-modules.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/bbccom.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://node1.bbcimg.co.uk/glow/glow/1.7.7/core/core.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/script/zones/3pt_zone_file.js"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ad.doubleclick.net/N4817/adj/bbccom.live.site.www/bbc_homepage_int;slot=wallpaper;sz=1x1;sectn=nonnews;ctype=index;nnsec=homepage_int;referrer=nonbbc;domain=www.bbc.com;referrer_domain=;rsi=;keyword=;tile=1;ord=31854401975952?"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ad.doubleclick.net/N4817/adj/bbccom.live.site.www/bbc_homepage_int;slot=leaderboard;sz=728x90,970x66,970x90,970x300,970x250,940x230,930x180,844x179;sectn=nonnews;ctype=index;nnsec=homepage_int;referrer=nonbbc;domain=www.bbc.com;referrer_domain=;rsi=;keyword=;tile=2;dcopt=ist;ord=31854401975952?"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Optimieren Sie die CSS-Darstellung{{END_LINK}} für die folgenden URLs:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/frameworks/barlesque/2.83.4/desktop/3.5/style/main.css"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/wwhp/1.67.0/desktop/css/homepage-compiled.css"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://static.bbci.co.uk/bbcdotcom/0.3.312/style/3pt_ads.css"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "OptimizeImages": {
+    "localizedRuleName": "Bilder optimieren",
+    "ruleImpact": 20.31130000000001,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Durch eine korrekte Formatierung und Komprimierung von Bildern können viele Datenbytes gespart werden."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Optimieren Sie die folgenden Bilder{{END_LINK}}, um ihre Größe um {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) zu reduzieren.",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "198,1 KB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "37 %"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Durch die Komprimierung und Größenanpassung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/624-351/images/live/p0/2p/nt/p02pnt1r.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "87,1 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "94 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/336-189/images/live/p0/2p/52/p02p5231.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "21,6 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "54 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/ns/p02pnstm.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "17,2 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "72 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2n/px/p02npxjw.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "12,1 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "67 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/336-189/images/live/p0/2p/nm/p02pnm0c.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "10,1 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "47 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung und Größenanpassung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/images/ic/336x189/p01t67p4.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "9,1 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "79 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/ny/p02pny47.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "3,8 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "40 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://images.amcnetworks.com/bbcamerica.com/files/2015/04/ripper-street-train-wreck-336.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "3 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "5 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/304-171/images/live/p0/2p/q1/p02pq1zw.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,9 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "20 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82446000/jpg/_82446535_picture3.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "45 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/304-171/mcs/media/images/82474000/jpg/_82474963_murphyfalcon-murphy-freddiegrayphoto.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "18 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82471000/jpg/_82471978_thinkstockphotos-115962945.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "28 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82455000/jpg/_82455718_82455717.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "70 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82414000/jpg/_82414598_026692524-1.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "35 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82268000/jpg/_82268492_garethbale2_getty.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "28 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82455000/jpg/_82455765_thinkstockphotos-93394580.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "28 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/304-171/mcs/media/images/81342000/jpg/_81342577_globe.money.think.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "15 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82454000/jpg/_82454662_82454661.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "48 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/304-171/mcs/media/images/82475000/jpg/_82475232_samuels_afp.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "13 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/336-189/mcs/media/images/82441000/jpg/_82441250_golem1024.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "10 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/96-54/mcs/media/images/82472000/jpg/_82472829_82472828.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "48 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/144-81/82459000/jpg/_82459511_houthi_epa.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "36 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/400-225/82448000/jpg/_82448845_82446819.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "7 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/624-351/82448000/jpg/_82448845_82446819.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "4 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/96-54/82448000/jpg/_82448845_82446819.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "41 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/96-54/82450000/jpg/_82450503_82449817.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "50 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/news/96-54/82451000/jpg/_82451608_82450512.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "59 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/144-81/mcs/media/images/82476000/jpg/_82476400_82476398.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "37 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/624-351/mcs/media/images/82476000/jpg/_82476455_026854977.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1,5 KB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "6 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://secure-assets.rubiconproject.com/static/psa/edx/RUBICON-300x250-2.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "914 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "3 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://pagead2.googlesyndication.com/pagead/imgad?id=CICAgMCu2N6YSxABGAEyCDn6UWQ2vjBJ"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "844 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "24 %"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Durch die Komprimierung von {{URL}} könnten {{SIZE_IN_BYTES}} ({{PERCENTAGE}}) ohne Verluste eingespart werden.",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "http://ichef.bbci.co.uk/wwhp/ic/ibroadcast/336-189/images/live/p0/2j/gp/p02jgpgt.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "814 Byte"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "6 %"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "PrioritizeVisibleContent": {
+    "localizedRuleName": "Sichtbare Inhalte priorisieren",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Die Inhalte \"above the fold\" (ohne Scrollen sichtbar) wurden ordnungsgemäß priorisiert. {{BEGIN_LINK}}Weitere Informationen zum Priorisieren sichtbarer Inhalte{{END_LINK}}",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "version": {
+  "major": 1,
+  "minor": 15
+ },
+ "screenshot": {
+  "mime_type": "image/jpeg",
+  "data": "_9j_4AAQSkZJRgABAQAAAQABAAD_2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj_2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj_wAARCADwAUADASIAAhEBAxEB_8QAHQAAAQQDAQEAAAAAAAAAAAAABgAEBQcBAgMICf_EAFIQAAIBAgQCBgQJBwoEBQQDAAECAwQRAAUSIQYxBxMUIkFRVGFxkxUjMlKBkZLR0ggzQlOhseEWNWJyc3SUssHTFyQ08BgmQ0SzJWOC8TdVdf_EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf_EAC4RAAICAQMDAwIEBwAAAAAAAAABAhEDEiExBEFRE2HwFCJxgZHRBRVSU6HB4f_aAAwDAQACEQMRAD8A9U4qjiXjXPqfjzN8loKnLKWlpIqQxvUU-ss89xYkyptcchdjewBOLU1SfMX7X8MCea8C5ZmOeVWbua6Cuqo445np614wyp8nYciPPngCrMn6WOJ8wgyvtHwXRvLTV1RUs1PbT1EgUKNcqhduZZhyx2XpN4t6yspZGyhZqTMpqaSfschUwRU5mLrHruWIW4F97jw3wd03RXw9SrSdkiroHpVmSN0rpNWmVtTgk_KufPC_4VcPWvozHru19u6_4Rl63rtGjVrvflgAf6I-kqt43zzMqSR4ZKOCjWZWFL1Lhy-kg2kcEWtyxcOBbIeDcvyPMqivo-0vVzwCnZ56ppAEDagADsNyTt54JtUnzF-1_DAG-FjTVJ8xftfwwtUnzF-1_DACm_NP_VOIHPOK6TJc2ioqynq7PD13XxxF0G5Gk23vt_3bE4_WMjLpXcW-V_DGbyfMX7X8MAQmV8W5XmeZdhpWqDPd179O6KGT5QuRa-Hmb5omUUIqZYpJEMwjOj9HU1tR9Q9V8P7yfMX7X8MYUOBYop3J-V6_ZgAcHHGUNAJIe1y3XUFSna5F2Hjt-ifHE_VTdnjnm0M_VxF9K82tc2GN4lMUaxxRRoiiyqpsAPIC2M_Gay2leVvlfwwAJZd0hZVV00k8sNbSoqs462AklRpN9r8w6EDnvjvT8d5VKH1x1sTK7KFanYlrKTfa_kRvgnvJ8xftfwwryfMX7X8MAau-hmcg2VCbYGf5dZatLHI8NWZ2gWoMCR6iqsCRc8r2G--Ce0nWatK8rfK_hjILjki_a_hgBnlmYRZpl1LWwLIscu4WRdLAi4II9oOIuu4uoqCWoSqhqlMczQoEiLGUqFJI8P0h4-BxPt1jFe6uxv8AK_hjN5PmL9r-GAIXLeK8szGrhp6Vp2eZmVC0DBSVW53tYbYe5tmC5VltVWyRSSpEQSsfOxIF_ovfz22vh7eT5i_a_hjCiQFrqpub_K_hgAaHHWULGWn7TEwYoVMDHk4UG42N7gj24JWJEhIFzp5fTjEiGQASRRuAQw1G9iNweXPGfjNerSvK3yv4YAh8i4iTNqrs_ZJ4JRAtQddiAjGy7jxJDi39A-rG-b53Fk4oFnhldah9GpBtGPFj6sS15PmL9r-GMR9YqAaV2Hzv4YAF4uPcolnVUFUYjGj9b1DW7xsBa1_9ME08ohEspBYJGWsOZtfHS8nzF-1_DGvxmvVpXlb5X8MACmUcf5ZmFKszwV1MWvZJICTYWudr-Z-r2YJMvzOkzCngmpplYTIHVTs1j5qdwcObyfMX7X8MYu_zF-1_DAEfnGYNltC9QEMioHdlVbsQN7AeeB1eP8sKITVIGdgoURsTqKhrC3PYjlgslpxMumaJXFzsW8_owzMeX2LEUtltcmUbX5f6YAi8r4sgzOrqKekYNJCqudUZAZT4j67Yk_hGbyT6sZUZcCdBpQfG0w_78Djb_kdu9T77j4_ngDT4Rm8k-rC-EZvJPqw4ip6eVA8SRuh21LLcY27FF-pX7ZwA1-EZvJPqxq-ZzqjMEVrAnSq7n1Dfnh52KL9Sv2zhdii_Ur9s4AgeEuKXz55VaKKJ4mQOqMWsGTUOYBBG4ItzB3OCvDRKZEkDrENY5EuThxqk-Yv2v4YA3wsLCwAsLCwsALDTNqtqKhknjRXdSoCs1hcsBubHzw7xF8S7ZRL_AF4__kXAHE12Y3_M0XvX_DhduzH9VQ-9f8OONTUw06NLUSxwxA7vI4VR9J2xq1XTqpZqiFVBIJMgAuBcjn5b-zAljnt2ZfqqH3r_AIcLtuZfqaH3r_hw1WvpGWFlq6YrMdMTCZSJD5Kb7n1DGJMxooi4kraVCjBG1TKNLeANzsfUcCjvtuZfqqH3r_hxntuZfqqH3r_hw2eupY5FSSqp0dm0KrSqCW22Avudxt6xjC5jRsZgtZSsYReUCZSYx5tv3fpwA67ZmX6qh96_4cZ7ZmX6qh96_wCHDNMzoXiMiV1I0YYIXWdCoY8he9rnyw5eVEK63VSx0rqIFz5DzPqwBv2vMv1VD71_w4Xa8y_VUPvX_DjkaqBahadp4RO4usRcB2HmFvc45HM6FXCNXUgcrrCmdASvna_LY7-rADvtWZfqqH3r_hwu1Zl-rofev-HDRM1y9zGEzCiYyG0dqhDrPLbff6MZOa5esHXGvohDq09YahNN_K97X9WAHfacy_V0PvH_AA4Xacy_V0PvH_Dji9dSxx9ZJVU6R799pVA25738PHGq5nQmnacVtIYFbS0onTQD5Fr2B9WAHPaMy_V0PvX_AA4XX5n-qofeP-HGna4Osjj6-HrJV1Rr1gu481F9x6xjArqbRrFTBoFu91q23FxvfxGAOnX5n-qofeP-HC6_M_1VD7x_w450mYUtWGNJV084QAt1UqvpB5XsdsYbNaFIY5XrqRYpDZHM6BXPkDex-jAHXr8z_V0PvH_DjPX5n-rofeP-HGWqoU165Yl0EK13A0k8gfIm4-vHIZpQGYRdupOtIDBOvTUQeRte-9x9eAOnXZn-rofeP-HC67M_1VD7x_w46JPC76EljZrE6QwJ2Njt6jt7ccpMwo4qgwSVlMkwFzG0qhgPYTfAJN8G3W5n-qofev8AhwutzT9VQ-8f8OMT5hSU76Kirp4n1adMkqqb-Viee4-vG0VfSysViqqd2D9WQsqnvb93Y89jt6sC6XzRqz5mylWioiCLH41_w4j1ypljKLl-WBD4B329nd25eGJNK6meYQpUwNMQSEWRSxA2Jte_gcdO1Q6rdbHfX1dtY-Va-n228OeBKfgiWyt2jCHL8s0A3trceN_m-ZONDk27E5dlhJGk3d9xa2_d3xORzJKuqN1dbkXU3FwbHl68bEixwA3yWQvSshhjhMUjxlY2JXY8xcDD_Edkvyaz-9S_vxI4AWFhYWAFhYWFgBYWFhYAWFhYWAFiK4n_AJmm_rR__IuJXETxUwXI52YgANGSSbAfGLgAT44yibO8rSClSJqmKYSxtJL1YRgrAN8hw3yvkspBBPI2wL5hwXm9ZS1FG8-WdS8k1WJlDITNJS9QU0BbKga7XBO1hbB6a2m1H_mYOf61fvwu2U3pMHvV-_AlgBQ8EZpSzUs8Zy-OpWqaUymTrNEbNGWUqYgrk6CQQEKm25sb7zcC5jPktHlyfBFJJRyMwro4xJJVXilUPKrpYsTICbk82II2we9rpvSaf3q_fhdrp_SYPer9-AK4zDo7zGZVWmeiSPvKFeZm0AxUyi5MZL2MDfNJBHeG-Cjg3h2pyirzUZjHSTU9XNJICjB9SvKz6WQxi2zb3ZvowQdsp_SYPer9-M9tp_SYPer9-BQJHBE1NlmWR09Jk1VLTCrSWnqUKwv1zHTJspuyLYbjkSARhzn3B-ZZhlmQ0dNmscZyenV4ppIyzS1SBQjn5qgKd9z3jtgu7bT-kQe9X78Z7bTekQe9X78AC3EfDFbm_EQrY0y5IpIaVGncsZ6VopmkYw93mdWkG49d-WImm6O6pctzSOWrpxUVGXCjhVEUx6tMgJYlNYHfFtJHjcHFgdspvSYPer9-M9spvSaf3q_fgQDJeC6qDP6Cqo5KeemhpeoczlInDGRmvpSHSR3vDSdtziFg6N8zpaOiRJqGplgeFiSwhBVaZotFhEy7MxOoqSwIvYjFndsp_SYPer9-F2yn9Jp_er9-AA3K-B5qXiKHMJpqaSjeprKmpo2XWjNKCqMoItfTYMLWOkHnhyvBzjgjJsjjelgmpaimmqJYolKsY2uzAMpDMRa2oe3BUKym9Jg96v34z2ym9Jg96v34CwGTgCSjrI4qA0j0fWUki1lQSaqmEJuUjstrOb8ioGptiLDDbK-jutpJsvmaspQ0U1D2mJdTRzxQIARYjZgwJU-IYg89rD7ZTek0_vV-_C7ZTek0_vV-_AWDS8IaOEs9ymn7HSz5jNUOskMeldDyF0RrAEi3dIHgTbEZBwJUVGew5hVmhy6HrpJjR0CK8cV440AXrI9J1dWSxCqeVt7nBz2ym9Jp_er9-M9sp_Saf3q_fgUH854Ylr-LYMyjmhWgdFerp2BvLPEHEDDwsNZvf5ieWBjLejzMqemzCmmegYVFDHDHMsm8c0cEaK2kx3sHiBvrG3hfFj9spvSaf3q_fjPbab0mn96v34AEuDOE8x4dzKoqZailqxMI0uzMGiVi0tQV23LTNqA2FudrY61nCU1bxLndRVinbLszh6okSfGJ8SI76THzuLghx7MFPbKb0mD3q_fjPbKb0mn96v34HTHlljtx7gQOD82M2T1tTLQ1eYxyzT17l9AldzGAVvG-wWIC1h7RjlRcAVcFDmiNVQGrng_5OeM9WaacTPIrAhbmxZTqN2HeXcHB6Kym9Jp_er9-F2ym9Jp_er9-LZ3-ty1XzmwPn4MlTOYny-HLYqKMUXVzMW7RD2dmYhLL-nexJbkWuDjlS8E5nFludQzZhTy1OYqKxJlUxmnrwxIkU77bgatjZALb4Nu2U3pNP71fvxntlN6TT-9X78LJ9Zlqr8f4NcmpPg2nShhhgioaeNEp9DEsdu9qBHn43N7knEgTsd8MhWU3pNP71fvwjW01v-pp_er9-IeaTcnbHGS_JrP71L-_EjiL4fdZIat0ZWU1UtipuD3sSmBBYWFhYAWFhYWAFhYRNgTiKoM9o62oEEa1MchcxgSwPHdgLkXI8BgCVwsQ8fEVBIHdDOYETrHn6h-rQaA-7WsO6QfpxhuI6FVUstWCQzEdlkuqrpuxFuXeXf14AmcYdVdSrqGU7EEXBxGtnuXCaaI1AvCIy50nSBJ8k3ta24ufC4va-HMGYU09JJVROWp0LguFNjpJBI8xsdxz8MAbdhpfRoPdj7sLsNL6NB7sfdhpTZ5QzzQQrI6TzO0aRSRMj6lXUQQRttY7-Y88Zq87oaWepgllYzU8ayOiRsxsxsLWG5vbYb7jzGAHXYaX0aD3Y-7C7DS-jQe7H3YjDxPlytpY1CkfnL07jqt7d_bu7kc_biQoswpq1pFppCxj2bukW3I8f6pwBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgBv2Gl9Gg92Puwuw0vo0Hux92HGFgDWONIkCxqqKOQUWGNsLCwAsLCwsALCwsLACPLfA7NSUJJkp8zME4qHqFkXS2ksukixFiLYIX-QfZgF8MVIDynyXLKaqaSnzFEDII79XGZVAiEe0hGobAH6_A2xinyehpwDS5yYSwdX6qONVKtoBCqFsp7g3A5knDPfHOD80v0_vwoEtT5PktOztFWMGkjkhk1S6g6OALaTsLBVtYD5O98SVPNTU9KKaCvijiSBYYiANSEAjV5fN2tbbA1hYUQnKCGjpoaRJczE708zTCQ6VLsUZTqtzPeJv54aVmS5LVzzzS1rmad2aUmW4dTp7mk921kQbC_dG-I3CxaKSlXk-QTyxyI9PA8IXqDGqfFMr69S3HMnn5jHfLoKPL65poM0HUuO_CwUhjdiDe1x8r9mITGCMKIGnwlRekxfawvhOi9Ji-1gKwiMKFhp8KUNyO1Q3_AK2F8J0XpUX2sA4_PP7B_rjbChYbfCdF6VF9rC-FKL0qL7WAjGLevChYcfClF6VF9rC-FKL0qL7WAfCwoBx8KUPpUP2sL4UofSoftYBsYIwoWHPwpQ-lQ_awvhWh9Kh-1gFwiMKFh18K0HpcP2sL4WoPS4ftYAyMYwoB78LUHpcP2sOKeohqU1wSLIl7XU33xXWC_hH-a2_tW_cMRqik2cRa5_lzqGScspFwRE5BH1Yk25HA3lDEZTRWJ_MR-P8ARGICS-HKD9a_uX_DhfDlB-tf3L_hxork-J-vG2pvM_XgDb4coP1r-5f8OF8N0P6yT3L_AIcYDHzP143DN84_XgDX4bof1knuX_DhfDVD-sk9zJ-HHQMT4n68bBm8z9eAOXw1RfPk9zJ-HDKvzHrpIzSVzwIPlL2V2Lbje9tth-3EornzP146Bj5nAlg61VM0rE5xMEPgtGw8LfN898atV1WtiucOAeV6Jjbf2YJbnzOM3PmcCkDllVJ2yBajNXl1d0RmmMYdrHxI-m3qwRYjMzJ62g3P_VL_AJWxJjlgDD_IPswCkYOn-QfZgHxUDXxGOUIAiT2Y7Y5QfmU_qjCwb4xjbGLYWDGERjNsR-c5pBlNKk09yZJFijQGxd2Ow_78sG_ISKb6T-lLNct4knyrJYRBFRyBHnLd6VvEWItpH7cW5wnm659w1lmaoLCrgWWw8Cef7QcUJ0o0cnEPFRrqesSAIoVoxT3BZTz5kE28Tix-j3j34QzKLIMzpYKapEQ6iSnXRG9h8nR-ibeW2OEMib2Z1nBpcFlYwRfG2MY7HI5AfHP7B_rjbGF_PuP6I_ecdLYtkNLYxjYjCwsGlsLG1sYO2FgxjBxsRjGFg1IxrjfCwsGmMY3Ixi2-Fg0OC7hL-bG_tW_cMCdsFvCf82N_at-4YNlJpuRwM5R_NNF_YR_5RgmbkcDGUELlFESbAQIST_VGIRj3G6m-GqVdNImuOogdNJfUsikaRzN78vXhJV07vIsdRAzRi7hZFJQeZF9vpwKPBjIOGy1lMY4n7TBplNo261bOfJTff6MZirKWUExVVO4DaCVlU2by2PP1YAdg42Bvhj8I0Qg641tJ1OrT1nXppv5Xva_qxvLmFHAEM1ZSxh11KXmVdS-Yudx68APQcbK1sN46iF5TEk0TShQ-gOC2k8jbnb146CRTIUDqXABK3FwDyNsAOAcbY4qbY6A4pngZ5n-doP70v-VsSY5Yi8z_ADtB_el_ytiUHLENGH-QfZgHwcP8g-zAQRiA1OOdP-Yj_qj92N3IVWLEBQCSTyAxRPEXTJXQZg8OTw0y0kR6sNKupnttfc7ezGZTUeTcYOXBe-MWvt4nHnV-mnP1IIShcWB0iIffib436Rpqzg3I67L6iejmnqzHUmlYg2RVYhfbq-vGVlTK8bXJdcE0c0SywurxtyZTcHe3-mKj4-zSozjpNyPI6UlYaOUzyXIAuFJJPqttvbniu-FOLs80yQjNa0wo7MvxpAGpybftxDZxnc89e9VNKaiUq5ZpLEsSygXPPYY5zyavtRuMKWphNnSVFNxLPRdeGRWJJQDyv_riL7S2XcW5XWgMzQOrdYRzIYG23kL_AF4HJMyqXpJnbs4ZWWxCWuDe4w_yyqL5RCZtF5KhxysB3Vscc4xcWmdZTUlR69BDG4-SdxjZyscTSSMFRRck8gMUXmHTfUUNfLTw5TSSwxHSrioLareNxtiB4t6Xs64hoRS5XbKlRWafqhraQXAFiRsOd8eh5PB51jd7l_5Rm1BnDzyZbUpOsdkfTcaTc874kMUb-TnJnNVmGZVc-uTK2i6tpZAFPWXBUC3P9K_li8zzONRdrczJU6MYwcbYxbFsya88LGSMYxbBg88YIxnxxjCwa4WMkYxhYEcLCwsLBrbBbwp_Njf2rfuGBM4LOFf5tb-1b9wxQTLcjgGqqMZnwY9CYuuFRQiIx9b1Wq6AW12On22ODk8sV9m9fPlXANVmFIUWopcuM0ZcXAZY7i48RgATHCnEUdBUIlLlzvV0FVlmgypEYY5XVkkcxoEdhZtWkC-3rxw_4f5kc0zNpqWCajmFUBpqkieVZOr02Ij1K10udZZfADc4zmHHGbUsVXHTV9BmCU8czrXQwAJIwo3mCEBiupGUXsdwQDY4kabOeKXznJqBzWBqmF6icGgphIFEsagkdbpCWY7glvVgQzknDGb0eZ0VbmeVZTmIEfUiNmjjNEBOziRQqaGcqRqKBbsgttiNyPo7zahFMZTSSOrUrkoVjCCOV2dSFUaz3gQ533I9Zb0nHGe1GTRVS1qy1EtasJipaWnmkRPjidEYk1E2jGzhTztfHSi46zuaaUz1tDEY8sSrWOJYCsjtTvJ-k-s7quyBgNwTgUbUPR1n1Pl1JG9JRloZKUtGKiC79VDLGxBMRjteRbalZudydsWDn3DKZxQ8PLNQUTy0VVTvMsyo2mJQdaA6bEXtsAAfIYEDxlxHUZPnchkp8vr8oyunrJVNMJUmdtZJUk_IYBCPEbjBDxfmef5RBkNHl1S1ZmFW86ySRUUbNJoiLraMsFAvYHflgDllvCNdTcTwVHZaGNIMzmrzmaSfHzROrBacra4A1KvPTZBYX5O8t4dzqDpAn4jlnpDDVtJSy0631pShR1J1XsSGXVpsLdY25xCnjHPIq4pVzZdDWR1iUMmTrHqlsYQ7Tq97lQSWG2nSpub4ZZXx9n8z0a1CU_U1tVl1LFUxw3EbywxSSq4vtcSEqf6JHlgC4QcbKbYEeBqnOKufOfhfM4qxKStkoo1SkWHdNJ1kgnc6rWwWA4Ab5ifjaD-9L_lbEqOWIivPxtB_el_yviXHLAGH-SfZgFlljhXVK6ovmxtg5kIEbEmwAOPOvEgzXPc4qvgGraHL5gn_ADciEBbCxCA7n2jbHPLPQjcIamGea8U5HDDVwSZnRtOInAhMli50khR539WPM-dcIS1GcqYJGamljWUd24UlQxW48Rc7erBJxJFQ5HKKehqHrswvrmmkYMisNgBz_ZiEOf5heRDUyxpJu2lrX-7HCUnLdHeMVEjJeDEj3ecoE3dSCWt52G4-m2OmcUIGRxU2W1Uk8VPIGiiKabMflNvzJsPqx0NWTITqk1MCCwbc4jc0qleJYI5Hil1a0Ki5JXff1evBFaGNPLmsU6K7yRx6t2Cjb9mJSgoI1rDFIxlQowu3M3IvfD3h5J80R2qqMiBSdU4I3IG4IJG3nbfHWu6taoStSsKZjdXiulwbeXsxmT3pKiqPuR1XQwSZS8lJHJdj3bixFjvthpBK1JlFMzBrxVMjkePyRgjliy7qmeSXMAXFkTtFx7SdPn4DEZNw68yiaOulNO8Z1JMt9J9ot5csVPyTSO-HOFMulWPOM5aVsrLNo_QWdxfuj1Ajf-OH_ENPT1mVUEVBliZVFUqzAiMRmS3LUo3t5E3vh5lcdXBT0GV8P0L1E6RvIXmsEDsAWkGrZefM3PLEDBw7ndPJFVV0XbKuNbrFHMJWRb25Xvg6JHkJOD85zbgvLitHWdfApMjwSG6EnmFHh-zHobKq-DNMtpa6kYPBURiRCPX4fRuPox5hmnkrsmqwsTJMAVCW3uLG2Lj6Es2es4YmoahHjmoJdIR1sQjbi_03x0xNvk55opbosXCxyeZYydQew5nQSB7Ta2MwTx1EKywSLJE17OpuDY2O_tGOpyo6Y1OM4xzxSGMLCPPHGKpgmmliimjeWK3WIrAlL-Y8MCnQ4Rxm2MYgo1whjOMWxQLBXwr_ADa39q37hgUGCvhX-bW_tW_cMECZPLAXFV01Fw1HVV7pHSQ0iySs4uAoQXuPH2YNDywC9ggzThdcvrFZqappFikCmxsVG4PgfEY0QjDxhk6RRxCgrxOZVhWhNBpm76M4IjNhpZVbf1EHfbErX8RZbl5L1wlgZKB6_vxbiJSNSj-kCV7vrGIl-BqGtqY6nOqqfNp1lR3NVHHpkVEdEQoABYdYzX5lt8SWf8M0GdLli1GuNKCZZESKyh1AF4m_oGy3H9EYEoZx8V5MmYpSU2X1b1jyOhWGjUMrIyqxY3FrFwL-3Cp-LeG6iaFYkDVDpCyJ2UawJZWhVfUdQa48BvjlU8C0k-cLmaVsqTiomqLPTwzLeSRXIGtTpsUFiLH143p-Asrp86TM4pahahK6avUXBUNIttNrfJU95R54AmM5zihyqopqeop6ieaqVwkdPTdaWVLXuB4DUPrxxq-LcnpqXtNQ0tkNQCogJeMw7S3HMW2Hr1Dzw2zzhNc4GVNVV7PPQRsnWzUsU3Wlgt2ZWGkN3QbgC1zjFfwbRVlRnszVE6Pm1P2dwACsVwNboPNtKE3-aMXY9cFgqOtu-_6_tudaji_J6aSOaspK-CRomdpJaBg0UKsFLOeapdh6sdKji7IqSGYt1l4TIZYY6a7xmN1j7yjkdTKF87i22IuTo9oKlKftFRqlplIgMdJFEiEyrJfq1Gk7rYgixBN_DEtmnCtLXnPW654Js2EAkkSNSUMVtJF-d7b3w2NV01rd_H-Hjf8AI6txbk1PlrV0sr08QqlpJUkgZJEma2zoRcbWJPlvyw9fiHL0zU5azyCvE6U4h6s6iWQuGHmmkMS3IWI54gangSizDWc2rq6taV5ZZ21iHrJHjWMN3LWCoukLy3N74louH0Svpa81cjV9PlzZctQ0aFiCVPWHb5V15ctzhsZkunS2b-cdiVrvztB_ek_yviYHLEHOrIMsSSQyutRGGkYAFyEa5IGwvz2xODliHlNZvzT-w_ux5a6QuLGy9GoKKT_mmFncH82p8Bbk1vqGPUVUStNKw2IQkfVj5_5pmayTPJLJrme5J57nmccMyto7Ye5s9QzMS9yPEnxw0qq7QLg3Pnyxwo5HzGQxJKscSbvIwJA-rmcZbKIqrMo6daiTqlRmkbTtt4gDwxhUuTo7fA0bN1gUhSXlvt5YO6ZqTKclemaJKmrlIaeXVyPgoHzRvz5nfAb8HUlNUlhbQpALr3mt9-DXiLhrsMEVQMzEsR06ysZ1b2sAfG---MzatUbgvJF0FDk9VXs1ZHUpCEuoRrJcc-eJuKiQxrLGryRFSkQkXSFA5DVa3r53wf5bw3leVU4zLMbbaXLPYRxLp5C_ID6_DALxjxQ-fVh6i8WX0_5kWsf63kPZ5Y5qWp7GqSIupy5e_wBSryfpFEN2G48fp8N8PqnM6o5PHSUt0SE2eYC7nmbMeYA5YbZeatxOcqmp0nl0lpi-jRY3I9eq-_sx2yUyy5nTJWtG1OZNIJYMNRvpv42uMafuES_R3xOf5UQ5bWSGRauMxLJ4BwbgE-vf14I-L84y_JM2jupepKurIhAKoRYXbwv9eByfieGpqHaIxUsEDfF7BWdwdnFhtgQz2NnrHnp5uvSU62Z2JIY7kX8fbjKVuw_cmKDiSXLaOpEMTVCrd40Lnuknc38bY55PxXmdM8kuVz9kEh-MEB0kn1-eBxO0IT1UQdiLBdRAPquP2Y3hgSshE1HLJS1IFnjIvf2HxP0Y6VW5h1wG03EdbWxsZcwmgkC31amkJPs3-62HPDPF8mRzImYQ1DUxYseygKG3vfUPC_htzOK9p0lpZiahpXe1gxbkfL1XxOx5zRdhnSrpp2JGlOqK6NJ23vseXiOe-FUTkvik6Q8lmp-vnM9PGSQrOoIawuTsfDBHk2bUWdUEdZllQk8Di9xzX1MOYPqOPKtRJHUKHyu8aABTHK2rfnzG_PDfLqvMcvrOvp8xFBUfKLxyMGJ_1GOkZvucnDwevJnCxOxYKADufDFE9GuZS0_SdmNVn-awlJo5IImuyxFywIC-WwPyrHDPKukviLMss7HNUQic98VXVqGsP0WW1iD9eITOapBKyTVax11ZBeq7ojD6vC3gNNgbHBzVljjdFo1fTLkaVLpRU1TWRRLeV0ZFIPgFBPe5YaT9NuTin6yDLqxr7AyOiqDf9K1yPH6sD_BOY8PHOaunzyZMxiraaCBpniQQq0eygKBdRawv6t-eCzpO4NyLM-DKqroYKeBqCB5kNIFUSBVPcYgbj_XG1Kzm4tEhl_SlkOaytDk8WZZhU6Swhp6YsxAI8eQG_Plgjps762FHfKs3ici5jalJK-q4NsBHRXwFlnDy0uc0ubzVFQKXq50uixKXUEg-IttzOLLEsbMoV0JYalsw3HmMWyUNKbMDPMsfYcwiDX780GlR7TfBzwr_ADa39q37hgUuMFfCu-Wt_at-4YsWmw0TJ5YD8p_muj_sU_yjBgeWA7Kf5ro_7FP8oxswx4DY46A3GOQxkGxwCZ15Y3BvjmDfGeWAaOt8ZxoDfGwOKRGQbHG4NxjTCBtyxDR1GNgcaA3xkHAHGs_PUH96T_K-JscsQdWfj6D-9L_lfE4OWAOVYNVLMB4ow_ZjxVJ0eUohC1FZUTVDae8ihEH13OPa9R-Zk_qn92PL85qfzlMkYc7AjvEDlzJ2x588qo74VdgPDwNS0NLJpq6oau8qhAzM3gLbbYcZZwtCh6ySaVppVGvuqCq_NHPn44LlpZDKHle5N10G3eO1t_LGI6NoZ7RaQx2LBmYqvja_8MeZyfc9HGyGVPkeXU0wqEpIolVB3QupgANtzt9OO5qo5A69Wmh-4sZBsfMkc7fvxIKsLhg0zFy2--q58gfV6r4cxItPGYqeLq0HmNOo-bHmcLBCVfDdPmtJ_wDVO1SOhCkJOUEYHLxsPK1sDUvAkMtRJHQS1SxqgIeZzo35gEeXng5gWVkWHQ0pju_xi6VS5uPpv7TbDqUSU0Q7ZpmqJBq6sDurbYX9QxFJxI9-SrjlOZ5aEhFPIY0-S0VnB-kYf8PVFHHUimr8ujaRj3JHWxDX5HxtgrzfMqvqjDDCJpG3Oo2VAOV_M4DpZ616-EVQgKb6TGuk2B8sXVq2ZpR7hBmOQZQsIHweSwGrVEStvVz_AH4arwrlzoDFNVEW1aQQT-7D6KSrOYNTJA7kJszMAAfqv44c00E8FXDrZusCBeqvqVATzNhzxlag2iEbguEqVgrKgP60Vgvt5YZVHC81A0axV0Tu4JCdWVvby8id8G89Yinqwh2a17Dc_XjghWslIuFkXez_ACrer1Y0psjimVeF7VWTIyHRH3WO2xGHlDl2UCEy5hXIdd1iWFCWewF7jw58vVgp4jyFZmaoy6J45lbSzo4Bc-ek8_bgBr8ukpap4qhZopU2NgA37dsdE9Rzoe57lWV5dTifLsxqFdrP1BjvsT4E8tvA4jdaVsJGgsh-T6v44kp8lq5okkq6-WeExrpBUAqttgcRzUE-XIzBusgBuGHMeph_rjaWxL3HNRlnZ2iaGdGcxLLZW7yA77_sx0qq2tzFY43ndqmMEgsO6faLc_XjjQ1CyOxMQYDZWG9vp5g4lZZFihikhkpxXOujVKLuFBvYAcvDGX7mhxkfBsoytaynzGI1BLERqLNC4PyW328P2YmabNMypqeanrooipIiaqUowUkcj5nAJQ5nPTVMwkmqAruWcxvpvfwtyNsFHDbmuyerhqGVu8Xva3gNz6xjM9t2airN6fMnoYpJaeatRLuw6uRVuT4E6SB4eGH2S9Iktc0dBVRzjNaYgxTO4Z2sp3uAByP0jA65eGSelZgVj8LcwfHEJn5LNG8KN25DqgnjAS1vA_djVJmWnyWrk_SFnlfX1ML1dFBGkeqJpKYXJHMNuMXj0MZhm2ZcJSz58tIKntbqhpfkNHpWx58-ePJuX0GZV8LS1NOqVCnU0pmXSxNza3nty9uPUX5PqVKcByGsiMTmskYKbfJ0pbljeOtRzyR-2yzDywK0eVZrTUsMJio26tFS_aGF7C1_kYIRVqRcJJbztjPahcDq5LnkLY9J5yE7Bmno9J_iW_28LsOaej0n-Jb_AG8TXa1-Y_lyxjtsfk2BKIdaLNB_7ek_xLf7eNuyZn6PSf4lv9vEt2xPmtjLVaqbMjg-sWwKRIpMzH_t6T_Et_t4z2bM_RqX_Et_t4lTVoOauPaMLtifNf6sBRF9nzP0ak_xLf7eF2fM_RqX_FH_AG8SfbY_JsZ7Ylr6XtgCMEGZg_8ATUv-Kb_bxt1WZei0v-KP-3iQ7YnzWwu2p81sARwpK-WppTNDTRxxTCRis5Y2CsLAaB5-eJscsNe2J81sOVOpQR4i-AOdWdNLKfJGP7MeM6bjYJAbUCqovYGQ3PlfbHsut_6Se_LQ37jjxFwUmVVmbTJnAijpDTFVlkYDS5ePvA-DadX7ccssU6s6Y21dEhUcXVVQLR06xAi1xIeR-jDn-V0uyGlBawBJlNj7dsP5aLg1MoqK-Sp1TIsjx0SV_fktr0oTpuDdU5L-lzPhGZblWQVGZZ4HzKNKajrJFpWlqQvX04il0ldu83WCIeGxPnjl6aOmtjkcYtG4aOhRSBYN1puP2Y5JxfKFs1GukNf87-82wT0vC3C1TQVdeslTFlkEpRq3tRYKFliS4GizBlZ2vfY7WNsDnFFDwrT5NmUuVVitXQyKI45KlZVN9F1XT8q12Nz5fKuLF6aGtnf-XEkaao6FWYbgmbb92I6o45dZzJVUanxJMt1H7MSU-X8EQUHV_DlLLUOB3BXKoZlWQqOsKkxq50AsRttsMQlSvB9Vn_FRnrYoqKnWP4PjpqlUWQdX3yrMLOQwA0gXOom3k9JF1sa1PH6zStJ2BwSd9MnMfViMo-J1SqNS1Iaip1dxnfaO_qIscF-Z_wAgsyzDRFJl9FBFJLfqawRBo-0MnWatB1FY0Rlj_S1ncm94bMTwWkWTR0iQyFM0pUrJmrDqkgaGNpDpt3UDmRTa-kra--KsSXBPUbOUnHtQpZTTIB8xZSLt5mw3xHrxVI72ajUMfkqs7iwuN-f0YLDkvBMoev7dGQwlmWGGtVTI2mU9UECfFKrLEFbfWG9ezfh2LheqyykizmClgqZKrsc04NisBBk623g1wItfgpvzF8TREutkFU8aLHIddIri22mdiq_RbDvhrjT46qc0UTO9tI17hfHe2Jx-F-j2Wbq-0VGppNIdMwXTGDIEtspDBQS977hR5nDih4a4DpJ6UrmE8qyxwI7dsVbF2AeQgKdOkXJQ8rDzw9OIeRsbPxs7ONVDGEH_ANw3_diH4q4nGY0LF6GNWjYFW13I_ZiGdVBvckDYnzxD5vWpqEaHVzJPhhGCsmpkpQ8TNFAsTUysVFgdfLe_ljo_EBaQkUqC9wVL7H9mA8yOXLMbevDqOUMtm5-HljelEtnfNptd5KWJ6ex70QlNh61GJODiRMuhooZqYSzRKetkkfUz3B25bWvYYjEZWDa-dvE4h62UTzTOXDC_hipLuQmhxHFUVLSmgQKdyokNx9NueHWU8TSZdUvIgJp5RoeN3I29tsC1FpCHzvvjV2aSbq1BJJsAMHCL2CnJBtW52ZpVqaeCO-mzAS32H_fhiPp-Jo-0oTRCVVJ1LITb6vPERPFHTQwoGeOqt3geX0-W-GlUXBQOhWQi978xjKgjTnIsim42phTJAIyG3Yl2t3uQFgABbyx6a_J4zN824CnqXjWMdulVVUk2AVPPHh5FLL4g49ifkj__AMW1Y32zSf8AyR41DGlK0ZnNuNM7ccZFxJWcf02YZPBUvSxx0YSRJwiKUmcyhj1qlQUIB-Lk1ctsDnC_CvFtHTwx5tl2ZVOWKsHbKFa8Qy1EixyKWU9obUAzIzEvHqsO73cWvxXxLRcMUtPUZispjmkMS9WpaxCk7gb-GA2o6ZMkikKplubzWJ3jhG4897bY1LNCDqTOmHouozR1Y4NoxxzkPFNZQ0D8OCqgeDJpqaSlkrtRkeRo16tpCd5FTUyyfOS1-9htLT9KR7UYauJXeqeNQ6QdWkV2YSIQSSLIiWYAjrWO9rjo3TZkqbyZLnqJe2tokG_2saN05cOrzoc0BPgUQf64x9Ti_qO38q6z-2yW4Yi45-FpPh-TXRT0LuVDRKtPOyqRGundtLFl1bbLc3uDgYy7KeOspyeAcPUFfRS9kgjniqa-KcvVoj65rM7gIzFAQGW9rkedlcHcTUvFeWS1lFBU08ccxgZJwFcEAHkOXyhiBaTiagiZKPM6GqjCTytJW1UcjqBKwSx2Fgmjntq1ajyx2TUlaPDOEscnGXKBbL4-M8ozWio2llilziVacozCUU8agu9QvygugApYkAmReZGH_E2S8crxNmVfw7Lqpp655oYppxph0UWiN1UmxVpGZSp_SRGta5xJZPmHGElTRUeYVeXGiqUj1VUEqGWOPqtbS35Ekghdrd7VyXDqSp4xenpHiqMoNWs1R1qLKhjaEhTESL3vp1HY33BOxxTJApT9KPWUiJVoad1XrZJ1gWWPWxjNwpIvGoE2xOokj1YbT0XSY3xwklaphEsSza4Azxs9OTpjvoD2WTTqJHOxW4GJ6qqeOaimlXLqvIpVZ9KVCuqEIYbhiLmza-9bwA8RvhVVfxpSUVVVmXK5wgHxMJR2JsQ5S7AbMuynzN-WABw5N0k01XVVUNfmM9RIJNjNT9UNXZiTHGTYNZZwoJsCo3sbmwOCIOIY4a6TimqeWd5I1hj0xqioIU1MAl7EyGS9yeW23OFzLNuKo6SOWnrMigm6qnjlhqiq9XMerEn6XzmZQOXLfHehqON_hSJK2TIDSCsVHWFxrMG-rmdntoYAD9O3hcgHOJaL82n9UYifDEtF-bT-qMAa1KdZBIl7alIv5XGPMLdAkw0PBxlliDRZQIG38OWvflj1C3I7XwKyNT07RSxZHO0oRY006jpBN7cvA_6-q8cU-SptcFIQdBdSoiWo4tytyykowpmFwCAf07czbHU9BbLv_KvLAu3OE2v9vF1LKJafq5Mhm3Zzo1Nbc3Nzbx8vMgbjG1fBA1VKFyecrHJqZ1awk2B5AG633Ps8eWM6EXWylZehCdY1jPF-XKjASqhjazD51te_tw1k6CnYrbi7KjIRsWpyfAn5_LY4vZHiqzEKjJJUBDatd9tK6haw89t7c_oxyVYJ6OWqbIZlfUo6tiwZtRuTbyBN-X7sNCGtlA1H5OdY_wAY_F-UqhubilYDnY76_PbDYfk6SGMSfyyy0qWCXFK3MgkA9_bYHHoqSRJ4FiqcinMRRFCozabFuR5cuf8A-8YnnpKKjSQ5RKiyqzSC7ARlLgXPhe5sR5jni6UNTPPqfk3ziSP_AM3ZcQ17WpWIOnnvrt44cD8npBctxVlOkAH8weVr_PxfTVay0T04yKp7JESQt2W_jttc3ub_AE88YEUaSpUvk0rs4U_LJEVtQCgWv-iCduZ9mGlDWyjYegO7KsHFGVAuGCaaZrmxsbd7ffbHT_gW_VsRxdlWkG1-qO3jb5eLu6xJmWFcjm7OtrEs6spJ3tt4FjyPnjM8dNFVRIMilYROCjKTbYsAQPPujntvzxNERrZSMHQcVLW4uy4hSRbqW52H9LfmPrx0PQTNIHA4sy5jGCzAQHuqDY3Gvbyxd-V01HU1aiXJ3p9KF0ZyxAvsR5A4lYsmoIoZYo6dVSUMHFz3r2vve_gPqw0RGtnmh_yfqkqF_lnlfVgltIgNr3t8_wA9scH_ACeJZwpXjLKhcbDs7cufLXj038BZba3ZVtYj5TcjYefqGNlyTL1Z2FMupwASWYmwNx47WxdKGpnmGP8AJwqYnYfyvywhBdr0rEKL23OvzOOrfk5SqFK8W5aoYBgezNYg8iDr5Y9QDLqUU8sHUr1Ura3XfvNe9_2YxLltJLGEkgRlAsAf62r94vhpQ1M8ut-TxOY2YcaZRYXGrqDt5_p-vEfVfk0yw1EcU_GuWRzSHYdlYE7X-f5Y9XDJ8vDhxSxhhyO-MSZNQSSvI9Mpd1CMbncAWA58sWkS2eWk_JiqTp6rjLLm1toQ9lbc2vbZ9zbGtL-TVPIoZOMstJYageysCQPHd-WPVYyyjApwIFAp3Lxi57rHxxwfIctdtTUqlrEX1NyJufHxwoWeZ1_J4qmpl_8AOOWNGHZA7UrEBvEX145p-TJmFWzPFxZl8iqShK0jmxHMfLx6f-Bcv0FTSxkF9ZJuTfzvzw6paaGlQpAmhSxYi5O5w0oameYIfyYMzRu9xPRlfIUb_jxdnRDwRJwDwrNlM1XFVs9VJU9ZHGUHeVRaxJ-bg5wm5HChYM51kdLnlAsVXS01T1cgdFqF1KptzG3Pe2IFeBMl7wfJKRWvYFadW29uDej_ADR9uOpYeG5wpd0ajlyRVRk0vxZQfTTmVBwTmPDdDkXBWRZhPm3WL1dVAVYMpQC1tv0je-GiVfE-qKDI-jvhCraZQ0iwatje2rWbALuNyQee2Lr4g4WyXiGsoavOstp6yooSTTySX1REkE2II8h9WJeCKOGJYoY0jjXkiiwH0DGHBXsjp9RkqnJ_qwb4Qy6ry3h6mTM8vynL65mZ5afKw3UKTy3IBLWtc-eISDo14bgp3ijgqBrYv1hmu4JJOxI5XYmx2vg6zMlaV2U2IViD_wDiceNB0pcb2H_mSt-qP8ONo4ttu2emqngLh-pdXmpnMixJAr9Z3gqIqKL2v8lR-3zON6HgXIaKspKqCncVFL1vVuZLn4yNY2J237qi3lv4bYoHhjjDjjPoq1l4urIWpghCmJG1aidybAC1vpvth1mue9I2WZe9ZU8WkIsZlVARqdRubXjsbAXvex8CcUheB4DyZMu7FSrJBC00MshDXaQRuzaSf6WtlY8ypIxoejzh82HVVPV69bR9f3HIJ0hhbcC5A9u9-eKSr866S6GhNVUcTyKgmWEL3bklwgIPV2sSQRvcjcDY47RZp0kTOBFxjEyM-hZDIqqe7qJuYxawDbHewJtbfAF25pwLkWZ1VVU1MMwqKiUTPIklmDDwFwbDflyxvRcE5JRV9PV00U6zU84qIvjiQrBSvLxFmbnf5XqFvNmb9IXHmVZnU0FTxNUtPTv1bmPq2XVbcA6d7csF_QpxzxNn3H9NQZxnNTV0bU87tFIFsSq3B2A5YA9FeGJaL82n9UYicS0X5tP6owApGCIzG9lBO2K3yzpi4ezHOocrp6TNxVyi4D0yqAPWdWLHnNoXJ5aT-7HmSlp8tq52zfKqiGaSGWPS8TXaNW8x6sZk2uDtjxOcXJLgtvMulzhnLJ6qKvathamdo2vBe7AXstibnEXN09cFR0cNQs-YS9cwWKOOkYu7EXAC-PPFSZtwDmma8XS5l8KJS5VFMX6-oJXrZiLdy29vWOVtr4ecTcMU-W5VJWtGKqqo5YkjaJGOlTchwTdmKkqAAbWOOc5yStIlQbq9y5aHpWyOuyKfN6WkzZ6KEkO3ZgCCOYtq9eHcPSTk0lPPO0GYx08UQlaR4BpIPgLHc4p8DiOhyGSimY9jmi16LKXdtILd5Ra_O_jiS4dziGl4YFHXRmUSgLsLn2YjyuLSfc6w6dTi5RZb3CvGeV8TVU9PlwqRJCgkYTRhdifbhvxNx5lnD1eaStpq6STRqBhjVlJ27u7Dfe--1vHEJ0aUkKZrNW0fVCmmp2AVR3gQy88V10tjtXH9WzxyIsU0KdYQIwuiPVrLX7yd63qNxjeWTgk0b6XBDLlcJcIs5OlbIJImkijrpBfSmlYz1rcyq9_cgbnEtFxzlUtCaxUrezghTJ1JKgnkCQbC9xbfe4x54y9aamyhloo6ihK_GGGPqplDSghmcE8kOkn1HHbLuIaWnraOCmq4aeOlhkjFKaJDFO29muDrVQT-iCBbbxxxWWTs75Ojxxkl2-exdVR0rZFDmJoxS5tK4UN1kdLePc2A1Xtc4e1XSTkNJAJqlqqOIsiKzRbMXtptv43H14riGklnyA1YqaaDNlkSaWR2WaOSNk0OUvYEBgu9gQd_HDHPKmkmzuj4eiqDlUqSdsZ-yI3VxISzgm21wF3O98R5p1sbfRYlTTtb2XFR8Y0tTPlsJoMxhlrmZVSWNAYrfPGq4uNxz2OM8YcZ5Zwm1KuZpVMagMU6mMN8m177jzGKQpKyDMelegzCjrZZI5cxhSNY1-LZQ2km5HkPbzPLBv08QddLk1heyy_vTHs6JetOp8Hzeth6FV4_3wSh6ZeGh_6OZ_4cfixwqunDhSkgeaoTM4415k04_Fik5KI-WGdVRuaeZUA1FGAuLi9jj6j6PHWx85Z5HoKLph4bktpjzKx5fED8WHkPSjkMvyY6_wCmEfix5o4KmGYZDQzq2thGI3NrHUuxvg1oIOW2MrpcUkmjTyyTpl4Q8fZRL8lKz6Yh9-JTiDiOiyLh5s5rVmNIoQkRoC_fIA2v6xioaCGwG2C7peuOiGe3zKb_ADpjzZsMYNUdITck7OB6beFx_wCjmn-HX8WNR038LEgdTmu-3_TL-LHnABmw5p4RqBbHFxXY0pM9Ev018Mo4QwZqSfKnX8WGtf088KUNu0UudC_lSr-LFK081JDL1kqB9IAscR3HfExzPLaagWmplggLMlkAYFrX3-jBRjW7NWy6X_KS4KRdRps903tfsi_jxYXR3xvlfH-QyZtkaVSUqTtTEVMYRtShSdgTt3hjwDXOUiaMRjvWuxG49mPW35H409FlVf8A_tZ_8keMGi444p0WyhLc9zjbRUfNj-vA9Dx1l88FTKlJmSpFRzVsbTUxiWeOK2rQzbH5S29uI_8A4lUQ7GGpHJnleJtE8bAFTEO6b9_88uwtybyxAGWmo-bHjBSo-bHhlk-eNmQeY0M9PQFDJDVSMmmVQbXsDdfMXHLyO2IGi6SMpqoaKZY5xFUmpGsFGEfVKrgMQx3dHVlA-cAbHbEoBPUU808bI4UAgjY-YtioB-Txw7b_AK_N_fR_gwZR9I9NLS1FStBIscFItW8clRGsoBgWW2i_gGAJva4PgMOqLjynrIYOz0M81RUM8cKRSIySurqp0vexXckt4aGHMWxQAf8A4eOHfT8399H-DHap6Aslqur7Tm2eTdWgjTrKlG0qOSi6bD1YsWPiymGf5fk1XTy0uYVcLSmKR4yY2GqyGzEnUEkIIuLJva4wSYApI_k-ZAYhGcyzkxhiwXr47AkAXto52A-rGv8A4eOHfT8397H-DF34WAKQ_wDDxw76fm_vo_wYnODOh3KeEs-jzbLqrMJaiON4ws8iFbMLHkoOLTwsAR3ZZfJfrw_jBCKDzAAxthYA41i6qWZfNGH7Djx9wVUU_C8udZnBKsVZFR6KeicBetkG5YKQdQUA_Xj2FV6-zS9VfXoOm3O9tseVY-G-Ns4ipariHhetNazXZYolVY1IsT8rYm1_pxzyXWx6enyaG7fO35GtbmmaZ5XKuZzLNDJTdsi0VegswHdRV5WNzcEW2uCCMFlHV5nSOmmgWSMNeV4ZBqk2A3UnY28eWGHCfRbW5fxLDVVeV1poo4GtG9jZvC1jz5_Xi04OET1sVSIpVewJQ2BG3K_P6MaUJUpN8_Nzn1rxatGFbLv5A6rzpqHM6GnzKic5dUKGAdx1nWXuNhttyBHjt44jo80oaQvRZ3opq2JTKg02SZDfS6Hx9fkQRg1434Ol4iocukhonirsvnDozMASh-Uu3MHb2EXwKdI_CFXxPwxWUlNk-amupAyUNUwCNK4XWbr4ISNIPPVvyONJxh9rOMGotOvxO_QFxFTZxneZQRSM00cDMygd0DrANsC3SzEf-ImbTGFz30GqzWHcQc_D_XBP0B8OZvkuducw4blyiJcs6l5WAHWy9Yp899rnGnSHw5nuYcXZu9JklTVU08sZWVbBSojUHlzII2J5WtjhnVxpeT6PSdRpyOcvH7FW5EI6mpggLVlVHUtNJHIIgerUAnQSdx429V8bVeQ1bV850yLAQZFKEaGQ2s_0W2INwbjBlknCfEmWyVkwyTNXjML070zBAs_iH2Pjy58sR8eQcbSUYaDhSpo5ADD1QVSoj5WAv7ccNMlvFHaeVS4qh5w3ntPRzx5XnkUssCwPUB4yxlYJY_FqDbbc3NuQ8cFVbn-S03DdXFlUdGmZTRWmEZLNockFtbAFza1x4E4FzwVxJWTjt-RZjLCq6w3WKptt8WbcwfXyxwyvgXimeoq6utyariCxalGlC7Nbuqovy2-j2743FSUKrc-dn6jJJx9Pja_C5-fLIrgOCWHjjKIFDCFa-Atd7AEPtbbfmB-zF2dLsKOKCWVgscSSszHko7tycVxwbwnxNS8YZZVVWR1kNIKmKSZm0kIQ27c722B2vYYsLpeybN81rMmbL46yooYi_aKamsDMSy6QxPJRY35nyHiO3Q5PQ-6S4_Y6_wAScs-Xlbpf9v3sBaXJkripWeGOIoX61z3Str7W5nyHjiPfKiG-TcX8sG-SZdmA4cp582yOpo62WQxmCjhMoWw_OMpIIDHfY4jK2mz-MPUUnCuZVaSSGKOLUsTKqjd2DcgxJtvew8MfYj1sHyfKl08k6R56yLiGl4Nq-IstqKOeeVayQwJF-kbkAG52HyeQJxZHRE-eZrw-K7PgmiZiabu6X0DbcW5XvY89sRvHXR5xpmtXU59lvDVTDWmpgCwKQJlAisxDg2K32PI3sRgqzFeN24doaXhvg_MssmFopO0QJIIolUWCAN48t8eXF1Glu3sro75cV1XLoLdVPBCkk0gSNnCBr2Gon-GCrpVS_RZOh2ASnBv_AF1x57zHIelGqzmpjbLs9XKmlMsKLAgVSCGUFdR7t15XJ357nHpLiChrMw6OaemNJK1Y0FOXp7XZWGksD7LH6sZzZvUWwhj0nnSlpYCL3Ceo2-vlfG5BLhKaLWFI7zLYMPVg9k4XzqI2XIayZ-YIVQL-sk7Y1bhXiNtLNk81xuFBsAceVyZ0oBKShZpZBPTrGjckJDE-vERnPC4kkleArEgFwGNwfuxZrcL8S9ZqfJpio8EW5_fhhmHC3E8iuY8jryRyAQb_ALcZcpdjUUmUdneVU9DlYmmm_wCbZ7dUb2Ax6W_JGI_4XVekkgZpNufHuR4o_ifgDjyuc9VwrmjKfAIv34v_APJjyDNuGujmro-IKCfL6tsxmmEU4AOgpHY7Hlsfqx3c9VbUYUdN72GmXcHcPUFRmE9JlMUT18bRT2diCjCzKovZAbC4W1zvzx2PCWSPu9JKzHUHZqqZmlBCgrIS13WyINLXFlG2HtNnWVVAHUZlRv7JlviRikik_NyI_wDVYHGSkZBw5lMPbOrowoq0aOVescroYksqi9kBJJIW18CPGOb8CZNmL0-aU9LJmC9WxgjFrEMrpcCyg3RD52UX2xY1seWKrIswzXjmavrOzNT1VS-suNTpqZitx6wu3kBjMnSOmKGtllUPE_C1RJLDR5PmUyOqRyU9JUSSIV0rGC8YbTsoXcjw57YnuM5cmyqZlOVpUNKzPKVmeNkkZkfukcmJUN3bG--1ycDEeaZnkdRHl1Bw2GoNJcz08qrcWJLAAWPsO5ON-I65c1XLszXrY0qhHMI5u64Bi5lfaPDGIzbR0yYVFqjjmHGFBkuVrLTcJ08lUKiERqao6hJqAQmQqTta5O99-dzeXz7pXfJYqd6nKFbXOIJAlQTp71iV7ve9XK_qxX-T5DJUcI0YEvUM0wqGldS7MwkY6jc7k7eNsRfHdWs1Ar9TVVAjl69nhhuGs1zvyAvzNj6r46bnBuKRaUnSzIq5npyM9ZQzPCYzU7kqATey2HO3jyxHZf03rXRwLBkbyVBLddoqLxRW5DrNNmJ8hy88VDkOY0-dQZ0K6F5I6jNXmPZ0Z4zqVCFuPDfx2OCutWly6jVp3igiC2tcKB6v_wBYjdGox1FgT9L3ZoTLUZXDGl7C9XuT9nf6MDTflEIJurXIVL3IsapgTa__ANv1YD5KhqxRNlOXh206O0zDq1A8hcaiPYN8V3U9oikm6xYiutixVztz5AjGNTOuiJ6X4m6YvgPLKesbKYpOtbSI3rNB-jum_sGLPySt-EsnoK7QI-1U8c-gG4XUoNr-PPHl_Oq3hzJZo83zswdtMIWNAOslI_or4c-ewx6Y4TqFq-F8nqUVkWajhkCtzAKA2Pr3x0VnnZKNuMU-goYKcxw9J9TADTsUkkK76UQtILmzALG3svz56rge-k6QCfAHFV5RBVVElDDmvRzQKlRMYZJY9NoI5FbrGYMtzuCDbmD4YoOGcx5e6SZnB0hVdPJHTw5fJUU4MveAEmvSLjU4R97WsTbcY7SNl9WlbEekJnqamqp54HiPep--zxxhQx2bWBY87WtbYYoJammkioJ-j6NUrqyLrmV9Sau_d912CBdr2G_hcXsGLhzJoqntMWVUSVGtZOsWFQ2peTX8x54ArWWgpqZFoj0lzRR0kscBTWdUbJGV0s2u-olS2-1wdr74IeGJaCj4pkVuLZMweeJYqejmLWGr40FWJsxKEb8_M8hgjr-E8grlqRU5RRM1SzPK4iCuzMrKW1DfVZmF-e5w5iyDKYqmnqI8upVnpwqxSdWNSBV0ix57Lt7MASdhbFVcWUGWNxXmFRV8c1eWsqiRqGORlEQVUN1s178zsN9VvDFq4jK3IMornnesy2knef8AOtJEGL7aRf6NsAAArKGbLDTSdIZE09Wk6yyWRtDKUEOm42Y3NtrG23nyp-okhC0XSVIYzCugPZyEBcE3LAk2vud-7c3FrGsfBPDqV8lYMppjK4QWZbougkqVQ91TvzAucOJuFchm1dbk9A-oAHVApuAbjw88ABKU9NQ5WZn4-nWCsqIzBUf0IAVeJbsee_Ly3Db3d8CwmtzVKmHjHNM3WBetMU9O0UckUgYLzABsRsdz3cGDcO5O3ZtWWUZ7NI80N4R8W7tqZh5EncnDyioaWhUrR08cKnmEW3_fM4Ac2GAfpIy6mrZcveo4nmyLqVlkKxMR1yrpJvuNlFx_-Y8bYOMBvSNJURwUvZOGEz6VlmU61BEIKb32vZuVh_pgAP15TT12XU0_SDV1NJTnS1KplbrALEh5Ea4FmsL-dt7WD8w0lTHQn-X1X1uXARSzqzqJWkkfqie9pY7FfG4XwBxvXz1iU9QIOjiNpbaIgxQoTpV-9YbC5bl4gDnexXwzlCCkmbMMoy2mlM7aFgiIDIpbSxB5G7yfQ3hcgACq1-TplWWRVXHUtVUK7zpWqbmRJdYj1Be7pVgrAna8djYXGHVLwhm9Zl8c9Hx9msizU8aLOiqytbT3wL2u2k7_ANI7-ZO3B_DxjKLk1AnxQhBSFVIQAgAEcrXNvLEvQ0kFBRU9JSRiKmp41iijHJUUWAHsAGAGHD2V1GV088dXmdTmLSTGUPUc0BA7o9VwSB4Xw246FA3DVSmbVbUdI7RoZ0DkoxdQvyN-ZA-nfbE_iJ4qeSPIqmSHLBmsi6WFITbrO8PUdxz-jw54ArisNDLLd-kho4pZyYogxULrYOiCzgkBWtvz28rYfR01dl-dKrcZ1FTRxdbRTIQ0ky1UiXQaQCNvlC_LYDHF6iuFfBDVdHtLLNUykGRbWsF2YnSbWUKCDt5E7Ye0WZZtdan_AIeCB6ysiknXtEfWBzrvM_dsSuhd73745YAiqfs88EjQdINdSd-JpjURPHcmNlATrG2vzIF9wL774xRITL1cPSa0sNRGiUr6usZmE51n5Vualb-RN9rDBHw3l0eddtizrhGDK4r0k0ZsLzGNVZQbAH4tlA3tcAbWwSU3DOSUs8U9NlNDFNEpRHSBQVUliQNuV2b6zgCsaNKieFoKrpJljzGpqBTxGjJmTvTHSq35sdNiRyB-aRe4ZRancc-6f3YjE4ZyOOSKRMpoVkilE6MsCgq4JIYbc7knErKLxsPUcAUzIcip6t6WSlqwY7K8kcTFVNgee_niRrMvyLLKrqpZ6iKQjU1tRCgi4OwsMNZ2o5KXNJBK3anlkMaAGzDYL4erzw4q6ijpKTNqjNK9KYxqbGSQWtpuN_Hc2xdjO46q46DJ9MtTnslMgTrgHlI7lr328NsVLmvaqHIqSrjzAVmVCYSJX0h1hZbkkuflKSSTpYAg8sb5_wAc0WfdbSR1SCnlVYtEh06gByvblcE4EIKyt4VziWopiKiCoXRPSSbxVUfijjkfUfDYjyxXi1Lc6Y8zxvYtCm4nnzfJEgyuolWpV1JkpJlWTVfwUgg_sxL9LklXSSU4oi88l4kKAqGYWPMlWBse9ywP9H_D_C3Z5c2yeiNXUyOs1O00hLZffkmkfpAhtzc8rYIeNMw7XVIyRWZl0AGU6hYbkWHPc2v7ccop43Z1yZPWpARm1S-YwwSV2ZRsNFmDKFVCNrKl7aj43ucDVfUJTwSVC1kTRoLuViAI9liN9sduH6vMa3PsyaZqWGnpwViDRnUN7Elr7sfbiXPDycT5Dn0M9dHDKkCCnliv3ZS9xdb3PybbHa-MuST3KofbsV1wzxd8C0GZ0tI3UUNRUSVDTdmGqNSVtp7x8rcjYHFiUKZdPBHXU0va1lCmOaUmRmvbe55b-QGKcrsk4jy_MI8srcjeqq6hzHDJGrFJz5Arsx8-XrxbLcJPwzJSRTNqrK2giao0k2DhrMgPzQb8vDGpuO1M54oyWzQ8rnihR2qMxemi8ESRIyfXqNz9VsU7n1YscrijqZb9Y1hrLbb-DeOLYOimDJFliSVH64lFHsLE3xVedPPJmDiaEKOta51g25-rGYvudJrscqeCRD2qsmWjjYkSVEjB5z5kFtgfK2-PefAzRtwVw-0LtJEcvpyjtzYdWticfPrj5B21L3JQlRffbbHv_o526PuGP_8ALpf_AIlx6Jnkif_Z",
+  "width": 320,
+  "height": 240,
+  "page_rect": {
+   "left": 0,
+   "top": 0,
+   "width": 1024,
+   "height": 768
+  }
+ }
+}
