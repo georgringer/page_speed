@@ -31,7 +31,7 @@ After successfully activating the PageSpeed service you need to set the key in t
 Enable PageSpeed Service
 ^^^^^^^^^^^^^^^^^^^^^^^^
 1) Open `console.developers.google.com <https://console.developers.google.com/>`_ and create a new project.
-2) Open the project and switch to *APIs and auth* > *APIs* and **Activate the API**.
+2) Open the project and switch to *APIs and auth* > *APIs*, select *PageSpeed Insights API* and **Activate the API**.
 3) Switch to *Credentials* and click the button **Create new key** for *public API access*.
 4) Create either a *Server key* or a *Browser key**.
 5) Test the access by using cUrl on the server where you want to use the extension by calling the command ``curl 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?strategy=desktop&url=http://www.bbc.co.uk/&key=AIzaSyA2rQEy7UyQz-9D1-7bnmw1jzSo0FmobYM'``. (If you get a ``Bad request``, just wait a few minutes to get the key deployed on all Google servers)
