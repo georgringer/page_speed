@@ -26,6 +26,7 @@ Installation & Configuration
 ----------------------------
 The extension just needs to be installed as any other extension.
 To make it work, you need a Google account and activate the PageSpeed service.
+After successfully activating the PageSpeed service you need to set the key in the configuration in EM and deactivate the demo mode.
 
 Enable PageSpeed Service
 ^^^^^^^^^^^^^^^^^^^^^^^^
