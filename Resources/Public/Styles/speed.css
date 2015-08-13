@@ -87,6 +87,10 @@
 	margin-top: 30px;
 }
 
+.single-rule {
+	display: block !important;
+}
+
 .single-rule .title {
 	cursor: pointer;
 }
