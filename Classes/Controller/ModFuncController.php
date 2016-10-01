@@ -21,154 +21,156 @@ use GeorgRinger\PageSpeed\Service\UrlService;
 use TYPO3\CMS\Backend\Module\AbstractFunctionModule;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Fluid\View\StandaloneView;
 
-class ModFuncController extends AbstractFunctionModule {
+class ModFuncController extends AbstractFunctionModule
+{
 
-	/** @var StandaloneView */
-	protected $view;
+    /** @var StandaloneView */
+    protected $view;
 
-	/** @var string */
-	protected $templatePath = 'EXT:page_speed/Resources/Private/Templates/';
+    /** @var string */
+    protected $templatePath = 'EXT:page_speed/Resources/Private/Templates/';
 
-	/** @var UrlService */
-	protected $urlService;
+    /** @var UrlService */
+    protected $urlService;
 
-	/** @var PageSpeedRepository */
-	protected $pageSpeedRepository;
+    /** @var PageSpeedRepository */
+    protected $pageSpeedRepository;
 
-	/** @var Configuration */
-	protected $configuration;
+    /** @var Configuration */
+    protected $configuration;
 
-	/** @var int */
-	protected $pageId = 0;
+    /** @var int */
+    protected $pageId = 0;
 
-	public function __construct() {
-		$this->view = GeneralUtility::makeInstance(StandaloneView::class);
-		$this->view->getRequest()->setControllerExtensionName('lowlevel');
-		$this->pageId = (int)GeneralUtility::_GET('id');
-		$this->urlService = new UrlService();
-		$this->pageSpeedRepository = new PageSpeedRepository();
-		$this->configuration = new Configuration();
+    public function __construct()
+    {
+        $this->view = GeneralUtility::makeInstance(StandaloneView::class);
+        $this->view->getRequest()->setControllerExtensionName('lowlevel');
+        $this->pageId = (int)GeneralUtility::_GET('id');
+        $this->urlService = new UrlService();
+        $this->pageSpeedRepository = new PageSpeedRepository();
+        $this->configuration = new Configuration();
 
-		$this->addScripts();
-	}
+        $this->addScripts();
+    }
 
-	/**
-	 * Function menu initialization
-	 *
-	 * @return array Menu array
-	 */
-	public function modMenu() {
-		$languages = array();
-		$languageRecords = $this->getDatabaseConnection()->exec_SELECTgetRows('uid,title', 'sys_language', 'hidden=0', '', 'title');
-		if (is_array($languageRecords) && !empty($languageRecords)) {
-			$languages[] = 'Default';
-			foreach ($languageRecords as $language) {
-				$languages[$language['uid']] = $language['title'];
-			}
-		}
+    /**
+     * Function menu initialization
+     *
+     * @return array Menu array
+     */
+    public function modMenu()
+    {
+        $languages = [];
+        $languageRecords = $this->getDatabaseConnection()->exec_SELECTgetRows('uid,title', 'sys_language', 'hidden=0', '', 'title');
+        if (is_array($languageRecords) && !empty($languageRecords)) {
+            $languages[] = 'Default';
+            foreach ($languageRecords as $language) {
+                $languages[$language['uid']] = $language['title'];
+            }
+        }
 
-		$modMenuAdd = array(
-			'language' => $languages
-		);
-		return $modMenuAdd;
-	}
+        $modMenuAdd = [
+            'language' => $languages
+        ];
+        return $modMenuAdd;
+    }
 
+    public function main()
+    {
+        $result = $error = $url = null;
 
-	public function main() {
-		$result = $error = $url = NULL;
+        $this->view->setTemplatePathAndFilename(GeneralUtility::getFileAbsFileName($this->templatePath . 'Main.html'));
 
-		$this->view->setTemplatePathAndFilename(GeneralUtility::getFileAbsFileName($this->templatePath . 'Main.html'));
+        if ($this->configuration->isValid()) {
+            try {
+                $this->checkPageId();
+                $url = $this->urlService->getFullUrl($this->pageId, $this->pObj->MOD_SETTINGS);
 
+                if (GeneralUtility::_GET('clear')) {
+                    $this->pageSpeedRepository->clearByIdentifier($url);
+                    $this->view->assign('cacheCleared', true);
+                }
 
-		if ($this->configuration->isValid()) {
-			try {
-				$this->checkPageId();
-				$url = $this->urlService->getFullUrl($this->pageId, $this->pObj->MOD_SETTINGS);
+                $result = $this->pageSpeedRepository->findByIdentifier($url);
+            } catch (\HTTP_Request2_ConnectionException $e) {
+                $error = 'error.http_request.connection';
+                // todo add log
+            } catch (\RuntimeException $e) {
+                $error = $e->getMessage();
+            }
+        } else {
+            $error = 'error.invalid.key';
+        }
 
-				if (GeneralUtility::_GET('clear')) {
-					$this->pageSpeedRepository->clearByIdentifier($url);
-					$this->view->assign('cacheCleared', TRUE);
-				}
+        $this->view->assignMultiple([
+            'lll' => 'LLL:EXT:page_speed/Resources/Private/Language/locallang.xlf:',
+            'menu' => $this->modifyFuncMenu(BackendUtility::getFuncMenu(
+                $this->pObj->id,
+                'SET[language]',
+                $this->pObj->MOD_SETTINGS['language'],
+                $this->pObj->MOD_MENU['language']
+            ), 'language'),
+            'configuration' => $this->configuration,
+            'result' => $result,
+            'url' => $url,
+            'error' => $error,
+            'pageId' => $this->pageId
+        ]);
 
-				$result = $this->pageSpeedRepository->findByIdentifier($url);
+        return $this->view->render();
+    }
 
-			} catch (\HTTP_Request2_ConnectionException $e) {
-				$error = 'error.http_request.connection';
-				// todo add log
-			} catch (\RuntimeException $e) {
-				$error = $e->getMessage();
-			}
+    /**
+     * Check if the page id is valid
+     *
+     * @return void
+     */
+    protected function checkPageId()
+    {
+        if ($this->pageId === 0) {
+            throw new \UnexpectedValueException('error.page.idIsZero');
+        }
+        $row = $this->getDatabaseConnection()->exec_SELECTgetSingleRow('*', 'pages', 'uid=' . $this->pageId);
 
-		} else {
-			$error = 'error.invalid.key';
-		}
+        if (!GeneralUtility::inList($GLOBALS['TYPO3_CONF_VARS']['FE']['content_doktypes'], $row['doktype'])) {
+            throw new \UnexpectedValueException('error.page.doktype');
+        }
+        if ($row['hidden'] == 1 || $row['deleted'] == 1) {
+            throw new \UnexpectedValueException('error.page.hidden');
+        }
+        if (!empty($row['fe_group'])) {
+            throw new \UnexpectedValueException('error.page.restricted');
+        }
+    }
 
-		$this->view->assignMultiple(array(
-			'lll' => 'LLL:EXT:page_speed/Resources/Private/Language/locallang.xlf:',
-			'menu' => $this->modifyFuncMenu(BackendUtility::getFuncMenu(
-				$this->pObj->id,
-				'SET[language]',
-				$this->pObj->MOD_SETTINGS['language'],
-				$this->pObj->MOD_MENU['language']
-			), 'language'),
-			'configuration' => $this->configuration,
-			'result' => $result,
-			'url' => $url,
-			'error' => $error,
-			'pageId' => $this->pageId
-		));
+    /**
+     * Hack some bootstrap logic into the core
+     *
+     * @param string $code
+     * @param string $id
+     * @return string
+     */
+    protected function modifyFuncMenu($code, $id)
+    {
+        return str_replace('<select', '<select class="form-control" id="' . htmlspecialchars($id) . '"', $code);
+    }
 
-		return $this->view->render();
-	}
-
-	/**
-	 * Check if the page id is valid
-	 *
-	 * @return void
-	 */
-	protected function checkPageId() {
-		if ($this->pageId === 0) {
-			throw new \UnexpectedValueException('error.page.idIsZero');
-		}
-		$row = $this->getDatabaseConnection()->exec_SELECTgetSingleRow('*', 'pages', 'uid=' . $this->pageId);
-
-		if (!GeneralUtility::inList($GLOBALS['TYPO3_CONF_VARS']['FE']['content_doktypes'], $row['doktype'])) {
-			throw new \UnexpectedValueException('error.page.doktype');
-		}
-		if ($row['hidden'] == 1 || $row['deleted'] == 1) {
-			throw new \UnexpectedValueException('error.page.hidden');
-		}
-		if (!empty($row['fe_group'])) {
-			throw new \UnexpectedValueException('error.page.restricted');
-		}
-	}
-
-	/**
-	 * Hack some bootstrap logic into the core
-	 *
-	 * @param string $code
-	 * @param string $id
-	 * @return string
-	 */
-	protected function modifyFuncMenu($code, $id) {
-		return str_replace('<select', '<select class="form-control" id="' . htmlspecialchars($id) . '"', $code);
-	}
-
-	/**
-	 * Add JS and CSS files
-	 *
-	 * @return void
-	 */
-	protected function addScripts() {
-		$path = ExtensionManagementUtility::extRelPath('page_speed') . 'Resources/Public/';
-		$this->getDocumentTemplate()->addStyleSheet('page_speed', $path . 'Styles/speed.css');
-		$jsFiles = array('js/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js');
-		foreach ($jsFiles as $file) {
-			$this->getDocumentTemplate()->loadJavascriptLib($path . $file);
-		}
-	}
-
+    /**
+     * Add JS and CSS files
+     *
+     * @return void
+     */
+    protected function addScripts()
+    {
+        $path = ExtensionManagementUtility::extRelPath('page_speed') . 'Resources/Public/';
+        $this->getDocumentTemplate()->addStyleSheet('page_speed', $path . 'Styles/speed.css');
+        $jsFiles = ['js/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
+        foreach ($jsFiles as $file) {
+            $this->getDocumentTemplate()->loadJavascriptLib($path . $file);
+        }
+    }
 }

@@ -14,33 +14,36 @@
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Response;
 
-class Result {
+class Result
+{
 
-	/** @var string */
-	protected $format;
+    /** @var string */
+    protected $format;
 
-	/** @var array */
-	protected $arguments = array();
+    /** @var array */
+    protected $arguments = [];
 
-	public function __construct(array $raw) {
-		$this->format = $raw['format'];
-		if (isset($raw['args'])) {
-			$this->arguments = $raw['args'];
-		}
-	}
+    public function __construct(array $raw)
+    {
+        $this->format = $raw['format'];
+        if (isset($raw['args'])) {
+            $this->arguments = $raw['args'];
+        }
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getFormat() {
-		return $this->format;
-	}
+    /**
+     * @return string
+     */
+    public function getFormat()
+    {
+        return $this->format;
+    }
 
-	/**
-	 * @return array
-	 */
-	public function getArguments() {
-		return $this->arguments;
-	}
-
+    /**
+     * @return array
+     */
+    public function getArguments()
+    {
+        return $this->arguments;
+    }
 }

@@ -19,15 +19,24 @@ use GeorgRinger\PageSpeed\Domain\Model\Response;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class AssetsViewHelper extends AbstractViewHelper {
+class AssetsViewHelper extends AbstractViewHelper
+{
 
-	/**
-	 * @param string $id
-	 * @param array $result
-	 * @return string
-	 */
-	public function render($id, array $result) {
-		return '<script type="text/javascript">
+    /**
+     * As this ViewHelper renders HTML, the output must not be escaped.
+     *
+     * @var bool
+     */
+    protected $escapeOutput = false;
+
+    /**
+     * @param string $id
+     * @param array $result
+     * @return string
+     */
+    public function render($id, array $result)
+    {
+        return '<script type="text/javascript">
 				var chartResourcesBalloonText = "' . $this->translate('chart.resources.balloonText') . '";
 				// <![CDATA[
 				AmCharts.ready(function () {
@@ -74,53 +83,55 @@ class AssetsViewHelper extends AbstractViewHelper {
 				});
 				// ]]>
 			</script>';
-	}
+    }
 
-	/**
-	 * @param array $result
-	 * @return array
-	 */
-	protected function getData(array $result) {
-		/** @var Response $mobile */
-		$mobile = $result['mobile'];
-		/** @var Response $desktop */
-		$desktop = $result['desktop'];
+    /**
+     * @param array $result
+     * @return array
+     */
+    protected function getData(array $result)
+    {
+        /** @var Response $mobile */
+        $mobile = $result['mobile'];
+        /** @var Response $desktop */
+        $desktop = $result['desktop'];
 
-		$data = [
-			[
-				'type' => $this->translate('resources.html'),
-				'desktop' => $desktop->getPageStats()->getHtmlResponseKb(),
-				'mobile' => $mobile->getPageStats()->getHtmlResponseKb(),
-			], [
-				'type' => $this->translate('resources.css'),
-				'desktop' => $desktop->getPageStats()->getCssResponseKb(),
-				'mobile' => $mobile->getPageStats()->getCssResponseKb(),
-			],
-			[
-				'type' => $this->translate('resources.js'),
-				'desktop' => $desktop->getPageStats()->getJavascriptResponseKb(),
-				'mobile' => $mobile->getPageStats()->getJavascriptResponseKb(),
-			],
-			[
-				'type' => $this->translate('resources.img'),
-				'desktop' => $desktop->getPageStats()->getImageResponseKb(),
-				'mobile' => $mobile->getPageStats()->getImageResponseKb(),
-			],
-			[
-				'type' => $this->translate('resources.other'),
-				'desktop' => $desktop->getPageStats()->getOtherResponseKb(),
-				'mobile' => $mobile->getPageStats()->getOtherResponseKb(),
-			],
-		];
+        $data = [
+            [
+                'type' => $this->translate('resources.html'),
+                'desktop' => $desktop->getPageStats()->getHtmlResponseKb(),
+                'mobile' => $mobile->getPageStats()->getHtmlResponseKb(),
+            ], [
+                'type' => $this->translate('resources.css'),
+                'desktop' => $desktop->getPageStats()->getCssResponseKb(),
+                'mobile' => $mobile->getPageStats()->getCssResponseKb(),
+            ],
+            [
+                'type' => $this->translate('resources.js'),
+                'desktop' => $desktop->getPageStats()->getJavascriptResponseKb(),
+                'mobile' => $mobile->getPageStats()->getJavascriptResponseKb(),
+            ],
+            [
+                'type' => $this->translate('resources.img'),
+                'desktop' => $desktop->getPageStats()->getImageResponseKb(),
+                'mobile' => $mobile->getPageStats()->getImageResponseKb(),
+            ],
+            [
+                'type' => $this->translate('resources.other'),
+                'desktop' => $desktop->getPageStats()->getOtherResponseKb(),
+                'mobile' => $mobile->getPageStats()->getOtherResponseKb(),
+            ],
+        ];
 
-		return $data;
-	}
+        return $data;
+    }
 
-	/**
-	 * @param string $key
-	 * @return string
-	 */
-	protected function translate($key) {
-		return LocalizationUtility::translate($key, 'page_speed');
-	}
+    /**
+     * @param string $key
+     * @return string
+     */
+    protected function translate($key)
+    {
+        return LocalizationUtility::translate($key, 'page_speed');
+    }
 }

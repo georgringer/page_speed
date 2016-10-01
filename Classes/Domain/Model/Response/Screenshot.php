@@ -14,67 +14,72 @@
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Response;
 
-class Screenshot {
+class Screenshot
+{
 
+    /** @var string */
+    protected $mimeType;
 
-	/** @var string */
-	protected $mimeType;
+    /** @var string */
+    protected $data;
 
-	/** @var string */
-	protected $data;
+    /** @var int */
+    protected $width;
 
-	/** @var int */
-	protected $width;
+    /** @var int */
+    protected $height;
 
-	/** @var int */
-	protected $height;
+    /** @var array */
+    protected $pageRect;
 
-	/** @var array */
-	protected $pageRect;
+    public function __construct(array $raw = null)
+    {
+        if (is_array($raw)) {
+            $this->mimeType = $raw['mime_type'];
+            $this->data = str_replace(['_', '-'], ['/', '+'], $raw['data']);
+            $this->width = (int)$raw['width'];
+            $this->height = (int)$raw['height'];
+            $this->pageRect = $raw['page_rect'];
+        }
+    }
 
-	public function __construct(array $raw = NULL) {
-		if (is_array($raw)) {
-			$this->mimeType = $raw['mime_type'];
-			$this->data = str_replace(array('_', '-'), array('/', '+'), $raw['data']);
-			$this->width = (int)$raw['width'];
-			$this->height = (int)$raw['height'];
-			$this->pageRect = $raw['page_rect'];
-		}
-	}
+    /**
+     * @return string
+     */
+    public function getMimeType()
+    {
+        return $this->mimeType;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getMimeType() {
-		return $this->mimeType;
-	}
+    /**
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getData() {
-		return $this->data;
-	}
+    /**
+     * @return int
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getWidth() {
-		return $this->width;
-	}
+    /**
+     * @return int
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getHeight() {
-		return $this->height;
-	}
-
-	/**
-	 * @return array
-	 */
-	public function getPageRect() {
-		return $this->pageRect;
-	}
-
+    /**
+     * @return array
+     */
+    public function getPageRect()
+    {
+        return $this->pageRect;
+    }
 }

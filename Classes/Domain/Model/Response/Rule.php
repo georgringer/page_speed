@@ -14,81 +14,85 @@
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Response;
 
-class Rule {
+class Rule
+{
 
-	/** @var Result */
-	protected $summary;
+    /** @var Result */
+    protected $summary;
 
-	/** @var string */
-	protected $localizedRuleName;
+    /** @var string */
+    protected $localizedRuleName;
 
-	/** @var float */
-	protected $ruleImpact;
+    /** @var float */
+    protected $ruleImpact;
 
-	/** @var string */
-	protected $group;
+    /** @var string */
+    protected $group;
 
-	/** @var array */
-	protected $urlBlocks = [];
+    /** @var array */
+    protected $urlBlocks = [];
 
-	public function __construct(array $raw) {
-		$this->localizedRuleName = $raw['localizedRuleName'];
-		$this->ruleImpact = $raw['ruleImpact'];
-		$this->group = $raw['groups'][0];
+    public function __construct(array $raw)
+    {
+        $this->localizedRuleName = $raw['localizedRuleName'];
+        $this->ruleImpact = $raw['ruleImpact'];
+        $this->group = $raw['groups'][0];
 
-		if (isset($raw['summary']) && is_array($raw['summary'])) {
-			$this->summary = new Result($raw['summary']);
-		}
-		if (isset($raw['urlBlocks']) && is_array($raw['urlBlocks'])) {
-			foreach($raw['urlBlocks'] as $item) {
-				$this->urlBlocks[] = new UrlBlock($item);
-			}
-		}
-	}
+        if (isset($raw['summary']) && is_array($raw['summary'])) {
+            $this->summary = new Result($raw['summary']);
+        }
+        if (isset($raw['urlBlocks']) && is_array($raw['urlBlocks'])) {
+            foreach ($raw['urlBlocks'] as $item) {
+                $this->urlBlocks[] = new UrlBlock($item);
+            }
+        }
+    }
 
-	/**
-	 * @return Result
-	 */
-	public function getSummary() {
-		return $this->summary;
-	}
+    /**
+     * @return Result
+     */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
 
+    /**
+     * @return string
+     */
+    public function getLocalizedRuleName()
+    {
+        return $this->localizedRuleName;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getLocalizedRuleName() {
-		return $this->localizedRuleName;
-	}
+    /**
+     * @return float
+     */
+    public function getRuleImpact()
+    {
+        return $this->ruleImpact;
+    }
 
-	/**
-	 * @return float
-	 */
-	public function getRuleImpact() {
-		return $this->ruleImpact;
-	}
+    /**
+     * @return string
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getGroup() {
-		return $this->group;
-	}
+    /**
+     * @return string
+     */
+    public function getHasImpact()
+    {
+        return (float)$this->ruleImpact > 0 ? 'danger' : 'success';
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getHasImpact() {
-		return (float)$this->ruleImpact > 0 ? 'danger' : 'success';
-	}
-
-	/**
-	 * @return array
-	 */
-	public function getUrlBlocks() {
-		return $this->urlBlocks;
-	}
-
-
-
+    /**
+     * @return array
+     */
+    public function getUrlBlocks()
+    {
+        return $this->urlBlocks;
+    }
 }

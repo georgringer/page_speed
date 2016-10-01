@@ -18,17 +18,26 @@ namespace GeorgRinger\PageSpeed\ViewHelpers\Chart;
 use GeorgRinger\PageSpeed\Domain\Model\Response;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class GaugeViewHelper extends AbstractViewHelper {
+class GaugeViewHelper extends AbstractViewHelper
+{
 
-	/**
-	 * @param string $id
-	 * @param Response $response
-	 * @return string
-	 */
-	public function render($id, Response $response) {
-		$arrows = array();
-		if ($response->getScoreSpeed() > 0) {
-			$arrows[] = '{
+    /**
+     * As this ViewHelper renders HTML, the output must not be escaped.
+     *
+     * @var bool
+     */
+    protected $escapeOutput = false;
+
+    /**
+     * @param string $id
+     * @param Response $response
+     * @return string
+     */
+    public function render($id, Response $response)
+    {
+        $arrows = [];
+        if ($response->getScoreSpeed() > 0) {
+            $arrows[] = '{
 							"color": "blue",
 							"innerRadius": "10%",
 							"nailRadius": 0,
@@ -36,9 +45,9 @@ class GaugeViewHelper extends AbstractViewHelper {
 							"title": "Speed",
 							"radius": "100%"
 						}';
-		}
-		if ($response->getScoreUsability() > 0) {
-			$arrows[] = '{
+        }
+        if ($response->getScoreUsability() > 0) {
+            $arrows[] = '{
 							"color": "redo",
 							"title": "Usability",
 							"innerRadius": "0%",
@@ -46,8 +55,8 @@ class GaugeViewHelper extends AbstractViewHelper {
 							"value": ' . $response->getScoreUsability() . ',
 							"radius": "100%"
 						}';
-		}
-		return '<script type="text/javascript">
+        }
+        return '<script type="text/javascript">
 					// <![CDATA[
 					AmCharts.ready(function () {
 						AmCharts.makeChart("' . $id . '", {
@@ -93,5 +102,5 @@ class GaugeViewHelper extends AbstractViewHelper {
 					});
 					// ]]>
 				</script>';
-	}
+    }
 }

@@ -14,36 +14,39 @@
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Response;
 
-class UrlBlock {
+class UrlBlock
+{
 
-	/** @var Rule */
-	protected $header;
+    /** @var Rule */
+    protected $header;
 
-	/** @var array<Result> */
-	protected $urls = [];
+    /** @var array<Result> */
+    protected $urls = [];
 
-	public function __construct(array $raw) {
-		$this->header = new Result($raw['header']);
+    public function __construct(array $raw)
+    {
+        $this->header = new Result($raw['header']);
 
-		if (isset($raw['urls']) && is_array($raw['urls'])) {
-			foreach ($raw['urls'] as $item) {
-				$this->urls[] = new Result($item['result']);
-			}
-		}
-	}
+        if (isset($raw['urls']) && is_array($raw['urls'])) {
+            foreach ($raw['urls'] as $item) {
+                $this->urls[] = new Result($item['result']);
+            }
+        }
+    }
 
-	/**
-	 * @return Rule
-	 */
-	public function getHeader() {
-		return $this->header;
-	}
+    /**
+     * @return Rule
+     */
+    public function getHeader()
+    {
+        return $this->header;
+    }
 
-	/**
-	 * @return array
-	 */
-	public function getUrls() {
-		return $this->urls;
-	}
-
+    /**
+     * @return array
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
 }
