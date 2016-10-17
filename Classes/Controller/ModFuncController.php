@@ -67,7 +67,8 @@ class ModFuncController extends AbstractFunctionModule
         $languages = [];
         $languageRecords = $this->getDatabaseConnection()->exec_SELECTgetRows('uid,title', 'sys_language', 'hidden=0', '', 'title');
         if (is_array($languageRecords) && !empty($languageRecords)) {
-            $languages[] = 'Default';
+            $defaultLanguageLabel = BackendUtility::getModTSconfig($this->pObj->id, 'mod.SHARED.defaultLanguageLabel');
+            $languages[] = $defaultLanguageLabel['value'] ?:  'Default';
             foreach ($languageRecords as $language) {
                 $languages[$language['uid']] = $language['title'];
             }
