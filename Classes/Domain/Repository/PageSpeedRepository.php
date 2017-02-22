@@ -19,6 +19,7 @@ use GeorgRinger\PageSpeed\Domain\Model\Dto\Configuration;
 use GeorgRinger\PageSpeed\Domain\Model\Response;
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Http\HttpRequest;
+use TYPO3\CMS\Core\Http\RequestFactory;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -117,21 +118,24 @@ class PageSpeedRepository
      *
      * @param string $url
      * @return string
-     * @throws \Exception
-     * @throws \HTTP_Request2_LogicException
      */
     protected function apiCall($url)
     {
-        $config = [
-            'follow_redirects' => true,
-            'strict_redirects' => true
+        // Initiate the Request Factory, which allows to run multiple requests
+        /** @var RequestFactory $requestFactory */
+        $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
+        $additionalOptions = [
+            // Additional options, see http://docs.guzzlephp.org/en/latest/request-options.html
+            'allow_redirects' => true,
+            'cookies' => false
         ];
-        /** @var $request HttpRequest */
-        $request = GeneralUtility::makeInstance(HttpRequest::class, $url, 'GET', $config);
-        $response = $request->send();
-
-        if ((int)$response->getStatus() !== 200) {
-            $errorResponse = $response->getBody();
+        // Return a PSR-7 compliant response object
+        $response = $requestFactory->request($url, 'GET', $additionalOptions);
+        // Get the content as a string on a successful request
+        if ($response->getStatusCode() === 200) {
+            $content = $response->getBody()->getContents();
+        } else {
+            $errorResponse = $response->getBody()->getContents();
             $errors = json_decode($errorResponse, true);
             if (is_array($errors) && is_array($errors['error']) && isset($errors['error']['message'])) {
                 throw new \RuntimeException($errors['error']['message']);
@@ -140,8 +144,7 @@ class PageSpeedRepository
             }
         }
 
-        $body = $response->getBody();
-        return $body;
+        return $content;
     }
 
     /**
