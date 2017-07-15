@@ -1,4 +1,5 @@
 {namespace speed=GeorgRinger\PageSpeed\ViewHelpers}
+{namespace core=Typo3\Cms\Core\ViewHelpers}
 
 <div class="page-speed">
 	<script type="text/javascript" src="../typo3conf/ext/page_speed/Resources/Public/js/main.js"></script>
@@ -31,7 +32,7 @@
 				</f:if>
 
 				<f:link.page class="btn btn-default pull-right" additionalParams="{clear:1}">
-					<span class="t3-icon t3-icon-actions t3-icon-actions-system t3-icon-system-cache-clear-impact-medium"></span>
+					{core:icon(identifier:'actions-system-cache-clear')}
 					{f:translate(key:'{lll}cache.clear')}
 				</f:link.page>
 			</f:if>
