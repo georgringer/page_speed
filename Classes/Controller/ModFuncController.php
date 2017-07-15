@@ -20,6 +20,7 @@ use GeorgRinger\PageSpeed\Domain\Repository\PageSpeedRepository;
 use GeorgRinger\PageSpeed\Service\UrlService;
 use TYPO3\CMS\Backend\Module\AbstractFunctionModule;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
@@ -68,7 +69,7 @@ class ModFuncController extends AbstractFunctionModule
         $languageRecords = $this->getDatabaseConnection()->exec_SELECTgetRows('uid,title', 'sys_language', 'hidden=0', '', 'title');
         if (is_array($languageRecords) && !empty($languageRecords)) {
             $defaultLanguageLabel = BackendUtility::getModTSconfig($this->pObj->id, 'mod.SHARED.defaultLanguageLabel');
-            $languages[] = $defaultLanguageLabel['value'] ?:  'Default';
+            $languages[] = $defaultLanguageLabel['value'] ?: 'Default';
             foreach ($languageRecords as $language) {
                 $languages[$language['uid']] = $language['title'];
             }
@@ -167,11 +168,20 @@ class ModFuncController extends AbstractFunctionModule
      */
     protected function addScripts()
     {
-        $path = ExtensionManagementUtility::extRelPath('page_speed') . 'Resources/Public/';
-        $this->getDocumentTemplate()->addStyleSheet('page_speed', $path . 'Styles/speed.css');
+        $path = ExtensionManagementUtility::siteRelPath('page_speed') . 'Resources/Public/';
+        $this->getDocumentTemplate()->addStyleSheet('page_speed', '../' . $path . 'Styles/speed.css');
         $jsFiles = ['js/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
+        $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         foreach ($jsFiles as $file) {
-            $this->getDocumentTemplate()->loadJavascriptLib($path . $file);
+            $pageRenderer->addJsFile('../' . $path . $file);
         }
+    }
+
+    /**
+     * @return DatabaseConnection
+     */
+    protected function getDatabaseConnection()
+    {
+        return $GLOBALS['TYPO3_DB'];
     }
 }
