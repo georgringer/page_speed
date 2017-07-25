@@ -110,12 +110,12 @@ class ModFuncController extends AbstractFunctionModule
 
         $this->view->assignMultiple([
             'lll' => 'LLL:EXT:page_speed/Resources/Private/Language/locallang.xlf:',
-            'menu' => $this->modifyFuncMenu(BackendUtility::getFuncMenu(
+            'menu' => BackendUtility::getFuncMenu(
                 $this->pObj->id,
                 'SET[language]',
                 $this->pObj->MOD_SETTINGS['language'],
                 $this->pObj->MOD_MENU['language']
-            ), 'language'),
+            ),
             'configuration' => $this->configuration,
             'result' => $result,
             'url' => $url,
@@ -147,18 +147,6 @@ class ModFuncController extends AbstractFunctionModule
         if (!empty($row['fe_group'])) {
             throw new \UnexpectedValueException('error.page.restricted');
         }
-    }
-
-    /**
-     * Hack some bootstrap logic into the core
-     *
-     * @param string $code
-     * @param string $id
-     * @return string
-     */
-    protected function modifyFuncMenu($code, $id)
-    {
-        return str_replace('<select', '<select class="form-control" id="' . htmlspecialchars($id) . '"', $code);
     }
 
     /**
