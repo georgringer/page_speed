@@ -105,7 +105,7 @@ class PageSpeedRepository
      */
     protected function getResponseFromApi($identifier, $strategy, $locale = 'en')
     {
-        $url = sprintf('https://www.googleapis.com/pagespeedonline/v2/runPagespeed?screenshot=true&url=%s&strategy=%s&locale=%s&key=%s',
+        $url = sprintf('https://www.googleapis.com/pagespeedonline/v4/runPagespeed?screenshot=true&url=%s&strategy=%s&locale=%s&key=%s',
             rawurlencode($identifier),
             $strategy,
             $locale,
