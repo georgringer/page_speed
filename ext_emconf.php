@@ -7,11 +7,11 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Georg Ringer',
     'author_email' => 'georg.ringer@gmail.com',
     'state' => 'beta',
-    'clearCacheOnLoad' => 1,
-    'version' => '2.0.0',
+    'clearCacheOnLoad' => true,
+    'version' => '3.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.1.0-8.9.99',
+            'typo3' => '9.4.0-9.9.99',
         ],
         'conflicts' => [],
         'suggests' => [],

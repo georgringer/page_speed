@@ -9,10 +9,12 @@
 			<h1>{f:translate(key:'{lll}module.header')}</h1>
 
 			<p class="lead">{f:translate(key:'{lll}module.description')}<br>
-
+				<code>{url}</code>
 				<f:if condition="{configuration.demo}">
 					<f:then>
-						<f:be.infobox state="-1" title="{f:translate(key:'{lll}demo.header')}">{f:translate(key:'{lll}demo.description')}</f:be.infobox>
+						<f:be.infobox state="-1" title="{f:translate(key:'{lll}demo.header')}">
+							{f:translate(key:'{lll}demo.description')}
+						</f:be.infobox>
 					</f:then>
 					<f:else><code>{url}</code></f:else>
 				</f:if>
@@ -40,7 +42,7 @@
 		<div class="col-sm-8">
 			<f:if condition="{result}">
 				<div id="chart-resources" style="width:100%;height:250px;"></div>
-				<speed:chart.assets id="chart-resources" result="{result}" />
+				<speed:chart.assets id="chart-resources" result="{result}"/>
 			</f:if>
 		</div>
 
@@ -51,21 +53,23 @@
 			<div role="tabpanel">
 				<ul class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active">
-						<a class="text-capitalize" href="#category-desktop" aria-controls="category-desktop" role="tab" data-toggle="tab"><i class="fa fa-desktop"></i>
+						<a class="text-capitalize" href="#category-desktop" aria-controls="category-desktop" role="tab"
+							 data-toggle="tab"><i class="fa fa-desktop"></i>
 							{f:translate(key:'{lll}strategy.desktop')}</a>
 					</li>
 					<li role="presentation" class="">
-						<a class="text-capitalize" href="#category-mobile" aria-controls="category-mobile" role="tab" data-toggle="tab"><i class="fa fa-mobile"></i>
+						<a class="text-capitalize" href="#category-mobile" aria-controls="category-mobile" role="tab"
+							 data-toggle="tab"><i class="fa fa-mobile"></i>
 							{f:translate(key:'{lll}strategy.mobile')}</a>
 					</li>
 				</ul>
 			</div>
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="category-desktop">
-					<f:render section="response" arguments="{response:result.desktop,strategy:'desktop',lll:lll}" />
+					<f:render section="response" arguments="{response:result.desktop,strategy:'desktop',lll:lll}"/>
 				</div>
 				<div role="tabpanel" class="tab-pane " id="category-mobile">
-					<f:render section="response" arguments="{response:result.mobile,strategy:'mobile',lll:lll}" />
+					<f:render section="response" arguments="{response:result.mobile,strategy:'mobile',lll:lll}"/>
 				</div>
 			</div>
 			<f:if condition="{cacheCleared}">
@@ -78,7 +82,7 @@
 			<div class="alert alert-danger">
 				<strong>{f:translate(key:'{lll}error.header')}</strong><br>
 				<f:if condition="{error}">
-					<f:translate key="{lll}{error}" default="{error}" />
+					<f:translate key="{lll}{error}" default="{error}"/>
 				</f:if>
 			</div>
 			<h4>{f:translate(key:'{lll}troubleshooting.header')}</h4>
@@ -91,38 +95,38 @@
 <script type="text/javascript">
 	var calc = 1.422222222;
 
-	TYPO3.jQuery(document).ready(function () {
-		TYPO3.jQuery(".single-rule .title").click(function () {
-			TYPO3.jQuery(this).children('i').toggleClass('fa-minus');
-			TYPO3.jQuery(this).next('.description').toggle();
+	jQuery(document).ready(function () {
+		jQuery(".single-rule .title").click(function () {
+			jQuery(this).children('i').toggleClass('fa-minus');
+			jQuery(this).next('.description').toggle();
 		});
 
-		TYPO3.jQuery(".screenshot-toggle").click(function () {
-			if (TYPO3.jQuery(this).hasClass('active')) {
-				TYPO3.jQuery('.snapshot-rect').remove();
+		jQuery(".screenshot-toggle").click(function () {
+			if (jQuery(this).hasClass('active')) {
+				jQuery('.snapshot-rect').remove();
 			} else {
 				addOverlay(this, 'rects', '');
 				addOverlay(this, 'rects-secondary', 'secondary');
 			}
-			TYPO3.jQuery(this).toggleClass('active');
+			jQuery(this).toggleClass('active');
 
 		});
 	});
 
 	function addOverlay(link, attribute, additionalClass) {
-		TYPO3.jQuery('.snapshot-rect').remove();
-		var areas = TYPO3.jQuery(link).data(attribute).split(';');
+		jQuery('.snapshot-rect').remove();
+		var areas = jQuery(link).data(attribute).split(';');
 		for (var i = 0; i < areas.length; i++) {
 			var item = areas[i].split(',');
-			TYPO3.jQuery("<div>")
-					.addClass('snapshot-rect ' + additionalClass)
-					.css({
-						left: item[0] / calc,
-						top: item[1] / calc,
-						width: item[2] / calc,
-						height: item[3] / calc
-					})
-					.insertAfter(TYPO3.jQuery('#screenshot-' + TYPO3.jQuery(link).data('strategy')));
+			jQuery("<div>")
+				.addClass('snapshot-rect ' + additionalClass)
+				.css({
+					left: item[0] / calc,
+					top: item[1] / calc,
+					width: item[2] / calc,
+					height: item[3] / calc
+				})
+				.insertAfter(jQuery('#screenshot-' + jQuery(link).data('strategy')));
 		}
 	}
 </script>
@@ -135,7 +139,8 @@
 				<ul class="score">
 					<f:if condition="{response.scoreUsability}">
 						<li>
-							<span class="indicator color-{speed:indicator(number:response.scoreUsability)}">{response.scoreUsability}</span>
+							<span
+								class="indicator color-{speed:indicator(number:response.scoreUsability)}">{response.scoreUsability}</span>
 							{f:translate(key:'{lll}header.usability')}
 						</li>
 					</f:if>
@@ -178,7 +183,8 @@
 				<f:if condition="{response.screenshot}">
 					<div class="screenshot {strategy}">
 						<div class="screenshot-img-container">
-							<img id="screenshot-{strategy}" src="data:{response.screenshot.mimeType};base64,{response.screenshot.data}" class="img-responsive" />
+							<img id="screenshot-{strategy}"
+									 src="data:{response.screenshot.mimeType};base64,{response.screenshot.data}" class="img-responsive"/>
 						</div>
 					</div>
 				</f:if>
@@ -195,11 +201,12 @@
 					<!--Danger-->
 					<f:if condition="{response.rulesDangerForUsability}">
 						<h3>
-							<span class="indicator color-danger"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.required')} </h3>
+							<span class="indicator color-danger"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.required')}
+						</h3>
 
 						<div class="ruleset">
 							<f:for each="{response.rulesDangerForUsability}" as="rule">
-								<f:render section="rule" arguments="{rule:rule,strategy:strategy}" />
+								<f:render section="rule" arguments="{rule:rule,strategy:strategy}"/>
 							</f:for>
 						</div>
 					</f:if>
@@ -207,11 +214,12 @@
 					<!--Suggested-->
 					<f:if condition="{response.rulesWarningForUsability}">
 						<h3>
-							<span class="indicator color-warning"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.suggested')} </h3>
+							<span class="indicator color-warning"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.suggested')}
+						</h3>
 
 						<div class="ruleset">
 							<f:for each="{response.rulesWarningForUsability}" as="rule">
-								<f:render section="rule" arguments="{rule:rule,strategy:strategy}" />
+								<f:render section="rule" arguments="{rule:rule,strategy:strategy}"/>
 							</f:for>
 						</div>
 					</f:if>
@@ -220,11 +228,12 @@
 					<f:if condition="{response.rulesPassedForUsability}">
 						<h3>
 							<span class="indicator color-ok"><i class="fa fa-check"></i></span>
-							<f:translate key="{lll}rules.passed" arguments="{0:'{f:count(subject:response.rulesPassedForUsability)}'}" />
+							<f:translate key="{lll}rules.passed"
+													 arguments="{0:'{f:count(subject:response.rulesPassedForUsability)}'}"/>
 						</h3>
 						<div class="ruleset">
 							<f:for each="{response.rulesPassedForUsability}" as="rule">
-								<f:render section="rule" arguments="{rule:rule,strategy:strategy}" />
+								<f:render section="rule" arguments="{rule:rule,strategy:strategy}"/>
 							</f:for>
 						</div>
 					</f:if>
@@ -239,11 +248,12 @@
 					<!--Danger-->
 					<f:if condition="{response.rulesDangerForSpeed}">
 						<h3>
-							<span class="indicator color-danger"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.required')} </h3>
+							<span class="indicator color-danger"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.required')}
+						</h3>
 
 						<div class="ruleset">
 							<f:for each="{response.rulesDangerForSpeed}" as="rule">
-								<f:render section="rule" arguments="{rule:rule,strategy:strategy}" />
+								<f:render section="rule" arguments="{rule:rule,strategy:strategy}"/>
 							</f:for>
 						</div>
 					</f:if>
@@ -251,11 +261,12 @@
 					<!--Suggested-->
 					<f:if condition="{response.rulesWarningForSpeed}">
 						<h3>
-							<span class="indicator color-warning"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.suggested')} </h3>
+							<span class="indicator color-warning"><i class="fa fa-exclamation"></i></span>{f:translate(key:'{lll}action.suggested')}
+						</h3>
 
 						<div class="ruleset">
 							<f:for each="{response.rulesWarningForSpeed}" as="rule">
-								<f:render section="rule" arguments="{rule:rule,strategy:strategy}" />
+								<f:render section="rule" arguments="{rule:rule,strategy:strategy}"/>
 							</f:for>
 						</div>
 					</f:if>
@@ -264,11 +275,11 @@
 					<f:if condition="{response.rulesPassedForSpeed}">
 						<h3>
 							<span class="indicator color-ok"><i class="fa fa-check"></i></span>
-							<f:translate key="{lll}rules.passed" arguments="{0:'{f:count(subject:response.rulesPassedForSpeed)}'}" />
+							<f:translate key="{lll}rules.passed" arguments="{0:'{f:count(subject:response.rulesPassedForSpeed)}'}"/>
 						</h3>
 						<div class="ruleset">
 							<f:for each="{response.rulesPassedForSpeed}" as="rule">
-								<f:render section="rule" arguments="{rule:rule,strategy:strategy}" />
+								<f:render section="rule" arguments="{rule:rule,strategy:strategy}"/>
 							</f:for>
 						</div>
 					</f:if>
@@ -287,7 +298,7 @@
 		<div class="description" style="display: none;">
 			<f:if condition="{rule.summary}">
 				<p>
-					<speed:result result="{rule.summary}" />
+					<speed:result result="{rule.summary}"/>
 				</p>
 			</f:if>
 			<f:if condition="{rule.urlBlocks}">
@@ -295,12 +306,12 @@
 				<div class="url-blocks">
 					<f:for each="{rule.urlBlocks}" as="block">
 						<div class="block">
-							<speed:result result="{block.header}" />
+							<speed:result result="{block.header}"/>
 							<f:if condition="{block.urls}">
 								<ul>
 									<f:for each="{block.urls}" as="url">
 										<li>
-											<speed:urlBlock result="{url}" strategy="{strategy}" />
+											<speed:urlBlock result="{url}" strategy="{strategy}"/>
 										</li>
 									</f:for>
 								</ul>

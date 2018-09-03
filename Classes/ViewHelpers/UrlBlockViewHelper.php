@@ -16,14 +16,18 @@ class UrlBlockViewHelper extends AbstractViewHelper
      */
     protected $escapingInterceptorEnabled = false;
 
-    /**
-     * @param Result $result
-     * @param bool $hsc
-     * @param string $strategy
-     * @return string
-     */
-    public function render(Result $result = null, $hsc = true, $strategy = '')
+    public function initializeArguments()
     {
+        $this->registerArgument('result', Result::class, 'Result', false, null);
+        $this->registerArgument('hsc', 'bool', 'HSC', false, true);
+        $this->registerArgument('strategy', 'string', 'stragey', false, '');
+    }
+
+    public function render()
+    {
+        $result = $this->arguments['result'];
+        $hsc = $this->arguments['hsc'];
+        $strategy = $this->arguments['strategy'];
         if (is_null($result)) {
             return '';
         }

@@ -2,24 +2,11 @@
 
 namespace GeorgRinger\PageSpeed\Controller;
 
-/*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
-
 use GeorgRinger\PageSpeed\Domain\Model\Dto\Configuration;
 use GeorgRinger\PageSpeed\Domain\Repository\PageSpeedRepository;
-use GeorgRinger\PageSpeed\Service\UrlService;
 use TYPO3\CMS\Backend\Module\AbstractFunctionModule;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -34,9 +21,6 @@ class ModFuncController extends AbstractFunctionModule
     /** @var string */
     protected $templatePath = 'EXT:page_speed/Resources/Private/Templates/';
 
-    /** @var UrlService */
-    protected $urlService;
-
     /** @var PageSpeedRepository */
     protected $pageSpeedRepository;
 
@@ -49,11 +33,10 @@ class ModFuncController extends AbstractFunctionModule
     public function __construct()
     {
         $this->view = GeneralUtility::makeInstance(StandaloneView::class);
-        $this->view->getRequest()->setControllerExtensionName('lowlevel');
+        $this->view->getRequest()->setControllerExtensionName('page_speed');
         $this->pageId = (int)GeneralUtility::_GET('id');
-        $this->urlService = new UrlService();
-        $this->pageSpeedRepository = new PageSpeedRepository();
-        $this->configuration = new Configuration();
+        $this->pageSpeedRepository = GeneralUtility::makeInstance(PageSpeedRepository::class);
+        $this->configuration = GeneralUtility::makeInstance(Configuration::class);
 
         $this->addScripts();
     }
@@ -63,11 +46,16 @@ class ModFuncController extends AbstractFunctionModule
      *
      * @return array Menu array
      */
-    public function modMenu()
+    public function modMenu(): array
     {
         $languages = [];
-        $languageRecords = $this->getDatabaseConnection()->exec_SELECTgetRows('uid,title', 'sys_language', 'hidden=0', '', 'title');
-        if (is_array($languageRecords) && !empty($languageRecords)) {
+        $languageRecords = GeneralUtility::makeInstance(ConnectionPool::class)
+            ->getQueryBuilderForTable('sys_language')
+            ->select('*')
+            ->from('sys_language')
+            ->execute()
+            ->fetchAll();
+        if (\is_array($languageRecords) && !empty($languageRecords)) {
             $defaultLanguageLabel = BackendUtility::getModTSconfig($this->pObj->id, 'mod.SHARED.defaultLanguageLabel');
             $languages[] = $defaultLanguageLabel['value'] ?: 'Default';
             foreach ($languageRecords as $language) {
@@ -90,7 +78,7 @@ class ModFuncController extends AbstractFunctionModule
         if ($this->configuration->isValid()) {
             try {
                 $this->checkPageId();
-                $url = $this->urlService->getFullUrl($this->pageId, $this->pObj->MOD_SETTINGS);
+                $url = $this->getFullUrl($this->pageId, $this->pObj->MOD_SETTINGS);
 
                 if (GeneralUtility::_GET('clear')) {
                     $this->pageSpeedRepository->clearByIdentifier($url);
@@ -131,16 +119,13 @@ class ModFuncController extends AbstractFunctionModule
      *
      * @return void
      */
-    protected function checkPageId()
+    protected function checkPageId(): void
     {
         if ($this->pageId === 0) {
             throw new \UnexpectedValueException('error.page.idIsZero');
         }
-        $row = $this->getDatabaseConnection()->exec_SELECTgetSingleRow('*', 'pages', 'uid=' . $this->pageId);
+        $row = BackendUtility::getRecord('pages', $this->pageId);
 
-        if (!GeneralUtility::inList($GLOBALS['TYPO3_CONF_VARS']['FE']['content_doktypes'], $row['doktype'])) {
-            throw new \UnexpectedValueException('error.page.doktype');
-        }
         if ($row['hidden'] == 1 || $row['deleted'] == 1) {
             throw new \UnexpectedValueException('error.page.hidden');
         }
@@ -158,7 +143,8 @@ class ModFuncController extends AbstractFunctionModule
     {
         $path = ExtensionManagementUtility::siteRelPath('page_speed') . 'Resources/Public/';
         $this->getDocumentTemplate()->addStyleSheet('page_speed', '../' . $path . 'Styles/speed.css');
-        $jsFiles = ['js/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
+
+        $jsFiles = ['JavaScript/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         foreach ($jsFiles as $file) {
             $pageRenderer->addJsFile('../' . $path . $file);
@@ -166,10 +152,18 @@ class ModFuncController extends AbstractFunctionModule
     }
 
     /**
-     * @return DatabaseConnection
+     * @param int $pageId
+     * @param array $additionalParams
+     * @return string
      */
-    protected function getDatabaseConnection()
+    protected function getFullUrl($pageId, array $additionalParams = []): string
     {
-        return $GLOBALS['TYPO3_DB'];
+        $additionalGetVars = '';
+        if (isset($additionalParams['language'])) {
+            $additionalGetVars .= '&L=' . $additionalParams['language'];
+        }
+        $url = BackendUtility::getPreviewUrl($pageId, '', null, '', '', $additionalGetVars);
+        return $url;
     }
+
 }

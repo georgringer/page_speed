@@ -29,21 +29,22 @@ class AssetsViewHelper extends AbstractViewHelper
      */
     protected $escapeOutput = false;
 
-    /**
-     * @param string $id
-     * @param array $result
-     * @return string
-     */
-    public function render($id, array $result)
+    public function initializeArguments()
+    {
+        $this->registerArgument('id', 'string', 'ID');
+        $this->registerArgument('result', 'array', 'Result');
+    }
+
+    public function render()
     {
         return '<script type="text/javascript">
 				var chartResourcesBalloonText = "' . $this->translate('chart.resources.balloonText') . '";
 				// <![CDATA[
 				AmCharts.ready(function () {
-					AmCharts.makeChart("' . $id . '", {
+					AmCharts.makeChart("' . $this->arguments['id'] . '", {
 						type: "serial",
 						"theme": "light",
-						"dataProvider": ' . json_encode($this->getData($result)) . ',
+						"dataProvider": ' . json_encode($this->getData($this->arguments['result'])) . ',
 						categoryField: "type",
 						rotate: true,
 						"legend": {

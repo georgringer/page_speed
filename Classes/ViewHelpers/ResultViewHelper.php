@@ -15,13 +15,17 @@ class ResultViewHelper extends AbstractViewHelper
      */
     protected $escapeOutput = false;
 
-    /**
-     * @param Result $result
-     * @param bool $hsc
-     * @return string
-     */
-    public function render(Result $result = null, $hsc = true)
+    public function initializeArguments()
     {
+        $this->registerArgument('result', Result::class, 'Result', false, null);
+        $this->registerArgument('hsc', 'bool', 'HSC', false, true);
+    }
+
+    public function render()
+    {
+        $result = $this->arguments['result'];
+        $hsc = $this->arguments['hsc'];
+
         if (is_null($result)) {
             return '';
         }

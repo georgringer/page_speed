@@ -10,7 +10,7 @@
 				<source>Page Speed</source>
 			</trans-unit>
 			<trans-unit id="module.description" xml:space="preserve">
-				<source>Measure the performance of the selected page.</source>
+				<source>Measure the performance of the selected page:</source>
 			</trans-unit>
 			<trans-unit id="extmng.key" xml:space="preserve">
 				<source>Key</source>

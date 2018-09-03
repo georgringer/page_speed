@@ -34,7 +34,7 @@ class Screenshot
 
     public function __construct(array $raw = null)
     {
-        if (is_array($raw)) {
+        if (\is_array($raw)) {
             $this->mimeType = $raw['mime_type'];
             $this->data = str_replace(['_', '-'], ['/', '+'], $raw['data']);
             $this->width = (int)$raw['width'];

@@ -2,20 +2,9 @@
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Dto;
 
-/*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
+use TYPO3\CMS\Core\SingletonInterface;
 
-class Configuration
+class Configuration implements SingletonInterface
 {
 
     /** @var string */
@@ -30,8 +19,8 @@ class Configuration
     public function __construct()
     {
         $configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['page_speed']);
-        if (is_array($configuration)) {
-            $this->key = $configuration['key'];
+        if (\is_array($configuration)) {
+            $this->key = (string)$configuration['key'];
             $this->demo = (bool)$configuration['demo'];
             $this->cacheTime = (int)$configuration['cacheTime'];
         }
@@ -40,18 +29,18 @@ class Configuration
     /**
      * @return bool
      */
-    public function isValid()
+    public function isValid(): bool
     {
         if ($this->demo) {
             return true;
         }
-        return (!empty($this->key)) ? true : false;
+        return !empty($this->key);
     }
 
     /**
      * @return string
      */
-    public function getKey()
+    public function getKey(): string
     {
         return $this->key;
     }
@@ -59,7 +48,7 @@ class Configuration
     /**
      * @return bool
      */
-    public function isDemo()
+    public function isDemo(): bool
     {
         return $this->demo;
     }
@@ -67,7 +56,7 @@ class Configuration
     /**
      * @return int
      */
-    public function getCacheTime()
+    public function getCacheTime(): int
     {
         return $this->cacheTime;
     }

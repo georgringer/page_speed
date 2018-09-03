@@ -28,42 +28,6 @@ class UrlService
         'language' => 'L'
     ];
 
-    /**
-     * @param int $pageId
-     * @param array $additionalParams
-     * @return string
-     */
-    public function getFullUrl($pageId, array $additionalParams = null)
-    {
-        $domainName = $this->getDomainName($pageId);
-        // Mount point overlay: Set new target page id and mp parameter
-        /** @var PageRepository $sysPage */
-        $sysPage = GeneralUtility::makeInstance(PageRepository::class);
-        $sysPage->init(false);
-        $mountPointMpParameter = '';
-        $finalPageIdToShow = $pageId;
-        $mountPointInformation = $sysPage->getMountPointInfo($pageId);
-        if ($mountPointInformation && $mountPointInformation['overlay']) {
-            // New page id
-            $finalPageIdToShow = $mountPointInformation['mount_pid'];
-            $mountPointMpParameter = '&MP=' . $mountPointInformation['MPvar'];
-        }
-        // Modify relative path to protocol with host if domain record is given
-        $protocolAndHost = '..';
-        if ($domainName) {
-            $protocol = 'http';
-            $page = (array)$sysPage->getPage($finalPageIdToShow);
-            if ($page['url_scheme'] == 2 || $page['url_scheme'] == 0 && GeneralUtility::getIndpEnv('TYPO3_SSL')) {
-                $protocol = 'https';
-            }
-            $protocolAndHost = $protocol . '://' . $domainName;
-        }
-
-        $mountPointMpParameter .= $this->addAdditionalParams($additionalParams);
-
-        $url = $protocolAndHost . '/index.php?id=' . $finalPageIdToShow . $this->getTypeParameterIfSet($finalPageIdToShow) . $mountPointMpParameter;
-        return $url;
-    }
 
     /**
      * @param array $additionalParams

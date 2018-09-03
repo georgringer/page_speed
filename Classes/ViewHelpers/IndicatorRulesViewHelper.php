@@ -8,13 +8,14 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 class IndicatorRulesViewHelper extends AbstractViewHelper
 {
 
-    /**
-     * @param int $number
-     * @return string
-     */
-    public function render($number)
+    public function initializeArguments()
     {
-        $number = (int)$number;
+        $this->registerArgument('number', 'int', 'number');
+    }
+
+    public function render()
+    {
+        $number = (int)$this->arguments['number'];
         if ($number === 0) {
             return 'none';
         } elseif ($number <= Response::INDICATOR_LOW) {
