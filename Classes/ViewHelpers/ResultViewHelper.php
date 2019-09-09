@@ -3,7 +3,7 @@
 namespace GeorgRinger\PageSpeed\ViewHelpers;
 
 use GeorgRinger\PageSpeed\Domain\Model\Response\Result;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class ResultViewHelper extends AbstractViewHelper
 {
@@ -26,7 +26,7 @@ class ResultViewHelper extends AbstractViewHelper
         $result = $this->arguments['result'];
         $hsc = $this->arguments['hsc'];
 
-        if (is_null($result)) {
+        if ($result === null) {
             return '';
         }
         $searchReplace = [];

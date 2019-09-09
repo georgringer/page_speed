@@ -8,7 +8,7 @@ if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations
     $configuration = new \GeorgRinger\PageSpeed\Domain\Model\Dto\Configuration();
 
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['page_speed_response'] = [
-        'frontend' => \TYPO3\CMS\Core\Cache\Frontend\StringFrontend::class,
+        'frontend' => \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend::class,
         'backend' => \TYPO3\CMS\Core\Cache\Backend\SimpleFileBackend::class,
         'options' => [
             'defaultLifetime' => $configuration->getCacheTime(),

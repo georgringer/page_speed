@@ -3,7 +3,7 @@
 namespace GeorgRinger\PageSpeed\ViewHelpers;
 
 use GeorgRinger\PageSpeed\Domain\Model\Response\Result;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class UrlBlockViewHelper extends AbstractViewHelper
 {

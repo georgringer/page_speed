@@ -4,16 +4,23 @@ namespace GeorgRinger\PageSpeed\Controller;
 
 use GeorgRinger\PageSpeed\Domain\Model\Dto\Configuration;
 use GeorgRinger\PageSpeed\Domain\Repository\PageSpeedRepository;
-use TYPO3\CMS\Backend\Module\AbstractFunctionModule;
+use TYPO3\CMS\Backend\Module\BaseScriptClass;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Page\PageRenderer;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
-class ModFuncController extends AbstractFunctionModule
+class ModFuncController
 {
+    /**
+     * Contains a reference to the parent (calling) object (which is probably an instance of
+     * an extension class to \TYPO3\CMS\Backend\Module\BaseScriptClass
+     *
+     * @var BaseScriptClass
+     * @see init()
+     */
+    public $pObj;
 
     /** @var StandaloneView */
     protected $view;
@@ -29,6 +36,20 @@ class ModFuncController extends AbstractFunctionModule
 
     /** @var int */
     protected $pageId = 0;
+
+
+    /**
+     * Initialize the object
+     *
+     * @param \object $pObj A reference to the parent (calling) object
+     * @throws \RuntimeException
+     * @see \TYPO3\CMS\Backend\Module\BaseScriptClass::checkExtObj()
+     */
+    public function init($pObj)
+    {
+        $this->pObj = $pObj;
+        $this->pObj->MOD_MENU = array_merge($this->pObj->MOD_MENU, $this->modMenu());
+    }
 
     public function __construct()
     {
@@ -141,13 +162,13 @@ class ModFuncController extends AbstractFunctionModule
      */
     protected function addScripts()
     {
-        $path = ExtensionManagementUtility::siteRelPath('page_speed') . 'Resources/Public/';
-        $this->getDocumentTemplate()->addStyleSheet('page_speed', '../' . $path . 'Styles/speed.css');
+        $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+        $pageRenderer->addCssFile('EXT:page_speed/Resources/Public/Styles/speed.css');
 
         $jsFiles = ['JavaScript/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         foreach ($jsFiles as $file) {
-            $pageRenderer->addJsFile('../' . $path . $file);
+            $pageRenderer->addJsFile('EXT:page_speed/Resources/Public/' . $file);
         }
     }
 

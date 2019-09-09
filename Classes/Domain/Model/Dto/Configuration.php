@@ -2,7 +2,10 @@
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Dto;
 
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Exception;
 use TYPO3\CMS\Core\SingletonInterface;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class Configuration implements SingletonInterface
 {
@@ -18,12 +21,14 @@ class Configuration implements SingletonInterface
 
     public function __construct()
     {
-        $configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['page_speed']);
-        if (\is_array($configuration)) {
-            $this->key = (string)$configuration['key'];
-            $this->demo = (bool)$configuration['demo'];
-            $this->cacheTime = (int)$configuration['cacheTime'];
+        try {
+            $configuration = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('page_speed');
+        } catch (\Exception $e) {
+            $configuration = [];
         }
+        $this->key = (string)$configuration['key'];
+        $this->demo = (bool)$configuration['demo'];
+        $this->cacheTime = (int)$configuration['cacheTime'];
     }
 
     /**

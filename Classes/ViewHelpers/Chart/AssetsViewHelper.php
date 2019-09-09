@@ -17,7 +17,7 @@ namespace GeorgRinger\PageSpeed\ViewHelpers\Chart;
 
 use GeorgRinger\PageSpeed\Domain\Model\Response;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class AssetsViewHelper extends AbstractViewHelper
 {
