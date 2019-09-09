@@ -19,7 +19,7 @@ Screenshot
 
 Requirements
 ------------
-- TYPO3 CMS 7.2+
+- TYPO3 CMS 9.5+
 - Google Account
 
 Installation & Configuration

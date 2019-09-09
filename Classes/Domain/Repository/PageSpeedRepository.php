@@ -90,7 +90,7 @@ class PageSpeedRepository
      * @param string $locale
      * @return string
      */
-    protected function getResponseFromApi(string $identifier, string $strategy, string $locale = 'en')
+    protected function getResponseFromApi(string $identifier, string $strategy, string $locale = 'en'): string
     {
         $url = sprintf('https://www.googleapis.com/pagespeedonline/v4/runPagespeed?screenshot=true&url=%s&strategy=%s&locale=%s&key=%s',
             rawurlencode($identifier),
@@ -108,14 +108,13 @@ class PageSpeedRepository
      */
     protected function apiCall($url): string
     {
-        // Initiate the Request Factory, which allows to run multiple requests
-        /** @var RequestFactory $requestFactory */
         $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
         $additionalOptions = [
-            // Additional options, see http://docs.guzzlephp.org/en/latest/request-options.html
             'allow_redirects' => true,
-            'cookies' => false
+            'cookies' => false,
+            'force_ip_resolve' => 'v4'
         ];
+
         $response = $requestFactory->request($url, 'GET', $additionalOptions);
         if ($response->getStatusCode() === 200) {
             $content = $response->getBody()->getContents();
@@ -146,7 +145,7 @@ class PageSpeedRepository
      * @param string $identifier
      * @return string|NULL
      */
-    protected function getFromCache($identifier)
+    protected function getFromCache($identifier): ?string
     {
         return $this->cache->get($identifier);
     }
