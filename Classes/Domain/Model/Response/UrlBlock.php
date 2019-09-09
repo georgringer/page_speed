@@ -23,7 +23,7 @@ class UrlBlock
         }
     }
 
-    public function getHeader(): Rule
+    public function getHeader(): Result
     {
         return $this->header;
     }
