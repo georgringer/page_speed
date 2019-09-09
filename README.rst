@@ -7,7 +7,7 @@
 TYPO3 CMS Extension "page_speed"
 ================================
 This extensions provides an entry in the info module to check the **usability** & **performance**
-of the selected page by using the API of `Google Page Speed Insights <https://developers.google.com/speed/pagespeed/insights/>`_.
+of the selected page by using the API of `Google PageSpeed Insights <https://developers.google.com/speed/pagespeed/insights/>`_.
 
 Every page is automatically checked for the resolution **desktop** & **mobile**.
 

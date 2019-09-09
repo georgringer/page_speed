@@ -7,10 +7,10 @@
 				<source>Speed</source>
 			</trans-unit>
 			<trans-unit id="mlang_labels_tablabel" xml:space="preserve">
-				<source>Page Speed check</source>
+				<source>PageSpeed Check</source>
 			</trans-unit>
 			<trans-unit id="mlang_labels_tabdescr">
-				<source>Use the API of Google's Page Speed to check your sites.</source>
+				<source>Use the API of Google's PageSpeed to check your sites.</source>
 			</trans-unit>
 		</body>
 	</file>
