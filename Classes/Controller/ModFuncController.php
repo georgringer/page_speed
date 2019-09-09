@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace GeorgRinger\PageSpeed\Controller;
 
@@ -18,7 +19,6 @@ class ModFuncController
      * an extension class to \TYPO3\CMS\Backend\Module\BaseScriptClass
      *
      * @var BaseScriptClass
-     * @see init()
      */
     public $pObj;
 
@@ -45,7 +45,7 @@ class ModFuncController
      * @throws \RuntimeException
      * @see \TYPO3\CMS\Backend\Module\BaseScriptClass::checkExtObj()
      */
-    public function init($pObj)
+    public function init($pObj): void
     {
         $this->pObj = $pObj;
         $this->pObj->MOD_MENU = array_merge($this->pObj->MOD_MENU, $this->modMenu());
@@ -84,13 +84,10 @@ class ModFuncController
             }
         }
 
-        $modMenuAdd = [
-            'language' => $languages
-        ];
-        return $modMenuAdd;
+        return ['language' => $languages];
     }
 
-    public function main()
+    public function main(): string
     {
         $result = $error = $url = null;
 
@@ -107,9 +104,6 @@ class ModFuncController
                 }
 
                 $result = $this->pageSpeedRepository->findByIdentifier($url);
-            } catch (\HTTP_Request2_ConnectionException $e) {
-                $error = 'error.http_request.connection';
-                // todo add log
             } catch (\RuntimeException $e) {
                 $error = $e->getMessage();
             }
@@ -137,8 +131,6 @@ class ModFuncController
 
     /**
      * Check if the page id is valid
-     *
-     * @return void
      */
     protected function checkPageId(): void
     {
@@ -160,7 +152,7 @@ class ModFuncController
      *
      * @return void
      */
-    protected function addScripts()
+    protected function addScripts(): void
     {
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         $pageRenderer->addCssFile('EXT:page_speed/Resources/Public/Styles/speed.css');
@@ -177,7 +169,7 @@ class ModFuncController
      * @param array $additionalParams
      * @return string
      */
-    protected function getFullUrl($pageId, array $additionalParams = []): string
+    protected function getFullUrl(int $pageId, array $additionalParams = []): string
     {
         $additionalGetVars = '';
         if (isset($additionalParams['language'])) {

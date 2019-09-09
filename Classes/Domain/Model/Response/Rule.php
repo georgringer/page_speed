@@ -1,16 +1,5 @@
 <?php
-/*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
+declare(strict_types=1);
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Response;
 
@@ -48,50 +37,32 @@ class Rule
         }
     }
 
-    /**
-     * @return Result
-     */
-    public function getSummary()
+    public function getSummary(): Result
     {
         return $this->summary;
     }
 
-    /**
-     * @return string
-     */
-    public function getLocalizedRuleName()
+    public function getLocalizedRuleName(): string
     {
         return $this->localizedRuleName;
     }
 
-    /**
-     * @return float
-     */
-    public function getRuleImpact()
+    public function getRuleImpact(): float
     {
         return $this->ruleImpact;
     }
 
-    /**
-     * @return string
-     */
-    public function getGroup()
+    public function getGroup(): string
     {
         return $this->group;
     }
 
-    /**
-     * @return string
-     */
-    public function getHasImpact()
+    public function getHasImpact(): string
     {
         return (float)$this->ruleImpact > 0 ? 'danger' : 'success';
     }
 
-    /**
-     * @return array
-     */
-    public function getUrlBlocks()
+    public function getUrlBlocks(): array
     {
         return $this->urlBlocks;
     }

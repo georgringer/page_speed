@@ -18,6 +18,7 @@ namespace GeorgRinger\PageSpeed\Domain\Repository;
 use GeorgRinger\PageSpeed\Domain\Model\Dto\Configuration;
 use GeorgRinger\PageSpeed\Domain\Model\Response;
 use TYPO3\CMS\Core\Cache\CacheManager;
+use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Http\HttpRequest;
 use TYPO3\CMS\Core\Http\RequestFactory;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -26,7 +27,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class PageSpeedRepository
 {
 
-    /** @var \TYPO3\CMS\Core\Cache\Frontend\FrontendInterface */
+    /** @var FrontendInterface */
     protected $cache;
 
     /** @var Configuration */
@@ -45,7 +46,7 @@ class PageSpeedRepository
      * @param string $identifier
      * @return array<Response>
      */
-    public function findByIdentifier($identifier)
+    public function findByIdentifier(string $identifier): array
     {
         $apiResponses = $result = [];
 
@@ -74,10 +75,9 @@ class PageSpeedRepository
 
     /**
      * @param string $identifier
-     * @return void
      * @todo what to do with the locale
      */
-    public function clearByIdentifier($identifier)
+    public function clearByIdentifier($identifier): void
     {
         foreach ($this->strategies as $strategy) {
             $cacheIdentifier = $this->getCacheIdentifier($identifier, $strategy);
@@ -90,7 +90,7 @@ class PageSpeedRepository
      * @param string $strategy
      * @return string
      */
-    protected function getCacheIdentifier($url, $strategy)
+    protected function getCacheIdentifier(string $url, string $strategy): string
     {
         $locale = $this->getLocale();
         $cacheIdentifier = $url . '_' . implode('_', [$strategy, $locale]);
@@ -103,7 +103,7 @@ class PageSpeedRepository
      * @param string $locale
      * @return string
      */
-    protected function getResponseFromApi($identifier, $strategy, $locale = 'en')
+    protected function getResponseFromApi(string $identifier, string $strategy, string $locale = 'en')
     {
         $url = sprintf('https://www.googleapis.com/pagespeedonline/v4/runPagespeed?screenshot=true&url=%s&strategy=%s&locale=%s&key=%s',
             rawurlencode($identifier),
@@ -119,7 +119,7 @@ class PageSpeedRepository
      * @param string $url
      * @return string
      */
-    protected function apiCall($url)
+    protected function apiCall($url): string
     {
         // Initiate the Request Factory, which allows to run multiple requests
         /** @var RequestFactory $requestFactory */
@@ -129,9 +129,7 @@ class PageSpeedRepository
             'allow_redirects' => true,
             'cookies' => false
         ];
-        // Return a PSR-7 compliant response object
         $response = $requestFactory->request($url, 'GET', $additionalOptions);
-        // Get the content as a string on a successful request
         if ($response->getStatusCode() === 200) {
             $content = $response->getBody()->getContents();
         } else {
@@ -139,9 +137,9 @@ class PageSpeedRepository
             $errors = json_decode($errorResponse, true);
             if (is_array($errors) && is_array($errors['error']) && isset($errors['error']['message'])) {
                 throw new \RuntimeException($errors['error']['message']);
-            } else {
-                throw new \RuntimeException($errorResponse);
             }
+
+            throw new \RuntimeException($errorResponse);
         }
 
         return $content;
@@ -152,9 +150,9 @@ class PageSpeedRepository
      *
      * @return string
      */
-    protected function getLocale()
+    protected function getLocale(): string
     {
-        return $GLOBALS['BE_USER']->uc['lang'] ? $GLOBALS['BE_USER']->uc['lang'] : 'en';
+        return $GLOBALS['BE_USER']->uc['lang'] ?: 'en';
     }
 
     /**
@@ -171,7 +169,7 @@ class PageSpeedRepository
      * @param string $content
      * @return void
      */
-    protected function setToCache($identifier, $content)
+    protected function setToCache(string $identifier, string $content): void
     {
         $this->cache->set($identifier, $content);
     }

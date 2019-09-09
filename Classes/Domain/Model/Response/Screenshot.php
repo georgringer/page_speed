@@ -1,16 +1,5 @@
 <?php
-/*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
+declare(strict_types=1);
 
 namespace GeorgRinger\PageSpeed\Domain\Model\Response;
 
@@ -43,42 +32,27 @@ class Screenshot
         }
     }
 
-    /**
-     * @return string
-     */
-    public function getMimeType()
+    public function getMimeType(): string
     {
         return $this->mimeType;
     }
 
-    /**
-     * @return string
-     */
-    public function getData()
+    public function getData(): string
     {
         return $this->data;
     }
 
-    /**
-     * @return int
-     */
-    public function getWidth()
+    public function getWidth(): int
     {
         return $this->width;
     }
 
-    /**
-     * @return int
-     */
-    public function getHeight()
+    public function getHeight(): int
     {
         return $this->height;
     }
 
-    /**
-     * @return array
-     */
-    public function getPageRect()
+    public function getPageRect(): array
     {
         return $this->pageRect;
     }
