@@ -155,9 +155,10 @@ class ModFuncController
     protected function addScripts(): void
     {
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+        $pageRenderer->loadRequireJsModule('TYPO3/CMS/PageSpeed/PageSpeedModule');
         $pageRenderer->addCssFile('EXT:page_speed/Resources/Public/Styles/speed.css');
 
-        $jsFiles = ['JavaScript/main.js', 'Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
+        $jsFiles = ['Contrib/amcharts/amcharts.js', 'Contrib/amcharts/gauge.js', 'Contrib/amcharts/serial.js', 'Contrib/amcharts/themes/dark.js'];
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         foreach ($jsFiles as $file) {
             $pageRenderer->addJsFile('EXT:page_speed/Resources/Public/' . $file);
