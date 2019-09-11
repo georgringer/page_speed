@@ -5,6 +5,7 @@ namespace GeorgRinger\PageSpeed\Controller;
 
 use GeorgRinger\PageSpeed\Domain\Model\Dto\Configuration;
 use GeorgRinger\PageSpeed\Domain\Repository\PageSpeedRepository;
+use GeorgRinger\PageSpeed\Service\UrlService;
 use TYPO3\CMS\Backend\Module\BaseScriptClass;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -96,7 +97,7 @@ class ModFuncController
         if ($this->configuration->isValid()) {
             try {
                 $this->checkPageId();
-                $url = $this->getFullUrl($this->pageId, $this->pObj->MOD_SETTINGS);
+                $url = UrlService::getFullUrl($this->pageId, $this->pObj->MOD_SETTINGS);
 
                 if (GeneralUtility::_GET('clear')) {
                     $this->pageSpeedRepository->clearByIdentifier($url);
@@ -163,21 +164,6 @@ class ModFuncController
         foreach ($jsFiles as $file) {
             $pageRenderer->addJsFile('EXT:page_speed/Resources/Public/' . $file);
         }
-    }
-
-    /**
-     * @param int $pageId
-     * @param array $additionalParams
-     * @return string
-     */
-    protected function getFullUrl(int $pageId, array $additionalParams = []): string
-    {
-        $additionalGetVars = '';
-        if (isset($additionalParams['language'])) {
-            $additionalGetVars .= '&L=' . $additionalParams['language'];
-        }
-        $url = BackendUtility::getPreviewUrl($pageId, '', null, '', '', $additionalGetVars);
-        return $url;
     }
 
 }

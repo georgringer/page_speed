@@ -21,7 +21,7 @@ class PageSpeedRepository
     protected $configuration;
 
     /** @var array */
-    protected $strategies = ['desktop', 'mobile'];
+    public const STRATEGIES = ['desktop', 'mobile'];
 
     public function __construct()
     {
@@ -31,14 +31,14 @@ class PageSpeedRepository
 
     /**
      * @param string $identifier
-     * @return array<Response>
+     * @return Response[]
      */
-    public function findByIdentifier(string $identifier): array
+    public function findByIdentifier(string $identifier, bool $forceRequestToApi = true): array
     {
         $apiResponses = $result = [];
 
         $locale = $this->getLocale();
-        foreach ($this->strategies as $strategy) {
+        foreach (self::STRATEGIES as $strategy) {
             if ($this->configuration->isDemo()) {
                 $path = ExtensionManagementUtility::extPath('page_speed', 'Resources/Private/Examples/');
                 $apiResponses[$strategy] = GeneralUtility::getUrl($path . $strategy . '.json');
@@ -46,7 +46,7 @@ class PageSpeedRepository
                 $cacheIdentifier = $this->getCacheIdentifier($identifier, $strategy);
 
                 $resultFromApi = $this->getFromCache($cacheIdentifier);
-                if (!$resultFromApi) {
+                if (!$resultFromApi && $forceRequestToApi) {
                     $resultFromApi = $this->getResponseFromApi($identifier, $strategy, $locale);
                     $this->setToCache($cacheIdentifier, $resultFromApi);
                 }
@@ -66,7 +66,7 @@ class PageSpeedRepository
      */
     public function clearByIdentifier($identifier): void
     {
-        foreach ($this->strategies as $strategy) {
+        foreach (self::STRATEGIES as $strategy) {
             $cacheIdentifier = $this->getCacheIdentifier($identifier, $strategy);
             $this->cache->remove($cacheIdentifier);
         }
